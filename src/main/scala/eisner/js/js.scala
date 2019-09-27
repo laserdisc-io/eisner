@@ -6,12 +6,12 @@ import java.util.concurrent.CompletionStage
 import java.util.{Map => JMap}
 
 import scala.compat.java8.FutureConverters._
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 import scala.concurrent.duration.Duration
 
-object JS {
-
-  import scala.concurrent.ExecutionContext.Implicits.global
+package object js {
+  import dot._
 
   private[this] val engine: Invocable = {
     val e = new ScriptEngineManager().getEngineByExtension("js")
@@ -30,6 +30,8 @@ object JS {
     e.asInstanceOf[Invocable]
   }
 
-  def viz(dot: String): Future[String] =
-    engine.invokeFunction("viz", dot).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.map(_.get("result").asInstanceOf[String])
+  implicit final class GraphToSVG(private val g: Graph) extends AnyVal {
+    final def svg: Future[String] =
+      engine.invokeFunction("viz", Writer[Graph].write(g, 0).mkString("\n")).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.map(_.get("result").asInstanceOf[String])
+  }
 }

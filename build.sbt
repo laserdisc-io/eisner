@@ -17,7 +17,8 @@ lazy val eisner = project
     libraryDependencies ++= Seq(
       "net.arnx"               % "nashorn-promise"     % "0.1.1",
       "org.clapper"            %% "classutil"          % "1.5.1",
-      "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0"
+      "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0",
+      "org.scalatest"          %% "scalatest"          % "3.0.8" % Test
     ),
     scriptedLaunchOpts ++= Seq("-Xmx1024M", s"-Dplugin.version=${version.value}"),
     scriptedBufferLog := false
