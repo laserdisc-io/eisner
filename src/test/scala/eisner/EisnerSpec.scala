@@ -2,11 +2,9 @@ package eisner
 
 import org.scalatest.{AsyncWordSpec, Matchers}
 import scala.io.Source
+import scala.xml.XML
 
 final class DotSpec extends AsyncWordSpec with Matchers {
-  import dot._
-  import js._
-
   "A topology" when {
     "loaded from disk" must {
       "convert to a valid graph" in {
@@ -58,13 +56,13 @@ final class DotSpec extends AsyncWordSpec with Matchers {
         val topologyTxt = Source.fromInputStream(getClass.getResourceAsStream("/topology.txt")).getLines.mkString("\n")
         val expectedDot = Source.fromInputStream(getClass.getResourceAsStream("/topology.dot")).getLines.mkString("\n")
 
-        Writer[Graph].write(topologyTxt.dot, 0).mkString("\n").trim shouldBe expectedDot.trim
+        Writer[Graph].write(topologyTxt.dot, 0).mkString("\n") shouldBe expectedDot
       }
       "convert to a valid svg" in {
         val topologyTxt = Source.fromInputStream(getClass.getResourceAsStream("/topology.txt")).getLines.mkString("\n")
-        val expectedSvg = Source.fromInputStream(getClass.getResourceAsStream("/topology.svg")).getLines.mkString("\n")
+        val expectedSvg = XML.loadString(Source.fromInputStream(getClass.getResourceAsStream("/topology.svg")).getLines.mkString("\n"))
 
-        topologyTxt.dot.svg.map(_.trim shouldBe expectedSvg.trim)
+        topologyTxt.dot.svg.map(_ shouldBe expectedSvg)
       }
     }
   }

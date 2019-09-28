@@ -8,11 +8,10 @@ import java.util.{Map => JMap}
 import scala.compat.java8.FutureConverters._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.concurrent.duration.Duration
+import scala.util.Try
+import scala.xml.XML
 
 package object js {
-  import dot._
-
   private[this] val engine: Invocable = {
     val e = new ScriptEngineManager().getEngineByExtension("js")
     e.getContext.setWriter(new PrintWriter(System.out, true))
@@ -30,8 +29,13 @@ package object js {
     e.asInstanceOf[Invocable]
   }
 
-  implicit final class GraphToSVG(private val g: Graph) extends AnyVal {
-    final def svg: Future[String] =
-      engine.invokeFunction("viz", Writer[Graph].write(g, 0).mkString("\n")).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.map(_.get("result").asInstanceOf[String])
-  }
+  private[this] final def viz(dot: String): Future[String] =
+    engine.invokeFunction("viz", dot).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.flatMap {
+      case jm => Option(jm.get("result")) match {
+        case Some(s: String) => Future.successful(s)
+        case other => Future.failed(new RuntimeException(s"Could not find svg in viz.js response: $other"))
+      }
+    }
+
+  final def toSVG(dot: String): Future[Node] = viz(dot).flatMap(svg => Future.fromTry(Try(XML.loadString(svg))))
 }
