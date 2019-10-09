@@ -13,13 +13,13 @@
 <g id="clust1" class="cluster">
 <title>cluster_0</title>
 <polygon fill="#d3d3d3" stroke="#d3d3d3" points="8,-701.5603 8,-1339.8694 174,-1339.8694 174,-701.5603 8,-701.5603"/>
-<text text-anchor="middle" x="91" y="-1323.2694" font-family="Times,serif" font-size="14.00" fill="#000000"> Sub&#45;</text>
+<text text-anchor="middle" x="91" y="-1323.2694" font-family="Times,serif" font-size="14.00" fill="#000000">Sub&#45;</text>
 <text text-anchor="middle" x="91" y="-1306.4694" font-family="Times,serif" font-size="14.00" fill="#000000">topology: 0</text>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_1</title>
 <polygon fill="#d3d3d3" stroke="#d3d3d3" points="8,-111.2 8,-607.1603 174,-607.1603 174,-111.2 8,-111.2"/>
-<text text-anchor="middle" x="91" y="-590.5603" font-family="Times,serif" font-size="14.00" fill="#000000"> Sub&#45;</text>
+<text text-anchor="middle" x="91" y="-590.5603" font-family="Times,serif" font-size="14.00" fill="#000000">Sub&#45;</text>
 <text text-anchor="middle" x="91" y="-573.7603" font-family="Times,serif" font-size="14.00" fill="#000000">topology: 1</text>
 </g>
 <!-- KSTREAM&#45;\nSOURCE&#45;\n0000000000 -->

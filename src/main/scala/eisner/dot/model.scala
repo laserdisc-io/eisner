@@ -25,7 +25,7 @@ final object Subgraph {
   implicit final val subgraphWriter: Writer[Subgraph] = Writer.instance {
     case (Subgraph(id, l, es), i) =>
       s"${i.tabs}subgraph cluster_$id {" ::
-        s"""${(i + 1).tabs}label = " $l";""" ::
+        s"""${(i + 1).tabs}label = "$l";""" ::
         s"${(i + 1).tabs}style = filled;" ::
         s"${(i + 1).tabs}color = lightgrey;" ::
         s"${(i + 1).tabs}node [style = filled, color = white];" ::

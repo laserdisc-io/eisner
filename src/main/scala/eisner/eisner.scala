@@ -4,19 +4,21 @@ package object eisner {
   final type Graph = dot.Graph
   final type Node  = xml.Node
 
-  final val Graph = dot.Graph
+  final val Graph    = dot.Graph
   final val Subgraph = dot.Subgraph
-  final val Edge = dot.Edge
-  final val Topic = dot.Topic
-  final val Store = dot.Store
+  final val Edge     = dot.Edge
+  final val Topic    = dot.Topic
+  final val Store    = dot.Store
 
   implicit final class IntOps(private val i: Int) extends AnyVal {
     final def tabs: String = "\t" * i
   }
   implicit final class StringOps(private val s: String) extends AnyVal {
-    final def dot: Graph = eisner.dot.toDot(s)
+    final def dot: Graph        = eisner.dot.toDot(s)
+    final def dotString: String = dot.dotString
   }
   implicit final class GraphOps(private val g: Graph) extends AnyVal {
-    final def svg: Future[Node] = eisner.js.toSVG(Writer[Graph].write(g, 0).mkString("\n"))
+    final def dotString: String = Writer[Graph].write(g, 0).mkString("\n")
+    final def svg: Future[Node] = eisner.js.toSVG(dotString)
   }
 }

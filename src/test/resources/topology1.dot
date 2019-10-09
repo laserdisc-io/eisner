@@ -1,7 +1,7 @@
 digraph G {
 	label = "Kafka Streams Topology"
 	subgraph cluster_0 {
-		label = " Sub-\ntopology: 0";
+		label = "Sub-\ntopology: 0";
 		style = filled;
 		color = lightgrey;
 		node [style = filled, color = white];
@@ -11,7 +11,7 @@ digraph G {
 		"KSTREAM-\nFILTER-\n0000000005" -> "KSTREAM-\nSINK-\n0000000004";
 	}
 	subgraph cluster_1 {
-		label = " Sub-\ntopology: 1";
+		label = "Sub-\ntopology: 1";
 		style = filled;
 		color = lightgrey;
 		node [style = filled, color = white];

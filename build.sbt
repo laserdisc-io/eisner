@@ -7,14 +7,13 @@ inThisBuild {
   )
 }
 
-publish / skip := true // don't publish the build root project
-
 lazy val eisner = project
   .in(file("."))
   .enablePlugins(SbtPlugin)
   .settings(
     name := "eisner",
     libraryDependencies ++= Seq(
+      "io.circe"               %% "circe-core"         % "0.12.1",
       "net.arnx"               % "nashorn-promise"     % "0.1.1",
       "org.clapper"            %% "classutil"          % "1.5.1",
       "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0",
