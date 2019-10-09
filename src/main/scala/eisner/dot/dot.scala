@@ -22,13 +22,13 @@ package object dot {
       case ((DiGraph(sgs, es, ts, ss), maybeN), SubCat(Clean(sc), id)) =>
         DiGraph(Subgraph.empty(id, sc) :: sgs, es, ts, ss) -> maybeN
       case ((DiGraph(sgs, es, ts, ss), _), Source(Clean(n), Links(ls @ _*))) =>
-        DiGraph(sgs, es ++ ls.map(l => Edge(l, n)), ts ++ ls.map(Topic(_)), ss) -> Some(n)
+        DiGraph(sgs, es ++ ls.map(Edge(_, n)), ts ++ ls.map(Topic(_)), ss) -> Some(n)
       case ((DiGraph(sgs, es, ts, ss), _), Proc(Clean(n), Links(ls @ _*))) =>
-        DiGraph(sgs, es ++ ls.map(l => Edge(n, l)), ts, ss ++ ls.map(Store(_))) -> Some(n)
+        DiGraph(sgs, es ++ ls.map(Edge(n, _)), ts, ss ++ ls.map(Store(_))) -> Some(n)
       case ((DiGraph(sgs, es, ts, ss), _), Sink(Clean(n), Links(l))) =>
         DiGraph(sgs, es :+ Edge(n, l), ts + Topic(l), ss) -> Some(n)
       case ((DiGraph(Subgraph(id, la, sges) :: sgs, es, ts, ss), Some(n)), Arrow(Links(ls @ _*))) =>
-        DiGraph(Subgraph(id, la, sges ++ ls.map(l => Edge(n, l))) :: sgs, es, ts, ss) -> Some(n)
+        DiGraph(Subgraph(id, la, sges ++ ls.map(Edge(n, _))) :: sgs, es, ts, ss) -> Some(n)
       case (acc, _) =>
         acc
     }
