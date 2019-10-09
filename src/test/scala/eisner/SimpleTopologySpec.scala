@@ -1,7 +1,7 @@
 package eisner
 
 final class SimpleTopologySpec extends BaseEisnerSpec(1) {
-  override final val expectedGraph = Graph(
+  override final val expectedDiGraph = DiGraph(
     List(
       Subgraph(
         "1",

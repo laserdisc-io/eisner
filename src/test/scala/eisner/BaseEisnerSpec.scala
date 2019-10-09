@@ -6,7 +6,7 @@ import scala.xml.XML
 
 abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
 
-  def expectedGraph: Graph
+  def expectedDiGraph: DiGraph
 
   lazy val txt = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.txt")).getLines.mkString("\n")
   lazy val dot = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.dot")).getLines.mkString("\n")
@@ -15,7 +15,7 @@ abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
   s"Topology #$i" when {
     "loaded from disk" must {
       "convert to a valid graph" in {
-        txt.dot shouldBe expectedGraph
+        txt.dot shouldBe expectedDiGraph
       }
       "convert to a valid dot" in {
         txt.dotString shouldBe dot

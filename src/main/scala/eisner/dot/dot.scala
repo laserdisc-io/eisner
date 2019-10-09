@@ -17,18 +17,18 @@ package object dot {
     final def unapplySeq(s: String): Option[Seq[String]] = Some(s.split(',').flatMap(Clean.unapply).filter(_ != "none"))
   }
 
-  final def toDot(s: String): Graph = {
-    val (g, _) = s.split('\n').foldLeft(Graph.empty -> (None: Option[String])) {
-      case ((Graph(sgs, es, ts, ss), maybeN), SubCat(Clean(sc), id)) =>
-        Graph(Subgraph.empty(id, sc) :: sgs, es, ts, ss) -> maybeN
-      case ((Graph(sgs, es, ts, ss), _), Source(Clean(n), Links(ls @ _*))) =>
-        Graph(sgs, es ++ ls.map(l => Edge(l, n)), ts ++ ls.map(Topic(_)), ss) -> Some(n)
-      case ((Graph(sgs, es, ts, ss), _), Proc(Clean(n), Links(ls @ _*))) =>
-        Graph(sgs, es ++ ls.map(l => Edge(n, l)), ts, ss ++ ls.map(Store(_))) -> Some(n)
-      case ((Graph(sgs, es, ts, ss), _), Sink(Clean(n), Links(l))) =>
-        Graph(sgs, es :+ Edge(n, l), ts + Topic(l), ss) -> Some(n)
-      case ((Graph(Subgraph(id, la, sges) :: sgs, es, ts, ss), Some(n)), Arrow(Links(ls @ _*))) =>
-        Graph(Subgraph(id, la, sges ++ ls.map(l => Edge(n, l))) :: sgs, es, ts, ss) -> Some(n)
+  final def toDot(s: String): DiGraph = {
+    val (g, _) = s.split('\n').foldLeft(DiGraph.empty -> (None: Option[String])) {
+      case ((DiGraph(sgs, es, ts, ss), maybeN), SubCat(Clean(sc), id)) =>
+        DiGraph(Subgraph.empty(id, sc) :: sgs, es, ts, ss) -> maybeN
+      case ((DiGraph(sgs, es, ts, ss), _), Source(Clean(n), Links(ls @ _*))) =>
+        DiGraph(sgs, es ++ ls.map(l => Edge(l, n)), ts ++ ls.map(Topic(_)), ss) -> Some(n)
+      case ((DiGraph(sgs, es, ts, ss), _), Proc(Clean(n), Links(ls @ _*))) =>
+        DiGraph(sgs, es ++ ls.map(l => Edge(n, l)), ts, ss ++ ls.map(Store(_))) -> Some(n)
+      case ((DiGraph(sgs, es, ts, ss), _), Sink(Clean(n), Links(l))) =>
+        DiGraph(sgs, es :+ Edge(n, l), ts + Topic(l), ss) -> Some(n)
+      case ((DiGraph(Subgraph(id, la, sges) :: sgs, es, ts, ss), Some(n)), Arrow(Links(ls @ _*))) =>
+        DiGraph(Subgraph(id, la, sges ++ ls.map(l => Edge(n, l))) :: sgs, es, ts, ss) -> Some(n)
       case (acc, _) =>
         acc
     }

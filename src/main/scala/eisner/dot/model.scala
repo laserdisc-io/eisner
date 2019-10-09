@@ -1,12 +1,12 @@
 package eisner
 package dot
 
-final case class Graph(subgraphs: List[Subgraph], edges: Vector[Edge], topics: Set[Topic], stores: Set[Store])
-final object Graph {
-  final val empty: Graph = Graph(Nil, Vector.empty, Set.empty, Set.empty)
+final case class DiGraph(subgraphs: List[Subgraph], edges: Vector[Edge], topics: Set[Topic], stores: Set[Store])
+final object DiGraph {
+  final val empty: DiGraph = DiGraph(Nil, Vector.empty, Set.empty, Set.empty)
 
-  implicit final val graphWriter: Writer[Graph] = Writer.instance {
-    case (Graph(sgs, es, ts, ss), _) =>
+  implicit final val diGraphWriter: Writer[DiGraph] = Writer.instance {
+    case (DiGraph(sgs, es, ts, ss), _) =>
       "digraph G {" ::
         s"""${1.tabs}label = "Kafka Streams Topology"""" ::
         Writer[List[Subgraph]].write(sgs.reverse, 1) :::

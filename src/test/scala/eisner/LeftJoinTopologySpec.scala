@@ -1,7 +1,7 @@
 package eisner
 
 final class LeftJoinTopologySpec extends BaseEisnerSpec(2) {
-  override final val expectedGraph = Graph(
+  override final val expectedDiGraph = DiGraph(
     List(
       Subgraph(
         "1",
