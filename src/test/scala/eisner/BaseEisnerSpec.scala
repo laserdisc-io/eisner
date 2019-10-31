@@ -21,7 +21,7 @@ abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
         txt.dotString shouldBe dot
       }
       "convert to a valid svg" in {
-        js.viz(txt.dotString).map(_.trim shouldBe svg)
+        js.dotToSVG(txt.dotString).map(_.trim shouldBe svg)
       }
     }
   }

@@ -27,20 +27,20 @@ package object js {
     e.asInstanceOf[Invocable]
   }
 
-  private[eisner] final def viz(dot: String): Future[String] =
-    engine.invokeFunction("viz", dot).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.flatMap {
+  private[eisner] final def dotToSVG(dot: String): Future[String] =
+    engine.invokeFunction("dotToSVG", dot).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.flatMap {
       case jm =>
         Option(jm.get("result")) match {
           case Some(s: String) => Future.successful(s)
           case other           => Future.failed(new RuntimeException(s"Could not find svg in viz.js response: $other"))
         }
     }
-  private[this] final def rough(svg: String): String =
-    engine.invokeFunction("r", svg).asInstanceOf[String]
+  private[this] final def svgToRoughSVG(svg: String): String =
+    engine.invokeFunction("svgToRoughSVG", svg).asInstanceOf[String]
 
-  final def toSVG(dot: String): Future[Node] = viz(dot).flatMap { svgString =>
+  final def toSVG(dot: String): Future[Node] = dotToSVG(dot).flatMap { svgString =>
     Try(XML.loadString(svgString)).toEither.left.map(_.getLocalizedMessage()).flatMap { svgXML =>
-      SVG.fromXML(svgXML).flatMap(svg => rough(svg.toJsonString).svg.map(_.toXML))
+      SVG.fromXML(svgXML).flatMap(svg => svgToRoughSVG(svg.toJsonString).svg.map(_.toXML))
     } match {
       case Left(msg) => Future.failed(new RuntimeException(msg))
       case Right(v)  => Future.successful(v)

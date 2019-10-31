@@ -1,54 +1,54 @@
-var viz = function(dot) {
+var dotToSVG = function(dot) {
   return new Viz().renderString(dot)._future;
 }
 
-var r = function(g0) {
-  var g = JSON.parse(g0);
-  var ps = [];
+var svgToRoughSVG = function(svgString) {
+  var svg = JSON.parse(svgString);
   var i = 0;
-  var es = [];
+  var patterns = [];
+  var elements = [];
 
-  var gen = rough.generator({}, { width: g.viewBox.w, height: g.viewBox.h });
+  var gen = rough.generator({}, { width: svg.viewBox.w, height: svg.viewBox.h });
 
-  g.elements.forEach(function (el) {
+  svg.elements.forEach(function(e) {
 
-    var options = function () {
+    var options = function() {
       return {
-        fill: el.fill == 'none' ? null : el.fill,
-        stroke: el.stroke == 'none' ? null : el.stroke
+        fill: e.fill == 'none' ? null : e.fill,
+        stroke: e.stroke == 'none' ? null : e.stroke
       };
     };
 
-    var pushAll = function (paths) {
-      paths.forEach(function (path) {
-        if (path.hasOwnProperty("pattern")) {
-          var pattern = path.pattern;
-          delete path.pattern;
-          pattern.id = el.type + "_pattern" + i;
-          ps.push(pattern);
-          path.fill = "url(#" + pattern.id + ")";
+    var pushAll = function(ps) {
+      ps.forEach(function(p) {
+        if (p.hasOwnProperty("pattern")) {
+          var pattern = p.pattern;
+          delete p.pattern;
+          pattern.id = e.type + "_pattern" + i;
+          patterns.push(pattern);
+          p.fill = "url(#" + pattern.id + ")";
           i++;
         }
-        path.type = "Path";
-        es.push(path);
+        p.type = "Path";
+        elements.push(p);
       });
     };
 
-    if (el.type == 'Ellipse') {
-      pushAll(gen.toPaths(gen.ellipse(el.cx, el.cy, el.rx * 1.5, el.ry * 1.6)));
-    } else if (el.type == 'Path') {
-      pushAll(gen.toPaths(gen.path(el.d, options())));
-    } else if (el.type == 'Polygon') {
-      pushAll(gen.toPaths(gen.path("M" + el.points + "Z", options())));
-    } else if (el.type == 'Text') {
-      el.fontFamily = "sans-serif"
-      el.fontSize = 10
-      es.push(el);
+    if (e.type == 'Ellipse') {
+      pushAll(gen.toPaths(gen.ellipse(e.cx, e.cy, e.rx * 1.5, e.ry * 1.6)));
+    } else if (e.type == 'Path') {
+      pushAll(gen.toPaths(gen.path(e.d, options())));
+    } else if (e.type == 'Polygon') {
+      pushAll(gen.toPaths(gen.path("M" + e.points + "Z", options())));
+    } else if (e.type == 'Text') {
+      e.fontFamily = "sans-serif"
+      e.fontSize = 10
+      elements.push(e);
     }
   });
 
-  g.patterns = ps;
-  g.elements = es;
+  svg.patterns = patterns;
+  svg.elements = elements;
 
-  return JSON.stringify(g);
+  return JSON.stringify(svg);
 }
