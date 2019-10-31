@@ -22,6 +22,13 @@ final object ViewBox {
 final case class Pattern(id: String, x: Double, y: Double, width: Double, height: Double, patternUnits: String, path: El.Path)
 object Pattern {
   implicit final val patternCodec: Codec[Pattern] = deriveConfiguredCodec
+  implicit final val patternWriter: Writer[Pattern] = Writer.instance {
+    case (Pattern(id, x, y, w, h, pu, p), i) =>
+      s"""${i.tabs}<pattern id="$id" x="$x" y="$y" width="$w" height="$h" patternUnits="$pu">""" ::
+        Writer[El.Path].write(p, i + 1) :::
+        s"${i.tabs}</pattern>" ::
+        Nil
+  }
 }
 
 sealed trait El extends Product with Serializable
@@ -33,37 +40,20 @@ object El {
 
   object Path {
     implicit final val pathCodec: Codec[Path] = deriveConfiguredCodec
+    implicit final val pathWriter: Writer[Path] = Writer.instance {
+      case (Path(d, s, sw, f), i) => s"""${i.tabs}<path d="$d" stroke="$s" stroke-width="$sw" fill="$f"/>""" :: Nil
+    }
   }
 
   implicit final val elCodec: Codec[El] = deriveConfiguredCodec
+  implicit final val elWriter: Writer[El] = Writer.instancePF {
+    case (p: Path, i) => Writer[Path].write(p, i)
+    case (Text(x, y, a, ff, fs, f, v), i) =>
+      s"""${i.tabs}<text text-anchor="$a" x="$x" y="$y" font-family="$ff" font-size="$fs" fill="$f">$v</text>""" :: Nil
+  }
 }
 
-final case class SVG(width: String, height: String, viewBox: ViewBox, transform: String, patterns: List[Pattern], elements: List[El]) {
-  private[this] def pathToXML(p: El.Path): Node = <path d={p.d} stroke={p.stroke.toString} stroke-width={p.strokeWidth.toString} fill={p.fill}/>
-  def toXML: Node =
-    <svg width={width} height={height} viewBox={viewBox.x + " " + viewBox.y + " " + viewBox.w + " " + viewBox.h} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-    {
-      patterns.collect {
-        case Pattern(id, x, y, w, h, pu, p) =>
-          <pattern id={id} x={x.toString} y={y.toString} width={w.toString} height={h.toString} patternUnits={pu}>
-          {pathToXML(p)}
-        </pattern>
-
-      }
-    }
-    </defs>
-    <g transform={transform}>
-    {
-      elements.collect {
-        case p: El.Path => pathToXML(p)
-        case El.Text(x, y, a, ff, fs, f, v) =>
-          <text text-anchor={a} x={x.toString} y={y.toString} font-family={ff} font-size={fs.toString} fill={f}>{v}</text>
-      }
-    }
-    </g>
-  </svg>
-}
+final case class SVG(width: String, height: String, viewBox: ViewBox, transform: String, patterns: List[Pattern], elements: List[El])
 final object SVG {
   private[this] final def parseEllipse(n: Node): El.Ellipse =
     El.Ellipse((n \@ "cx").toDouble, (n \@ "cy").toDouble, (n \@ "rx").toDouble, (n \@ "ry").toDouble, n \@ "stroke", 1, n \@ "fill")
@@ -88,4 +78,16 @@ final object SVG {
     }.toEither.left.map(_.getLocalizedMessage)
 
   implicit final val svgCodec: Codec[SVG] = deriveConfiguredCodec
+  implicit final val svgWriter: Writer[SVG] = Writer.instance {
+    case (SVG(w, h, vb, t, ps, es), _) =>
+      s"""<svg width="$w" height="$h" viewBox="$vb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">""" ::
+        s"${1.tabs}<defs>" ::
+        Writer[List[Pattern]].write(ps, 2) :::
+        s"${1.tabs}</defs>" ::
+        s"""${1.tabs}<g transform="$t">""" ::
+        Writer[List[El]].write(es, 2) :::
+        s"${1.tabs}</g>" ::
+        "</svg>" ::
+        Nil
+  }
 }

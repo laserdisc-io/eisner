@@ -19,11 +19,12 @@ package object eisner {
     final def svg: Either[String, SVG] = io.circe.parser.decode[SVG](s).left.map(_.getLocalizedMessage())
   }
   implicit final class DotOps(private val dg: DiGraph) extends AnyVal {
-    final def dotString: String                  = Writer[DiGraph].write(dg, 0).mkString("\n")
-    final def svg: scala.concurrent.Future[Node] = eisner.js.toSVG(dotString)
+    final def dotString: String                    = Writer[DiGraph].write(dg, 0).mkString("\n")
+    final def svg: scala.concurrent.Future[String] = eisner.js.toSVG(dotString)
   }
   implicit final class SVGOps(private val svg: SVG) extends AnyVal {
     final def toJson: io.circe.Json = io.circe.Encoder[SVG].apply(svg)
     final def toJsonString: String  = toJson.noSpaces
+    final def xmlString: String     = Writer[SVG].write(svg, 0).mkString("\n")
   }
 }
