@@ -10,7 +10,7 @@ abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
 
   lazy val txt = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.txt")).getLines.mkString("\n")
   lazy val dot = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.dot")).getLines.mkString("\n")
-  lazy val svg = XML.loadString(Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.svg")).getLines.mkString("\n"))
+  lazy val svg = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.svg")).getLines.mkString("\n")
 
   s"Topology #$i" when {
     "loaded from disk" must {
@@ -21,7 +21,7 @@ abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
         txt.dotString shouldBe dot
       }
       "convert to a valid svg" in {
-        txt.dot.svg.map(_ shouldBe svg)
+        js.viz(txt.dotString).map(_.trim shouldBe svg)
       }
     }
   }

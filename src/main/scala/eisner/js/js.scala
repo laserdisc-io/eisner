@@ -27,7 +27,7 @@ package object js {
     e.asInstanceOf[Invocable]
   }
 
-  private[this] final def viz(dot: String): Future[String] =
+  private[eisner] final def viz(dot: String): Future[String] =
     engine.invokeFunction("viz", dot).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.flatMap {
       case jm =>
         Option(jm.get("result")) match {
