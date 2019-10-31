@@ -1,18 +1,17 @@
 package eisner
 package svg
 
-import io.circe.{Codec, Decoder, Encoder, Json}
+import io.circe.Codec
 import io.circe.generic.extras.semiauto._
 
-import scala.util.{Failure, Try}
-import scala.xml._
+import scala.util.Try
 
 final case class ViewBox(x: Double, y: Double, w: Double, h: Double) {
   override def toString: String = s"$x $y $w $h"
 }
 final object ViewBox {
   final def unapply(s: String): Option[ViewBox] = s.split(' ').toList match {
-    case x :: y :: w :: h :: Nil => Try(ViewBox(x.toDouble, y.toDouble, w.toDouble, h.toDouble)).toOption
+    case x :: y :: w :: h :: Nil => Try(ViewBox(x.dbl, y.dbl, w.dbl, h.dbl)).toOption
     case _                       => None
   }
 
@@ -55,27 +54,6 @@ object El {
 
 final case class SVG(width: String, height: String, viewBox: ViewBox, transform: String, patterns: List[Pattern], elements: List[El])
 final object SVG {
-  private[this] final def parseEllipse(n: Node): El.Ellipse =
-    El.Ellipse((n \@ "cx").toDouble, (n \@ "cy").toDouble, (n \@ "rx").toDouble, (n \@ "ry").toDouble, n \@ "stroke", 1, n \@ "fill")
-  private[this] final def parsePath(n: Node): El.Path       = El.Path(n \@ "d", n \@ "stroke", 1, n \@ "fill")
-  private[this] final def parsePolygon(n: Node): El.Polygon = El.Polygon(n \@ "points", n \@ "stroke", 1, n \@ "fill")
-  private[this] final def parseText(n: Node): El.Text =
-    El.Text((n \@ "x").toDouble, (n \@ "y").toDouble, n \@ "text-anchor", n \@ "font-family", (n \@ "font-size").toDouble, n \@ "fill", n.text)
-
-  final def fromXML(n: Node): Either[String, SVG] =
-    Try {
-      val w           = n \@ "width"
-      val h           = n \@ "height"
-      val ViewBox(vb) = n \@ "viewBox"
-      val t           = n \ "g" \@ "transform"
-      val es = (n \\ "_").collect {
-        case n @ Elem(_, "ellipse", _, _, _*) => parseEllipse(n)
-        case n @ Elem(_, "path", _, _, _*)    => parsePath(n)
-        case n @ Elem(_, "polygon", _, _, _*) => parsePolygon(n)
-        case n @ Elem(_, "text", _, _, _*)    => parseText(n)
-      }.toList
-      SVG(w, h, vb, t, List.empty, es)
-    }.toEither.left.map(_.getLocalizedMessage)
 
   implicit final val svgCodec: Codec[SVG] = deriveConfiguredCodec
   implicit final val svgWriter: Writer[SVG] = Writer.instance {
