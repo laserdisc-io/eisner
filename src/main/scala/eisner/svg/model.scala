@@ -7,7 +7,9 @@ import io.circe.generic.extras.semiauto._
 import scala.util.{Failure, Try}
 import scala.xml._
 
-final case class ViewBox(x: Double, y: Double, w: Double, h: Double)
+final case class ViewBox(x: Double, y: Double, w: Double, h: Double) {
+  override def toString: String = s"$x $y $w $h"
+}
 final object ViewBox {
   final def unapply(s: String): Option[ViewBox] = s.split(' ').toList match {
     case x :: y :: w :: h :: Nil => Try(ViewBox(x.toDouble, y.toDouble, w.toDouble, h.toDouble)).toOption
