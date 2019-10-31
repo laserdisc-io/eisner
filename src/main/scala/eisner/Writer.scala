@@ -9,7 +9,7 @@ sealed trait Writer[A] {
 object Writer {
   @inline final def apply[A](implicit ev: Writer[A]): Writer[A] = ev
   final def instance[A](f: ((A, Int)) => List[String]): Writer[A] = new Writer[A] {
-    override final def write(a: A, tabs: Int): List[String] = f(a, tabs)
+    override final def write(a: A, tabs: Int): List[String] = f(a -> tabs)
   }
   final def instancePF[A](pf: PartialFunction[(A, Int), List[String]]): Writer[A] = new Writer[A] {
     override final def write(a: A, tabs: Int): List[String] = pf.applyOrElse(a -> tabs, (_: (A, Int)) => List.empty)

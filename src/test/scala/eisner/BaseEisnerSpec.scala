@@ -2,7 +2,6 @@ package eisner
 
 import org.scalatest.{AsyncWordSpec, Matchers}
 import scala.io.Source
-import scala.xml.XML
 
 abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
 

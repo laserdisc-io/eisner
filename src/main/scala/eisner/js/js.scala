@@ -1,7 +1,5 @@
 package eisner
 
-import io.circe.Json
-
 import java.io.PrintWriter
 import javax.script.{Invocable, ScriptEngineManager}
 import java.util.concurrent.CompletionStage

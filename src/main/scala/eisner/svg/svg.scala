@@ -2,7 +2,7 @@ package eisner
 
 import io.circe.generic.extras.Configuration
 
-import scala.util.{Failure, Try}
+import scala.util.Try
 import scala.xml._
 
 package object svg {
