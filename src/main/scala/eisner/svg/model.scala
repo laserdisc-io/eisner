@@ -54,7 +54,6 @@ object El {
 
 final case class SVG(width: String, height: String, viewBox: ViewBox, transform: String, patterns: List[Pattern], elements: List[El])
 final object SVG {
-
   implicit final val svgCodec: Codec[SVG] = deriveConfiguredCodec
   implicit final val svgWriter: Writer[SVG] = Writer.instance {
     case (SVG(w, h, vb, t, ps, es), _) =>

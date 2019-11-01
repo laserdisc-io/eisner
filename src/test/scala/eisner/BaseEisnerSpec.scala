@@ -4,7 +4,6 @@ import org.scalatest.{AsyncWordSpec, Matchers}
 import scala.io.Source
 
 abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
-
   def expectedDiGraph: DiGraph
 
   lazy val txt = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.txt")).getLines.mkString("\n")
