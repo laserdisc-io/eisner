@@ -52,5 +52,6 @@ lazy val eisner = project
       "-opt-warnings"
     ),
     scriptedLaunchOpts ++= Seq("-Xmx1024M", s"-Dplugin.version=${version.value}"),
-    scriptedBufferLog := false
+    scriptedBufferLog := false,
+    Test / parallelExecution := false
   )
