@@ -3,7 +3,7 @@ package eisner
 final class SimpleTopologySpec extends BaseEisnerSpec(1) {
   override final val expectedDiGraph = DiGraph(
     List(
-      Subgraph(
+      SubGraph(
         "1",
         "Sub-\\ntopology: 1",
         Vector(
@@ -12,7 +12,7 @@ final class SimpleTopologySpec extends BaseEisnerSpec(1) {
           Edge("KTABLE-\\nTOSTREAM-\\n0000000007", "KSTREAM-\\nSINK-\\n0000000008")
         )
       ),
-      Subgraph(
+      SubGraph(
         "0",
         "Sub-\\ntopology: 0",
         Vector(

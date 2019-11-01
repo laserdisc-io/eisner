@@ -1,7 +1,7 @@
 package eisner
 package dot
 
-final case class DiGraph(subgraphs: List[Subgraph], edges: Vector[Edge], topics: Set[Topic], stores: Set[Store])
+final case class DiGraph(subgraphs: List[SubGraph], edges: Vector[Edge], topics: Set[Topic], stores: Set[Store])
 final object DiGraph {
   final val empty: DiGraph = DiGraph(Nil, Vector.empty, Set.empty, Set.empty)
 
@@ -9,7 +9,7 @@ final object DiGraph {
     case (DiGraph(sgs, es, ts, ss), _) =>
       "digraph G {" ::
         s"""${1.tabs}label = "Kafka Streams Topology"""" ::
-        Writer[List[Subgraph]].write(sgs.reverse, 1) :::
+        Writer[List[SubGraph]].write(sgs.reverse, 1) :::
         Writer[Vector[Edge]].write(es, 1) :::
         Writer[Set[Topic]].write(ts, 1) :::
         Writer[Set[Store]].write(ss, 1) :::
@@ -18,12 +18,12 @@ final object DiGraph {
   }
 }
 
-final case class Subgraph(id: String, label: String, edges: Vector[Edge])
-final object Subgraph {
-  final def empty(id: String, label: String): Subgraph = Subgraph(id, label, Vector.empty)
+final case class SubGraph(id: String, label: String, edges: Vector[Edge])
+final object SubGraph {
+  final def empty(id: String, label: String): SubGraph = SubGraph(id, label, Vector.empty)
 
-  implicit final val subgraphWriter: Writer[Subgraph] = Writer.instance {
-    case (Subgraph(id, l, es), i) =>
+  implicit final val subgraphWriter: Writer[SubGraph] = Writer.instance {
+    case (SubGraph(id, l, es), i) =>
       s"${i.tabs}subgraph cluster_$id {" ::
         s"""${(i + 1).tabs}label = "$l";""" ::
         s"${(i + 1).tabs}style = filled;" ::

@@ -3,7 +3,7 @@ package object eisner {
   final type SVG     = svg.SVG
 
   private[eisner] final val DiGraph  = dot.DiGraph
-  private[eisner] final val Subgraph = dot.Subgraph
+  private[eisner] final val SubGraph = dot.SubGraph
   private[eisner] final val Edge     = dot.Edge
   private[eisner] final val Topic    = dot.Topic
   private[eisner] final val Store    = dot.Store

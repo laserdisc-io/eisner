@@ -3,14 +3,14 @@ package eisner
 final class LeftJoinTopologySpec extends BaseEisnerSpec(2) {
   override final val expectedDiGraph = DiGraph(
     List(
-      Subgraph(
+      SubGraph(
         "1",
         "Sub-\\ntopology: 1",
         Vector(
           Edge("KTABLE-\\nSOURCE-\\n0000000000", "KTABLE-\\nSOURCE-\\n0000000001")
         )
       ),
-      Subgraph(
+      SubGraph(
         "0",
         "Sub-\\ntopology: 0",
         Vector(

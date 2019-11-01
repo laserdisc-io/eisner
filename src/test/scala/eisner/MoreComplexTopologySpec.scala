@@ -3,7 +3,7 @@ package eisner
 final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
   override final val expectedDiGraph = DiGraph(
     List(
-      Subgraph(
+      SubGraph(
         "4",
         "Sub-\\ntopology: 4",
         Vector(
@@ -12,7 +12,7 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KTABLE-\\nTOSTREAM-\\n0000000050", "KSTREAM-\\nSINK-\\n0000000051")
         )
       ),
-      Subgraph(
+      SubGraph(
         "3",
         "Sub-\\ntopology: 3",
         Vector(
@@ -39,7 +39,7 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nSOURCE-\\n0000000029", "KSTREAM-\\nREDUCE-\\n0000000026")
         )
       ),
-      Subgraph(
+      SubGraph(
         "2",
         "Sub-\\ntopology: 2",
         Vector(
@@ -49,7 +49,7 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nFILTER-\\n0000000038", "KSTREAM-\\nSINK-\\n0000000037")
         )
       ),
-      Subgraph(
+      SubGraph(
         "1",
         "Sub-\\ntopology: 1",
         Vector(
@@ -60,7 +60,7 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nFILTER-\\n0000000032", "KSTREAM-\\nSINK-\\n0000000031")
         )
       ),
-      Subgraph(
+      SubGraph(
         "0",
         "Sub-\\ntopology: 0",
         Vector(
