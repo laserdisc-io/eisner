@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="282pt" height="1397pt" viewBox="0.0 0.0 282.1 1397.47" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g transform="scale(1 1) rotate(0) translate(4 1393.4694)">
+		<text text-anchor="middle" x="137.0477" y="-8.2" font-family="Times,serif" font-size="14.0" fill="#000000">Kafka Streams Topology</text>
+		<polygon fill="#d3d3d3" stroke="#d3d3d3" stroke-width="1.0" points="8,-701.5603 8,-1339.8694 174,-1339.8694 174,-701.5603 8,-701.5603"/>
+		<text text-anchor="middle" x="91.0" y="-1323.2694" font-family="Times,serif" font-size="14.0" fill="#000000">Sub-</text>
+		<text text-anchor="middle" x="91.0" y="-1306.4694" font-family="Times,serif" font-size="14.0" fill="#000000">topology: 0</text>
+		<polygon fill="#d3d3d3" stroke="#d3d3d3" stroke-width="1.0" points="8,-111.2 8,-607.1603 174,-607.1603 174,-111.2 8,-111.2"/>
+		<text text-anchor="middle" x="91.0" y="-590.5603" font-family="Times,serif" font-size="14.0" fill="#000000">Sub-</text>
+		<text text-anchor="middle" x="91.0" y="-573.7603" font-family="Times,serif" font-size="14.0" fill="#000000">topology: 1</text>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-1248.9744" rx="61.8044" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-1261.5744" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-1244.7744" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
+		<text text-anchor="middle" x="91.0" y="-1227.9744" font-family="Times,serif" font-size="14.0" fill="#000000">0000000000</text>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-1130.3843" rx="75.2123" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-1142.9843" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-1126.1843" font-family="Times,serif" font-size="14.0" fill="#000000">TRANSFORM-</text>
+		<text text-anchor="middle" x="91.0" y="-1109.3843" font-family="Times,serif" font-size="14.0" fill="#000000">0000000001</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-1207.4973C91,-1199.3298 91,-1190.6651 91,-1182.2065"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-1182.0384 91,-1172.0384 87.5001,-1182.0385 94.5001,-1182.0384"/>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-999.9149" rx="61.8044" ry="53.3494"/>
+		<text text-anchor="middle" x="91.0" y="-1020.9149" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-1004.1149" font-family="Times,serif" font-size="14.0" fill="#000000">KEY-</text>
+		<text text-anchor="middle" x="91.0" y="-987.3149" font-family="Times,serif" font-size="14.0" fill="#000000">SELECT-</text>
+		<text text-anchor="middle" x="91.0" y="-970.5149" font-family="Times,serif" font-size="14.0" fill="#000000">0000000002</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-1088.7443C91,-1080.5969 91,-1071.882 91,-1063.2127"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-1063.0935 91,-1053.0935 87.5001,-1063.0935 94.5001,-1063.0935"/>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M274.191,-1032.888C274.191,-1036.9312 253.4875,-1040.2154 228,-1040.2154 202.5125,-1040.2154 181.809,-1036.9312 181.809,-1032.888 181.809,-1032.888 181.809,-966.9417 181.809,-966.9417 181.809,-962.8985 202.5125,-959.6143 228,-959.6143 253.4875,-959.6143 274.191,-962.8985 274.191,-966.9417 274.191,-966.9417 274.191,-1032.888 274.191,-1032.888"/>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M274.191,-1032.888C274.191,-1028.8449 253.4875,-1025.5607 228,-1025.5607 202.5125,-1025.5607 181.809,-1028.8449 181.809,-1032.888"/>
+		<text text-anchor="middle" x="228.0" y="-1012.5149" font-family="Times,serif" font-size="14.0" fill="#000000">conversation-</text>
+		<text text-anchor="middle" x="228.0" y="-995.7149" font-family="Times,serif" font-size="14.0" fill="#000000">meta-</text>
+		<text text-anchor="middle" x="228.0" y="-978.9149" font-family="Times,serif" font-size="14.0" fill="#000000">state</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M131.9678,-1095.3334C146.7399,-1082.3453 163.3682,-1067.3135 178,-1053.0893 180.3624,-1050.7927 182.7606,-1048.4142 185.1631,-1045.9939"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="187.8586,-1048.2437 192.3516,-1038.6487 182.8557,-1043.3476 187.8586,-1048.2437"/>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-869.4454" rx="61.8044" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-882.0454" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-865.2454" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
+		<text text-anchor="middle" x="91.0" y="-848.4454" font-family="Times,serif" font-size="14.0" fill="#000000">0000000005</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-946.4715C91,-938.0663 91,-929.391 91,-921.029"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-921.0237 91,-911.0238 87.5001,-921.0238 94.5001,-921.0237"/>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-750.8553" rx="61.8044" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-763.4553" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-746.6553" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
+		<text text-anchor="middle" x="91.0" y="-729.8553" font-family="Times,serif" font-size="14.0" fill="#000000">0000000004</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-827.9683C91,-819.8008 91,-811.1361 91,-802.6775"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-802.5094 91,-792.5094 87.5001,-802.5094 94.5001,-802.5094"/>
+		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="128.3135,-673.7617 53.6865,-673.7617 53.6865,-614.9589 128.3135,-614.9589 128.3135,-673.7617"/>
+		<text text-anchor="middle" x="91.0" y="-656.9603" font-family="Times,serif" font-size="14.0" fill="#000000">count-</text>
+		<text text-anchor="middle" x="91.0" y="-640.1603" font-family="Times,serif" font-size="14.0" fill="#000000">resolved-</text>
+		<text text-anchor="middle" x="91.0" y="-623.3603" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-709.3766C91,-700.9995 91,-692.2134 91,-683.9048"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-683.7027 91,-673.7027 87.5001,-683.7028 94.5001,-683.7027"/>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-516.2653" rx="61.8044" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-528.8653" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-512.0653" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
+		<text text-anchor="middle" x="91.0" y="-495.2653" font-family="Times,serif" font-size="14.0" fill="#000000">0000000006</text>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-397.6752" rx="75.1726" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-410.2752" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-393.4752" font-family="Times,serif" font-size="14.0" fill="#000000">AGGREGATE-</text>
+		<text text-anchor="middle" x="91.0" y="-376.6752" font-family="Times,serif" font-size="14.0" fill="#000000">0000000003</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-474.7882C91,-466.6207 91,-457.9559 91,-449.4974"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-449.3292 91,-439.3293 87.5001,-449.3293 94.5001,-449.3292"/>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-279.0851" rx="67.8995" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-291.6851" font-family="Times,serif" font-size="14.0" fill="#000000">KTABLE-</text>
+		<text text-anchor="middle" x="91.0" y="-274.8851" font-family="Times,serif" font-size="14.0" fill="#000000">TOSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-258.0851" font-family="Times,serif" font-size="14.0" fill="#000000">0000000007</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-356.1981C91,-348.0306 91,-339.3659 91,-330.9073"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-330.7392 91,-320.7392 87.5001,-330.7392 94.5001,-330.7392"/>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M245.9264,-302.5672C245.9264,-305.4466 231.6165,-307.7855 214,-307.7855 196.3835,-307.7855 182.0736,-305.4466 182.0736,-302.5672 182.0736,-302.5672 182.0736,-255.603 182.0736,-255.603 182.0736,-252.7237 196.3835,-250.3848 214,-250.3848 231.6165,-250.3848 245.9264,-252.7237 245.9264,-255.603 245.9264,-255.603 245.9264,-302.5672 245.9264,-302.5672"/>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M245.9264,-302.5672C245.9264,-299.6879 231.6165,-297.349 214,-297.349 196.3835,-297.349 182.0736,-299.6879 182.0736,-302.5672"/>
+		<text text-anchor="middle" x="214.0" y="-283.2851" font-family="Times,serif" font-size="14.0" fill="#000000">count-</text>
+		<text text-anchor="middle" x="214.0" y="-266.4851" font-family="Times,serif" font-size="14.0" fill="#000000">resolved</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M132.2651,-362.9243C147.0671,-349.9665 163.6385,-334.8772 178,-320.3801 179.8157,-318.5473 181.6507,-316.6393 183.4807,-314.6926"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="186.2893,-316.8081 190.4619,-307.0695 181.1269,-312.0805 186.2893,-316.8081"/>
+		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="91.0" cy="-160.495" rx="61.8044" ry="41.0911"/>
+		<text text-anchor="middle" x="91.0" y="-173.095" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
+		<text text-anchor="middle" x="91.0" y="-156.295" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
+		<text text-anchor="middle" x="91.0" y="-139.495" font-family="Times,serif" font-size="14.0" fill="#000000">0000000008</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-237.6081C91,-229.4405 91,-220.7758 91,-212.3172"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-212.1491 91,-202.1491 87.5001,-212.1492 94.5001,-212.1491"/>
+		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="122.9264,-83.4014 59.0736,-83.4014 59.0736,-24.5986 122.9264,-24.5986 122.9264,-83.4014"/>
+		<text text-anchor="middle" x="91.0" y="-66.6" font-family="Times,serif" font-size="14.0" fill="#000000">streams-</text>
+		<text text-anchor="middle" x="91.0" y="-49.8" font-family="Times,serif" font-size="14.0" fill="#000000">count-</text>
+		<text text-anchor="middle" x="91.0" y="-33.0" font-family="Times,serif" font-size="14.0" fill="#000000">resolved</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-119.0163C91,-110.6392 91,-101.8531 91,-93.5445"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-93.3424 91,-83.3425 87.5001,-93.3425 94.5001,-93.3424"/>
+		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="137.191,-1389.2713 44.809,-1389.2713 44.809,-1348.0675 137.191,-1348.0675 137.191,-1389.2713"/>
+		<text text-anchor="middle" x="91.0" y="-1372.8694" font-family="Times,serif" font-size="14.0" fill="#000000">conversation-</text>
+		<text text-anchor="middle" x="91.0" y="-1356.0694" font-family="Times,serif" font-size="14.0" fill="#000000">meta</text>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-1347.8202C91,-1334.7299 91,-1317.2307 91,-1300.5959"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-1300.3971 91,-1290.3971 87.5001,-1300.3972 94.5001,-1300.3971"/>
+		<path fill="none" stroke="#000000" stroke-width="1.0" d="M91,-614.9727C91,-601.0368 91,-583.9679 91,-567.9675"/>
+		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="94.5001,-567.6509 91,-557.6509 87.5001,-567.6509 94.5001,-567.6509"/>
+	</g>
+</svg>

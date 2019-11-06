@@ -1,0 +1,16 @@
+Topology
+Sub-topologies:
+Sub-topology: 0
+  Source: KSTREAM-SOURCE-0000000002 (topics: [skus])
+  --> KSTREAM-LEFTJOIN-0000000003
+  Processor: KSTREAM-LEFTJOIN-0000000003 (stores: [])
+  --> KSTREAM-SINK-0000000004
+  <-- KSTREAM-SOURCE-0000000002
+  Sink: KSTREAM-SINK-0000000004 (topic: skus-with-taxcode)
+  <-- KSTREAM-LEFTJOIN-0000000003
+Sub-topology: 1 for global store (will not generate tasks)
+  Source: KTABLE-SOURCE-0000000000 (topics: [taxcodes])
+  --> KTABLE-SOURCE-0000000001
+  Processor: KTABLE-SOURCE-0000000001 (stores: [tax-codes-store])
+  --> none
+  <-- KTABLE-SOURCE-0000000000
