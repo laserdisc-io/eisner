@@ -1,0 +1,26 @@
+digraph G {
+	label = "Kafka Streams Topology"
+	subgraph cluster_0 {
+		label = "Sub-\ntopology: 0";
+		style = filled;
+		color = lightgrey;
+		node [style = filled, color = white];
+		"KSTREAM-\nSOURCE-\n0000000002" -> "KSTREAM-\nLEFTJOIN-\n0000000003";
+		"KSTREAM-\nLEFTJOIN-\n0000000003" -> "KSTREAM-\nSINK-\n0000000004";
+	}
+	subgraph cluster_1 {
+		label = "Sub-\ntopology: 1";
+		style = filled;
+		color = lightgrey;
+		node [style = filled, color = white];
+		"KTABLE-\nSOURCE-\n0000000000" -> "KTABLE-\nSOURCE-\n0000000001";
+	}
+	"skus" -> "KSTREAM-\nSOURCE-\n0000000002";
+	"KSTREAM-\nSINK-\n0000000004" -> "skus-\nwith-\ntaxcode";
+	"taxcodes" -> "KTABLE-\nSOURCE-\n0000000000";
+	"KTABLE-\nSOURCE-\n0000000001" -> "tax-\ncodes-\nstore";
+	"skus" [shape = rect];
+	"skus-\nwith-\ntaxcode" [shape = rect];
+	"taxcodes" [shape = rect];
+	"tax-\ncodes-\nstore" [shape = cylinder];
+}
