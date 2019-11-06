@@ -1,9 +1,9 @@
 package eisner
 
-import org.scalatest.{AsyncWordSpec, Matchers}
+import org.scalatest.{AsyncWordSpec, EitherValues, Matchers}
 import scala.io.Source
 
-abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
+abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers with EitherValues {
   def expectedDiGraph: DiGraph
 
   lazy val txt = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.txt")).getLines.mkString("\n")
@@ -13,13 +13,13 @@ abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers {
   s"Topology #$i" when {
     "loaded from disk" must {
       "convert to a valid graph" in {
-        txt.dot shouldBe expectedDiGraph
+        txt.toDiGraph.right.value shouldBe expectedDiGraph
       }
       "convert to a valid dot" in {
-        txt.dotString shouldBe dot
+        txt.toDot.right.value shouldBe dot
       }
       "convert to a valid svg" in {
-        js.dotToSVG(txt.dotString).map(_.trim shouldBe svg)
+        txt.toSVG.map(_.trim shouldBe svg)
       }
     }
   }

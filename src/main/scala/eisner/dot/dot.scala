@@ -17,21 +17,28 @@ package object dot {
     final def unapplySeq(s: String): Option[Seq[String]] = Some(s.split(',').flatMap(Clean.unapply).filter(_ != "none"))
   }
 
-  final def toDot(s: String): DiGraph = {
-    val (g, _) = s.split('\n').foldLeft(DiGraph.empty -> (None: Option[String])) {
-      case ((DiGraph(sgs, es, ts, ss), maybeN), SubTopology(Clean(sc), id)) =>
-        DiGraph(SubGraph.empty(id, sc) :: sgs, es, ts, ss) -> maybeN
-      case ((DiGraph(sgs, es, ts, ss), _), Source(Clean(n), Links(ls @ _*))) =>
-        DiGraph(sgs, es ++ ls.map(Edge(_, n)), ts ++ ls.map(Topic(_)), ss) -> Some(n)
-      case ((DiGraph(sgs, es, ts, ss), _), Processor(Clean(n), Links(ls @ _*))) =>
-        DiGraph(sgs, es ++ ls.map(Edge(n, _)), ts, ss ++ ls.map(Store(_))) -> Some(n)
-      case ((DiGraph(sgs, es, ts, ss), _), Sink(Clean(n), Links(l))) =>
-        DiGraph(sgs, es :+ Edge(n, l), ts + Topic(l), ss) -> Some(n)
-      case ((DiGraph(SubGraph(id, la, sges) :: sgs, es, ts, ss), Some(n)), RightArrow(Links(ls @ _*))) =>
-        DiGraph(SubGraph(id, la, sges ++ ls.map(Edge(n, _))) :: sgs, es, ts, ss) -> Some(n)
-      case (acc, _) =>
-        acc
+  final def toDot(s: String): TopologyParserError | DiGraph = {
+    if (!s.startsWith("Topology"))
+      Left(TopologyParserError(s"Supplied string does not appear to be a valid topology (${s.substring(0, 15)}...)"))
+    else {
+      val (g, _) = s.split('\n').foldLeft(DiGraph.empty -> (None: Option[String])) {
+        case ((DiGraph(sgs, es, ts, ss), maybeN), SubTopology(Clean(sc), id)) =>
+          DiGraph(SubGraph.empty(id, sc) :: sgs, es, ts, ss) -> maybeN
+        case ((DiGraph(sgs, es, ts, ss), _), Source(Clean(n), Links(ls @ _*))) =>
+          DiGraph(sgs, es ++ ls.map(Edge(_, n)), ts ++ ls.map(Topic(_)), ss) -> Some(n)
+        case ((DiGraph(sgs, es, ts, ss), _), Processor(Clean(n), Links(ls @ _*))) =>
+          DiGraph(sgs, es ++ ls.map(Edge(n, _)), ts, ss ++ ls.map(Store(_))) -> Some(n)
+        case ((DiGraph(sgs, es, ts, ss), _), Sink(Clean(n), Links(l))) =>
+          DiGraph(sgs, es :+ Edge(n, l), ts + Topic(l), ss) -> Some(n)
+        case ((DiGraph(SubGraph(id, la, sges) :: sgs, es, ts, ss), Some(n)), RightArrow(Links(ls @ _*))) =>
+          DiGraph(SubGraph(id, la, sges ++ ls.map(Edge(n, _))) :: sgs, es, ts, ss) -> Some(n)
+        case (acc, _) =>
+          acc
+      }
+      if (g != DiGraph.empty)
+        Right(g)
+      else
+        Left(TopologyParserError(s"Supplied topology does not contain valid subtopologies (${s.substring(0, 15)}...)"))
     }
-    g
   }
 }

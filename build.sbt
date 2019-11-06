@@ -15,6 +15,7 @@ lazy val eisner = project
     libraryDependencies ++= Seq(
       "io.circe"               %% "circe-generic-extras" % "0.12.2",
       "io.circe"               %% "circe-parser"         % "0.12.2",
+      "io.dylemma"             %% "xml-spac"             % "0.7",
       "net.arnx"               % "nashorn-promise"       % "0.1.2",
       "org.clapper"            %% "classutil"            % "1.5.1",
       "org.scala-lang.modules" %% "scala-java8-compat"   % "0.9.0",

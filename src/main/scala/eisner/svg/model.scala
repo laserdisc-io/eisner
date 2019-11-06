@@ -10,6 +10,7 @@ final case class ViewBox(x: Double, y: Double, w: Double, h: Double) {
   override def toString: String = s"$x $y $w $h"
 }
 final object ViewBox {
+  final val empty: ViewBox = ViewBox(0.0, 0.0, 0.0, 0.0)
   final def unapply(s: String): Option[ViewBox] = s.split(' ').toList match {
     case x :: y :: w :: h :: Nil => Try(ViewBox(x.dbl, y.dbl, w.dbl, h.dbl)).toOption
     case _                       => None
@@ -32,22 +33,25 @@ object Pattern {
 
 sealed trait El extends Product with Serializable
 object El {
-  final case class Ellipse(cx: Double, cy: Double, rx: Double, ry: Double, stroke: String, strokeWidth: Double, fill: String)    extends El
-  final case class Path(d: String, stroke: String, strokeWidth: Double, fill: String)                                            extends El
-  final case class Polygon(points: String, stroke: String, strokeWidth: Double, fill: String)                                    extends El
-  final case class Text(x: Double, y: Double, anchor: String, fontFamily: String, fontSize: Double, fill: String, value: String) extends El
+  final case class Ellipse(fill: String, stroke: String, strokeWidth: Double, cx: Double, cy: Double, rx: Double, ry: Double)    extends El
+  final case class Path(fill: String, stroke: String, strokeWidth: Double, d: String)                                            extends El
+  final case class Polygon(fill: String, stroke: String, strokeWidth: Double, points: String)                                    extends El
+  final case class Text(anchor: String, x: Double, y: Double, fontFamily: String, fontSize: Double, fill: String, value: String) extends El
 
   object Path {
     implicit final val pathCodec: Codec[Path] = deriveConfiguredCodec
     implicit final val pathWriter: Writer[Path] = Writer.instance {
-      case (Path(d, s, sw, f), i) => s"""${i.tabs}<path d="$d" stroke="$s" stroke-width="$sw" fill="$f"/>""" :: Nil
+      case (Path(f, s, sw, d), i) => s"""${i.tabs}<path fill="$f" stroke="$s" stroke-width="$sw" d="$d"/>""" :: Nil
     }
   }
 
   implicit final val elCodec: Codec[El] = deriveConfiguredCodec
-  implicit final val elWriter: Writer[El] = Writer.instancePF {
-    case (p: Path, i) => Writer[Path].write(p, i)
-    case (Text(x, y, a, ff, fs, f, v), i) =>
+  implicit final val elWriter: Writer[El] = Writer.instance {
+    case (Ellipse(f, s, sw, cx, cy, rx, ry), i) =>
+      s"""${i.tabs}<ellipse fill="$f" stroke="$s" stroke-width="$sw" cx="$cx" cy="$cy" rx="$rx" ry="$ry"/>""" :: Nil
+    case (p: Path, i)              => Writer[Path].write(p, i)
+    case (Polygon(f, s, sw, p), i) => s"""${i.tabs}<polygon fill="$f" stroke="$s" stroke-width="$sw" points="$p"/>""" :: Nil
+    case (Text(a, x, y, ff, fs, f, v), i) =>
       s"""${i.tabs}<text text-anchor="$a" x="$x" y="$y" font-family="$ff" font-size="$fs" fill="$f">$v</text>""" :: Nil
   }
 }
@@ -56,8 +60,17 @@ final case class SVG(width: String, height: String, viewBox: ViewBox, transform:
 final object SVG {
   implicit final val svgCodec: Codec[SVG] = deriveConfiguredCodec
   implicit final val svgWriter: Writer[SVG] = Writer.instance {
+    case (SVG(w, h, vb, t, Nil, es), _) =>
+      s"""<?xml version="1.0" encoding="UTF-8" standalone="no"?>""" ::
+        s"""<svg width="$w" height="$h" viewBox="$vb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">""" ::
+        s"""${1.tabs}<g transform="$t">""" ::
+        Writer[List[El]].write(es, 2) :::
+        s"${1.tabs}</g>" ::
+        "</svg>" ::
+        Nil
     case (SVG(w, h, vb, t, ps, es), _) =>
-      s"""<svg width="$w" height="$h" viewBox="$vb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">""" ::
+      s"""<?xml version="1.0" encoding="UTF-8" standalone="no"?>""" ::
+        s"""<svg width="$w" height="$h" viewBox="$vb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">""" ::
         s"${1.tabs}<defs>" ::
         Writer[List[Pattern]].write(ps, 2) :::
         s"${1.tabs}</defs>" ::
