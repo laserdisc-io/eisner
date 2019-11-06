@@ -56,8 +56,19 @@ object El {
   }
 }
 
-final case class SVG(width: String, height: String, viewBox: ViewBox, transform: String, patterns: List[Pattern], elements: List[El])
+final case class SVG(width: String, height: String, viewBox: ViewBox, transform: String, patterns: List[Pattern], elements: List[El]) {
+  final def simplified: SVG = {
+    import shapeless._
+    val simpleSVG = everywhere(SVG.trimDoubles)(this)
+    simpleSVG
+  }
+}
 final object SVG {
+  import shapeless.poly._
+  private[this] final val decimalsPattern = """\.(\d{2})\d+(\D?)""".r
+
+  private object trimDoubles extends ->((s: String) => decimalsPattern.replaceAllIn(s, ".$1$2"))
+
   implicit final val svgCodec: Codec[SVG] = deriveConfiguredCodec
   implicit final val svgWriter: Writer[SVG] = Writer.instance {
     case (SVG(w, h, vb, t, Nil, es), _) =>

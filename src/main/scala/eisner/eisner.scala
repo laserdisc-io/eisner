@@ -28,6 +28,10 @@ package object eisner {
       case Left(tpe) => Future.failed(tpe)
       case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.xml)))
     }
+    final def toSimplifiedRoughSVG(implicit ec: ExecutionContext): Future[String] = toDiGraph match {
+      case Left(tpe) => Future.failed(tpe)
+      case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.simplified.xml)))
+    }
   }
   private[eisner] implicit final class DiGraphOps(private val dg: DiGraph) extends AnyVal {
     import scala.concurrent.{ExecutionContext, Future}
