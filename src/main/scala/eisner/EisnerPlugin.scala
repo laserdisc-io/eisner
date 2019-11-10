@@ -34,7 +34,7 @@ object EisnerPlugin extends AutoPlugin {
     else {
       val tClass     = Class.forName(topology.name, true, cl)
       val describeM  = tClass.getSuperclass.getDeclaredMethod("describe")
-      val tDescr     = describeM.invoke(tClass.newInstance)
+      val tDescr     = describeM.invoke(tClass.getDeclaredConstructor().newInstance())
       val subtopoM   = tDescr.getClass.getDeclaredMethod("subtopologies")
       val setSubtopo = subtopoM.invoke(tDescr)
       val isEmptyM   = setSubtopo.getClass.getSuperclass.getDeclaredMethod("isEmpty")
