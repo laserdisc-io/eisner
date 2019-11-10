@@ -18,8 +18,8 @@ package object dot {
   }
 
   final def toDot(s: String): TopologyParserError | DiGraph = {
-    if (!s.startsWith("Topology"))
-      Left(TopologyParserError(s"Supplied string does not appear to be a valid topology (${s.substring(0, 15)}...)"))
+    if (!s.startsWith("Topolog"))
+      Left(TopologyParserError(s"Supplied string does not appear to be a valid topology (${s.substring(0, 10)}...)"))
     else {
       val (g, _) = s.split('\n').foldLeft(DiGraph.empty -> (None: Option[String])) {
         case ((DiGraph(sgs, es, ts, ss), maybeN), SubTopology(Clean(sc), id)) =>
@@ -38,7 +38,7 @@ package object dot {
       if (g != DiGraph.empty)
         Right(g)
       else
-        Left(TopologyParserError(s"Supplied topology does not contain valid subtopologies (${s.substring(0, 15)}...)"))
+        Left(TopologyParserError(s"Supplied topology does not contain valid subtopologies (${s.substring(0, 10)}...)"))
     }
   }
 }

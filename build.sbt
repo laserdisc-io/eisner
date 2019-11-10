@@ -1,3 +1,5 @@
+val `scala 2.12` = "2.12.10"
+
 inThisBuild {
   Seq(
     organization := "io.laserdisc",
@@ -11,13 +13,15 @@ lazy val eisner = project
   .in(file("."))
   .enablePlugins(SbtPlugin)
   .settings(
-    name := "eisner",
+    name := "sbt-eisner",
+    scalaVersion := `scala 2.12`,
     libraryDependencies ++= Seq(
       "com.chuusai"            %% "shapeless"            % "2.3.3",
       "io.circe"               %% "circe-generic-extras" % "0.12.2",
       "io.circe"               %% "circe-parser"         % "0.12.2",
       "io.dylemma"             %% "xml-spac"             % "0.7",
       "net.arnx"               % "nashorn-promise"       % "0.1.2",
+      "org.apache.kafka"       % "kafka-streams"         % "2.3.1",
       "org.clapper"            %% "classutil"            % "1.5.1",
       "org.scala-lang.modules" %% "scala-java8-compat"   % "0.9.0",
       "org.scalatest"          %% "scalatest"            % "3.0.8" % Test
@@ -55,5 +59,8 @@ lazy val eisner = project
     ),
     scriptedLaunchOpts ++= Seq("-Xmx1024M", s"-Dplugin.version=${version.value}"),
     scriptedBufferLog := false,
-    Test / parallelExecution := false
+    Test / parallelExecution := false,
+    addCommandAlias("fmt", ";scalafmt;test:scalafmt;scalafmtSbt"),
+    addCommandAlias("fmtCheck", ";scalafmtCheck;test:scalafmtCheck;scalafmtSbtCheck"),
+    addCommandAlias("fullBuild", ";fmtCheck;clean;test")
   )
