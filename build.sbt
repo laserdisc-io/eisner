@@ -1,3 +1,5 @@
+val `scala 2.12` = "2.12.10"
+
 inThisBuild {
   Seq(
     organization := "io.laserdisc",
@@ -12,6 +14,7 @@ lazy val eisner = project
   .enablePlugins(SbtPlugin)
   .settings(
     name := "sbt-eisner",
+    scalaVersion := `scala 2.12`,
     libraryDependencies ++= Seq(
       "io.circe"               %% "circe-generic-extras" % "0.12.2",
       "io.circe"               %% "circe-parser"         % "0.12.2",
