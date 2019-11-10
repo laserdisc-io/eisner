@@ -55,5 +55,8 @@ lazy val eisner = project
     ),
     scriptedLaunchOpts ++= Seq("-Xmx1024M", s"-Dplugin.version=${version.value}"),
     scriptedBufferLog := false,
-    Test / parallelExecution := false
+    Test / parallelExecution := false,
+    addCommandAlias("fmt", ";scalafmt;test:scalafmt;scalafmtSbt"),
+    addCommandAlias("fmtCheck", ";scalafmtCheck;test:scalafmtCheck;scalafmtSbtCheck"),
+    addCommandAlias("fullBuild", ";fmtCheck;clean;test")
   )
