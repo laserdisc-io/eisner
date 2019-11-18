@@ -6,3 +6,4 @@ libraryDependencies ++= Seq(
 )
 
 enablePlugins(EisnerPlugin)
+eisnerTopologies := Seq("explicit.inheritance.EisnerTopology")
