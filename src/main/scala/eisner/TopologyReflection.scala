@@ -1,51 +1,13 @@
 package eisner
 
-import java.lang.reflect.{Field, Method}
 import java.util.function.Supplier
 
 import org.apache.kafka.streams.Topology
 import org.clapper.classutil.ClassInfo
 import sbt.util.Logger
-import java.lang.reflect.Constructor
-
-private object TopologyReflection {
-  implicit final class ConstructorOps(private val c: Constructor[_]) extends AnyVal {
-    final def initialize: AnyRef = {
-      val switched = if (!c.isAccessible) {
-        c.setAccessible(true)
-        true
-      } else false
-      val res = c.newInstance().asInstanceOf[AnyRef]
-      if (switched) c.setAccessible(false)
-      res
-    }
-  }
-  implicit final class FieldOps(private val f: Field) extends AnyVal {
-    final def inside(i: AnyRef): AnyRef = {
-      val switched = if (!f.isAccessible) {
-        f.setAccessible(true)
-        true
-      } else false
-      val res = f.get(i)
-      if (switched) f.setAccessible(false)
-      res
-    }
-  }
-  implicit final class MethodOps(private val m: Method) extends AnyVal {
-    final def inside(i: AnyRef): AnyRef = {
-      val switched = if (!m.isAccessible) {
-        m.setAccessible(true)
-        true
-      } else false
-      val res = m.invoke(i)
-      if (switched) m.setAccessible(false)
-      res
-    }
-  }
-}
 
 private[eisner] trait TopologyReflection {
-  import TopologyReflection._
+  import Accessibility._
 
   private[this] final val dotRegex                             = "\\.".r
   private[this] final val function0ClassName                   = classOf[Function0[_]].getName
