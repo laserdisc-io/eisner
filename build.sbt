@@ -1,5 +1,12 @@
 val `scala 2.12` = "2.12.10"
 
+val MajorVersionRegex = """(\d+)(?:.+)?""".r
+val jdkMajorVersion: Int = System.getProperty("java.version") match {
+  case MajorVersionRegex(version) => version.toInt
+  case _                          => throw new RuntimeException("Couldn't parse major Java version")
+}
+def isJDK9Plus = jdkMajorVersion >= 9
+
 inThisBuild {
   Seq(
     organization := "io.laserdisc",
@@ -14,6 +21,7 @@ lazy val eisner = project
   .enablePlugins(SbtPlugin)
   .settings(
     name := "sbt-eisner",
+    Compile / unmanagedSourceDirectories += (Compile / sourceDirectory).value / (if (isJDK9Plus) "scala-jdk9+" else "scala-jdk8-"),
     scalaVersion := `scala 2.12`,
     libraryDependencies ++= Seq(
       "com.chuusai"            %% "shapeless"            % "2.3.3",
@@ -62,5 +70,5 @@ lazy val eisner = project
     Test / parallelExecution := false,
     addCommandAlias("fmt", ";scalafmt;test:scalafmt;scalafmtSbt"),
     addCommandAlias("fmtCheck", ";scalafmtCheck;test:scalafmtCheck;scalafmtSbtCheck"),
-    addCommandAlias("fullBuild", ";fmtCheck;clean;test")
+    addCommandAlias("fullBuild", ";fmtCheck;clean;test;scripted")
   )
