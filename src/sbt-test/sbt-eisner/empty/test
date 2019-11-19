@@ -1,0 +1,4 @@
+# invoke SVG creation
+> eisner
+# check that the SVG is not created (topology is empty)
+$ absent target/streams/_global/eisner/_global/streams/EmptyTopology.svg

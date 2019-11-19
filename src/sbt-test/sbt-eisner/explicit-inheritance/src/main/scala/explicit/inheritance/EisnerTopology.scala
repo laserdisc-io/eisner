@@ -1,8 +1,10 @@
+package explicit.inheritance
+
 import org.apache.kafka.common.serialization.Serdes
 import org.apache.kafka.streams.Topology
 import org.apache.kafka.streams.processor.{StreamPartitioner, WallclockTimestampExtractor}
 
-final class MyTopology extends Topology {
+final class EisnerTopology extends Topology {
   addSource(
     Topology.AutoOffsetReset.EARLIEST,
     "sensor-a",

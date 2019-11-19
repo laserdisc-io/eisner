@@ -1,3 +1,0 @@
-# check if the SVG gets created
-> eisner
-$ exists target/streams/_global/eisner/_global/streams/MyTopology.svg
