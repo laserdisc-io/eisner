@@ -6,7 +6,7 @@ import org.apache.kafka.streams.Topology
 import org.clapper.classutil.ClassInfo
 import sbt.util.Logger
 
-private[eisner] trait TopologyReflection {
+private[eisner] trait ReflectionSupport {
   import Accessibility._
 
   private[this] final val dotRegex                             = "\\.".r
