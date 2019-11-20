@@ -117,3 +117,12 @@ Currently, Eisner supports a handful of options, namely:
 
 - `eisnerTopologies`: a `Seq[String]` representing the fully qualified names of classes implementing `org.apache.kafka.streams.Topology`. This is useful in all cases where you need to control which SVGs get generated
 - `eisnerTopologiesSnippet`: a `Option[String]` representing a Scala snippet (inclusive of all necessary imports) that evaluates to a `Seq[(String, org.apache.kafka.streams.Topology)]`, where the `String` represents the `package.name` you want to give to the target file (dots will be converted to path separators). This is useful in all cases where automatic classloader scanning would not work, e.g. because you define your topologies in non zero-args methods or in fields that return `scala.Function1`. See [here](https://raw.githubusercontent.com/laserdisc-io/eisner/master/src/sbt-test/sbt-eisner/snippet/src/main/scala/snippet/EisnerTopology.scala) for a practical example.
+
+## License
+
+Eisner is licensed under the **[MIT License](LICENSE)** (the "License"); you may not use this software except in
+compliance with the License.
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations under the License.
