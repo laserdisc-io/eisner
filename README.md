@@ -8,7 +8,7 @@ Eisner is a Kafka (Streams' topologies) translator
 Kafka Stream's topologies can quickly become complex to grok without picturing them visually.
 
 Eisner fills this gap by offering to developers an sbt plugin to create a graphical representation of Kafka Stream's Topology(ies).
-It took ideas and inspiration inspiration from this online tool [https://zz85.github.io/kafka-streams-viz/](https://zz85.github.io/kafka-streams-viz/) by Joshua Koo.
+It took ideas and inspiration from [this](https://zz85.github.io/kafka-streams-viz/) online tool by Joshua Koo.
 
 For example, assuming the following topology description:
 
@@ -80,20 +80,21 @@ digraph G {
 }
 ```
 
-then, leveraging the JS wrapper of `graphviz` (see [here](https://github.com/mdaines/viz.js)), it will convert it into the following [`SVG`](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics):
+then, leveraging the JS wrapper of `graphviz` (see [here](https://github.com/mdaines/viz.js)), Eisner will convert it into the following [`SVG`](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics):
 
-![topology](https://raw.githubusercontent.com/laserdisc-io/eisner/master/src/test/resources/topology1.svg?sanitize=true)
+<img src="https://raw.githubusercontent.com/laserdisc-io/eisner/master/src/test/resources/topology1.svg?sanitize=true" width="141" height="699"/>
 
 and ultimately, it will add some "hand drawn" feeling to it using [roughjs](https://roughjs.com/), to turn it into a new `SVG` like the following:
 
-![topology](https://raw.githubusercontent.com/laserdisc-io/eisner/master/src/test/resources/topology1-rough.svg?sanitize=true)
+<img src="https://raw.githubusercontent.com/laserdisc-io/eisner/master/src/test/resources/topology1-rough.svg?sanitize=true" width="141" height="699"/>
 
 ## Usage
 
-Import the plugin placing the following line in `project/plugins.sbt`:
+Import the plugin by placing the following line in `project/plugins.sbt`:
 
 ```
-addSbtPlugin("io.laserdisc" %% "sbt-eisner" % version) // check current version on Maven Central (or badge above)
+// check the current version on Maven Central (or use the badge above)
+addSbtPlugin("io.laserdisc" %% "sbt-eisner" % version)
 ```
 
 Then, in your `build.sbt`, enable Eisner by adding the following to your module/project where your Kafka Stream's Topology(ies) definitions are:
