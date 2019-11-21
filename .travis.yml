@@ -5,6 +5,8 @@ language: scala
 scala:
   - 2.12.10
 
+sbt_args: -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false
+
 jdk:
   - openjdk8
   - openjdk11
@@ -20,9 +22,8 @@ stages:
 jobs:
   include:
     - env: STEP="unit"
-      script: sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION clean test
     - env: STEP="scripted"
-      script: sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION clean scripted
+      script: sbt ++$TRAVIS_SCALA_VERSION clean scripted
     - stage: release
       jdk: openjdk8
       script: sbt ci-release
