@@ -101,7 +101,7 @@ addSbtPlugin("io.laserdisc" %% "sbt-eisner" % version)
 Then, in your `build.sbt`, enable Eisner by adding the following to your module/project where your Kafka Stream's Topology(ies) definitions are:
 
 ```
-enablePlugins(Eisner)
+enablePlugins(EisnerPlugin)
 ```
 
 Finally, trigger Eisner's Topology to SVG translation by running within sbt:
