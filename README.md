@@ -1,5 +1,6 @@
 # Eisner
 [![Build Status](https://travis-ci.org/laserdisc-io/eisner.svg?branch=master)](https://travis-ci.org/laserdisc-io/eisner)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.laserdisc/sbt-eisner/badge.svg?kill_cache=1&color=orange)](https://search.maven.org/artifact/io.laserdisc/sbt-eisner/)
 
 Eisner is a Kafka (Streams' topologies) translator
 
@@ -103,6 +104,12 @@ Then, in your `build.sbt`, enable Eisner by adding the following to your module/
 enablePlugins(Eisner)
 ```
 
+Finally, trigger Eisner's Topology to SVG translation by running within sbt:
+
+```
+sbt> eisner
+```
+
 That's it (_potentially_)! Eisner is capable of scanning your classes searching for:
 - zero-arg constructor classes that extend `org.apache.kafka.streams.Topology`
 - fields or zero-arg methods that return `org.apache.kafka.streams.Topology`
@@ -110,6 +117,7 @@ That's it (_potentially_)! Eisner is capable of scanning your classes searching 
 - fields or zero-arg methods that return `java.util.function.Supplier[org.apache.kafka.streams.Topology]`
 
 SVGs will be created for each, named after the class(+field/method) that defines the Topology.
+Currently, files are generated in `target/streams/_global/eisner/_global/streams/`.
 
 ## Tweaking with it
 
