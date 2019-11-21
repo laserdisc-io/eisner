@@ -19,15 +19,9 @@ stages:
 
 jobs:
   include:
-    - name: formatting
-      env: STEP="check format"
-      jdk: openjdk8
-      script: sbt fmtCheck
-    - name: unit
-      env: STEP="unit tests"
+    - env: STEP="unit"
       script: sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION clean test
-    - name: scripted
-      env: STEP="scripted tests"
+    - env: STEP="scripted"
       script: sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION clean scripted
     - stage: release
       jdk: openjdk8
