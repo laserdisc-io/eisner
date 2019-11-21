@@ -21,9 +21,12 @@ stages:
 
 jobs:
   include:
-    - env: STEP="unit"
     - env: STEP="scripted"
-      script: sbt ++$TRAVIS_SCALA_VERSION clean scripted
+      jdk: openjdk8
+      script: sbt ++$TRAVIS_SCALA_VERSION scripted
+    - env: STEP="scripted"
+      jdk: openjdk11
+      script: sbt ++$TRAVIS_SCALA_VERSION scripted
     - stage: release
       jdk: openjdk8
       script: sbt ci-release
