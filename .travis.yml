@@ -9,8 +9,29 @@ jdk:
   - openjdk8
   - openjdk11
 
-script:
-  - sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION fullBuild
+before_install:
+  - git fetch --tags
+
+stages:
+  - name: test
+  - name: release
+    if: ((branch = master AND type = push) OR (tag IS present)) AND NOT fork
+
+jobs:
+  include:
+    - name: formatting
+      env: STEP="check format"
+      jdk: openjdk8
+      script: sbt fmtCheck
+    - name: unit
+      env: STEP="unit tests"
+      script: sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION clean test
+    - name: scripted
+      env: STEP="scripted tests"
+      script: sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION clean scripted
+    - stage: release
+      jdk: openjdk8
+      script: sbt ci-release
 
 cache:
   directories:
