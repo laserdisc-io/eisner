@@ -5,12 +5,35 @@ language: scala
 scala:
   - 2.12.10
 
+sbt_args: -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false
+
 jdk:
   - openjdk8
   - openjdk11
 
-script:
-  - sbt -Dfile.encoding=UTF8 -Dsbt.color=always -Dsbt.supershell=false ++$TRAVIS_SCALA_VERSION fullBuild
+before_install:
+  - git fetch --tags
+
+stages:
+  - name: format
+  - name: test
+  - name: release
+    if: ((branch = master AND type = push) OR (tag IS present)) AND NOT fork
+
+jobs:
+  include:
+    - stage: format
+      script: sbt fmtCheck
+    - stage: test
+      env: STEP="scripted"
+      jdk: openjdk8
+      script: sbt ++$TRAVIS_SCALA_VERSION scripted
+    - env: STEP="scripted"
+      jdk: openjdk11
+      script: sbt ++$TRAVIS_SCALA_VERSION scripted
+    - stage: release
+      jdk: openjdk8
+      script: sbt ci-release
 
 cache:
   directories:
