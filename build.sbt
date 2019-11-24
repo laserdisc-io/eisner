@@ -25,7 +25,7 @@ lazy val eisner = project
     scalaVersion := `scala 2.12`,
     libraryDependencies ++= Seq(
       "io.circe"               %% "circe-generic-extras" % "0.12.2",
-      "io.circe"               %% "circe-parser"         % "0.12.2",
+      "io.circe"               %% "circe-parser"         % "0.12.3",
       "io.dylemma"             %% "xml-spac"             % "0.7",
       "net.arnx"               % "nashorn-promise"       % "0.1.2",
       "org.apache.kafka"       % "kafka-streams"         % "2.3.1",
