@@ -31,7 +31,7 @@ lazy val eisner = project
       "org.apache.kafka"       % "kafka-streams"         % "2.3.1",
       "org.clapper"            %% "classutil"            % "1.5.1",
       "org.scala-lang.modules" %% "scala-java8-compat"   % "0.9.0",
-      "org.scalatest"          %% "scalatest"            % "3.0.8" % Test
+      "org.scalatest"          %% "scalatest"            % "3.1.0" % Test
     ),
     scalacOptions := Seq(
       "-deprecation",
