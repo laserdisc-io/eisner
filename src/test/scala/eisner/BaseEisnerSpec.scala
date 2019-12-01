@@ -1,7 +1,9 @@
 package eisner
 
-import org.scalatest.{AsyncWordSpec, EitherValues, Matchers}
+import org.scalatest.EitherValues
 import scala.io.Source
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AsyncWordSpec
 
 abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers with EitherValues {
   def expectedDiGraph: DiGraph
