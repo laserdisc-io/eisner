@@ -23,19 +23,19 @@ package object eisner {
     import io.circe.parser.decode
     import scala.concurrent.{ExecutionContext, Future}
 
-    private[eisner] final def toDiGraph: TopologyParserError | DiGraph = dot.toDot(s)
-    private[eisner] final def decodeSVG: SVGParserError | SVG          = decode[SVG](s).left.map(e => SVGParserError(e.getLocalizedMessage()))
+    private[eisner] final def toDiGraph(c: Config): TopologyParserError | DiGraph = dot.toDot(c, s)
+    private[eisner] final def decodeSVG: SVGParserError | SVG                     = decode[SVG](s).left.map(e => SVGParserError(e.getLocalizedMessage()))
 
-    final def toDot: TopologyParserError | String = toDiGraph.map(_.dot)
-    final def toSVG(implicit ec: ExecutionContext): Future[String] = toDiGraph match {
+    final def toDot(c: Config): TopologyParserError | String = toDiGraph(c).map(_.dot)
+    final def toSVG(c: Config)(implicit ec: ExecutionContext): Future[String] = toDiGraph(c) match {
       case Left(tpe) => Future.failed(tpe)
       case Right(dg) => dg.simpleSVG.map(_.xml)
     }
-    final def toRoughSVG(implicit ec: ExecutionContext): Future[String] = toDiGraph match {
+    final def toRoughSVG(c: Config)(implicit ec: ExecutionContext): Future[String] = toDiGraph(c) match {
       case Left(tpe) => Future.failed(tpe)
       case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.xml)))
     }
-    final def toSimplifiedRoughSVG(implicit ec: ExecutionContext): Future[String] = toDiGraph match {
+    final def toSimplifiedRoughSVG(c: Config)(implicit ec: ExecutionContext): Future[String] = toDiGraph(c) match {
       case Left(tpe) => Future.failed(tpe)
       case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.simplified.xml)))
     }

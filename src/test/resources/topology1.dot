@@ -25,9 +25,9 @@ digraph G {
 	"count-\nresolved-\nrepartition" -> "KSTREAM-\nSOURCE-\n0000000006";
 	"KSTREAM-\nAGGREGATE-\n0000000003" -> "count-\nresolved";
 	"KSTREAM-\nSINK-\n0000000008" -> "streams-\ncount-\nresolved";
-	"conversation-\nmeta" [shape = rect];
-	"count-\nresolved-\nrepartition" [shape = rect];
-	"streams-\ncount-\nresolved" [shape = rect];
-	"conversation-\nmeta-\nstate" [shape = cylinder];
-	"count-\nresolved" [shape = cylinder];
+	"conversation-\nmeta" [shape = rect; color = black];
+	"count-\nresolved-\nrepartition" [shape = rect; color = black];
+	"streams-\ncount-\nresolved" [shape = rect; color = black];
+	"conversation-\nmeta-\nstate" [shape = cylinder; color = black];
+	"count-\nresolved" [shape = cylinder; color = black];
 }

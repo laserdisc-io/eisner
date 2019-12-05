@@ -15,7 +15,8 @@ final class ComplexTopologySpec extends BaseEisnerSpec(3) {
           Edge("KTABLE-\\nMAPVALUES-\\n0000000015", "KTABLE-\\nTOSTREAM-\\n0000000016"),
           Edge("KTABLE-\\nTOSTREAM-\\n0000000008", "KSTREAM-\\nSINK-\\n0000000009"),
           Edge("KTABLE-\\nTOSTREAM-\\n0000000016", "KSTREAM-\\nSINK-\\n0000000017")
-        )
+        ),
+        "lightgrey"
       ),
       SubGraph(
         "0",
@@ -24,7 +25,8 @@ final class ComplexTopologySpec extends BaseEisnerSpec(3) {
           Edge("KSTREAM-\\nSOURCE-\\n0000000000", "KSTREAM-\\nKEY-\\nSELECT-\\n0000000001"),
           Edge("KSTREAM-\\nKEY-\\nSELECT-\\n0000000001", "KSTREAM-\\nFILTER-\\n0000000019"),
           Edge("KSTREAM-\\nFILTER-\\n0000000019", "KSTREAM-\\nSINK-\\n0000000018")
-        )
+        ),
+        "lightgrey"
       )
     ),
     Vector(
@@ -37,14 +39,14 @@ final class ComplexTopologySpec extends BaseEisnerSpec(3) {
       Edge("KSTREAM-\\nSINK-\\n0000000017", "windowed-\\ncount")
     ),
     Set(
-      Topic("streams-\\nplaintext-\\ninput"),
-      Topic("count-\\nstore-\\nrepartition"),
-      Topic("count-\\ntopic"),
-      Topic("windowed-\\ncount")
+      Topic("streams-\\nplaintext-\\ninput", "black"),
+      Topic("count-\\nstore-\\nrepartition", "black"),
+      Topic("count-\\ntopic", "black"),
+      Topic("windowed-\\ncount", "black")
     ),
     Set(
-      Store("count-\\nstore"),
-      Store("windowed-\\ncount-\\nstore")
+      Store("count-\\nstore", "black"),
+      Store("windowed-\\ncount-\\nstore", "black")
     )
   )
 }

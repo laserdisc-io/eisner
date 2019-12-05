@@ -30,10 +30,10 @@ digraph G {
 	"KSTREAM-\nAGGREGATE-\n0000000010" -> "windowed-\ncount-\nstore";
 	"KSTREAM-\nSINK-\n0000000009" -> "count-\ntopic";
 	"KSTREAM-\nSINK-\n0000000017" -> "windowed-\ncount";
-	"streams-\nplaintext-\ninput" [shape = rect];
-	"count-\nstore-\nrepartition" [shape = rect];
-	"count-\ntopic" [shape = rect];
-	"windowed-\ncount" [shape = rect];
-	"count-\nstore" [shape = cylinder];
-	"windowed-\ncount-\nstore" [shape = cylinder];
+	"streams-\nplaintext-\ninput" [shape = rect; color = black];
+	"count-\nstore-\nrepartition" [shape = rect; color = black];
+	"count-\ntopic" [shape = rect; color = black];
+	"windowed-\ncount" [shape = rect; color = black];
+	"count-\nstore" [shape = cylinder; color = black];
+	"windowed-\ncount-\nstore" [shape = cylinder; color = black];
 }
