@@ -8,7 +8,8 @@ final class LeftJoinTopologySpec extends BaseEisnerSpec(2) {
         "Sub-\\ntopology: 1",
         Vector(
           Edge("KTABLE-\\nSOURCE-\\n0000000000", "KTABLE-\\nSOURCE-\\n0000000001")
-        )
+        ),
+        "lightgrey"
       ),
       SubGraph(
         "0",
@@ -16,7 +17,8 @@ final class LeftJoinTopologySpec extends BaseEisnerSpec(2) {
         Vector(
           Edge("KSTREAM-\\nSOURCE-\\n0000000002", "KSTREAM-\\nLEFTJOIN-\\n0000000003"),
           Edge("KSTREAM-\\nLEFTJOIN-\\n0000000003", "KSTREAM-\\nSINK-\\n0000000004")
-        )
+        ),
+        "lightgrey"
       )
     ),
     Vector(
@@ -26,12 +28,12 @@ final class LeftJoinTopologySpec extends BaseEisnerSpec(2) {
       Edge("KTABLE-\\nSOURCE-\\n0000000001", "tax-\\ncodes-\\nstore")
     ),
     Set(
-      Topic("skus"),
-      Topic("skus-\\nwith-\\ntaxcode"),
-      Topic("taxcodes")
+      Topic("skus", "black"),
+      Topic("skus-\\nwith-\\ntaxcode", "black"),
+      Topic("taxcodes", "black")
     ),
     Set(
-      Store("tax-\\ncodes-\\nstore")
+      Store("tax-\\ncodes-\\nstore", "black")
     )
   )
 }

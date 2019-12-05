@@ -18,16 +18,16 @@ final object DiGraph {
   }
 }
 
-final case class SubGraph(id: String, label: String, edges: Vector[Edge])
+final case class SubGraph(id: String, label: String, edges: Vector[Edge], color: String)
 final object SubGraph {
-  final def empty(id: String, label: String): SubGraph = SubGraph(id, label, Vector.empty)
+  final def empty(id: String, label: String, color: String): SubGraph = SubGraph(id, label, Vector.empty, color)
 
   implicit final val subgraphWriter: Writer[SubGraph] = Writer.instance {
-    case (SubGraph(id, l, es), i) =>
+    case (SubGraph(id, l, es, c), i) =>
       s"${i.tabs}subgraph cluster_$id {" ::
         s"""${(i + 1).tabs}label = "$l";""" ::
         s"${(i + 1).tabs}style = filled;" ::
-        s"${(i + 1).tabs}color = lightgrey;" ::
+        s"${(i + 1).tabs}color = $c;" ::
         s"${(i + 1).tabs}node [style = filled, color = white];" ::
         Writer[Vector[Edge]].write(es, i + 1) :::
         s"${i.tabs}}" ::
@@ -40,12 +40,14 @@ final object Edge {
   implicit final val edgeWriter: Writer[Edge] = Writer.instance { case (Edge(f, t), i) => s"""${i.tabs}"$f" -> "$t";""" :: Nil }
 }
 
-final case class Topic(name: String) extends AnyVal
+final case class Topic(name: String, color: String)
 final object Topic {
-  implicit final val topicWriter: Writer[Topic] = Writer.instance { case (Topic(t), i) => s"""${i.tabs}"$t" [shape = rect];""" :: Nil }
+  implicit final val topicWriter: Writer[Topic] = Writer.instance { case (Topic(t, c), i) => s"""${i.tabs}"$t" [shape = rect; color = $c];""" :: Nil }
 }
 
-final case class Store(name: String) extends AnyVal
+final case class Store(name: String, color: String)
 final object Store {
-  implicit final val storeWriter: Writer[Store] = Writer.instance { case (Store(s), i) => s"""${i.tabs}"$s" [shape = cylinder];""" :: Nil }
+  implicit final val storeWriter: Writer[Store] = Writer.instance {
+    case (Store(s, c), i) => s"""${i.tabs}"$s" [shape = cylinder; color = $c];""" :: Nil
+  }
 }

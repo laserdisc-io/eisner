@@ -10,7 +10,8 @@ final class SimpleTopologySpec extends BaseEisnerSpec(1) {
           Edge("KSTREAM-\\nSOURCE-\\n0000000006", "KSTREAM-\\nAGGREGATE-\\n0000000003"),
           Edge("KSTREAM-\\nAGGREGATE-\\n0000000003", "KTABLE-\\nTOSTREAM-\\n0000000007"),
           Edge("KTABLE-\\nTOSTREAM-\\n0000000007", "KSTREAM-\\nSINK-\\n0000000008")
-        )
+        ),
+        "lightgrey"
       ),
       SubGraph(
         "0",
@@ -20,7 +21,8 @@ final class SimpleTopologySpec extends BaseEisnerSpec(1) {
           Edge("KSTREAM-\\nTRANSFORM-\\n0000000001", "KSTREAM-\\nKEY-\\nSELECT-\\n0000000002"),
           Edge("KSTREAM-\\nKEY-\\nSELECT-\\n0000000002", "KSTREAM-\\nFILTER-\\n0000000005"),
           Edge("KSTREAM-\\nFILTER-\\n0000000005", "KSTREAM-\\nSINK-\\n0000000004")
-        )
+        ),
+        "lightgrey"
       )
     ),
     Vector(
@@ -32,13 +34,13 @@ final class SimpleTopologySpec extends BaseEisnerSpec(1) {
       Edge("KSTREAM-\\nSINK-\\n0000000008", "streams-\\ncount-\\nresolved")
     ),
     Set(
-      Topic("conversation-\\nmeta"),
-      Topic("count-\\nresolved-\\nrepartition"),
-      Topic("streams-\\ncount-\\nresolved")
+      Topic("conversation-\\nmeta", "black"),
+      Topic("count-\\nresolved-\\nrepartition", "black"),
+      Topic("streams-\\ncount-\\nresolved", "black")
     ),
     Set(
-      Store("conversation-\\nmeta-\\nstate"),
-      Store("count-\\nresolved")
+      Store("conversation-\\nmeta-\\nstate", "black"),
+      Store("count-\\nresolved", "black")
     )
   )
 }

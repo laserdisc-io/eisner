@@ -1,4 +1,4 @@
 # invoke SVG creation
 > eisner
 # check that the SVG is created
-$ exists target/streams/_global/eisner/_global/streams/snippet/EisnerTopology#myTopology.svg
+$ exists target/eisner/snippet/EisnerTopology#myTopology.svg

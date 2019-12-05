@@ -19,8 +19,8 @@ digraph G {
 	"KSTREAM-\nSINK-\n0000000004" -> "skus-\nwith-\ntaxcode";
 	"taxcodes" -> "KTABLE-\nSOURCE-\n0000000000";
 	"KTABLE-\nSOURCE-\n0000000001" -> "tax-\ncodes-\nstore";
-	"skus" [shape = rect];
-	"skus-\nwith-\ntaxcode" [shape = rect];
-	"taxcodes" [shape = rect];
-	"tax-\ncodes-\nstore" [shape = cylinder];
+	"skus" [shape = rect; color = black];
+	"skus-\nwith-\ntaxcode" [shape = rect; color = black];
+	"taxcodes" [shape = rect; color = black];
+	"tax-\ncodes-\nstore" [shape = cylinder; color = black];
 }

@@ -13,21 +13,31 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSupport {
   object autoImport {
-    val eisnerTopologies = settingKey[Seq[String]]("The fully qualified names of classes implementing org.apache.kafka.streams.Topology")
+    val eisnerColorSink        = settingKey[String]("The color used to represent sinks, see https://www.graphviz.org/doc/info/colors.html")
+    val eisnerColorSubtopology = settingKey[String]("The color used to frame subtopologies, see https://www.graphviz.org/doc/info/colors.html")
+    val eisnerColorTopic       = settingKey[String]("The color used to represent topics, see https://www.graphviz.org/doc/info/colors.html")
+    val eisnerRoughSVG         = settingKey[Boolean]("The flag that controls whether to create SVG using pseudo hand-drawing")
+    val eisnerTargetDirectory  = settingKey[File]("The directory where to store the generated topologies")
+    val eisnerTopologies       = settingKey[Seq[String]]("The fully qualified names of classes implementing org.apache.kafka.streams.Topology")
     val eisnerTopologiesSnippet =
       settingKey[Option[String]]("A scala snippet (including all imports) that evaluates to a Seq[(String, org.apache.kafka.streams.Topology)]")
-    val eisner = taskKey[Seq[File]]("Generates one SVG for each org.apache.kafka.streams.Topology")
+    val eisner = taskKey[Set[File]]("Generates one SVG for each org.apache.kafka.streams.Topology")
   }
 
   import autoImport._
 
   override final def projectSettings: Seq[Setting[_]] = Seq(
+    eisnerColorSink := "black",
+    eisnerColorSubtopology := "lightgrey",
+    eisnerColorTopic := "black",
+    eisnerRoughSVG := true,
+    eisnerTargetDirectory := (Compile / target).value / "eisner",
     eisnerTopologies := Seq.empty,
     eisnerTopologiesSnippet := None,
     eisner := generate.dependsOn(Compile / compile).value
   )
 
-  private[this] final def generate: Def.Initialize[Task[Seq[File]]] = Def.taskDyn {
+  private[this] final def generate: Def.Initialize[Task[Set[File]]] = Def.taskDyn {
     val log      = streams.value.log
     val cacheDir = streams.value.cacheDirectory
 
@@ -59,18 +69,38 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
       Thread.currentThread.setContextClassLoader(classOf[PromiseException].getClassLoader)
 
       if (topologyDescriptions.nonEmpty) {
-        val fs = Future.traverse(topologyDescriptions) {
-          case (topologyName, topology) =>
-            topology.toSVG.map { svg =>
-              val f = new File(s"$cacheDir/${dotsToSlashes(topologyName)}.svg")
-              IO.write(f, svg)
-              f
-            }
+        val config = Config(eisnerColorSubtopology.value, eisnerColorTopic.value, eisnerColorSink.value)
+        val topologiesWithDots = topologyDescriptions
+          .map {
+            case (n, td) => (n, td, td.toDot(config))
+          }
+          .collect {
+            case (n, td, Right(d)) => (n, td, d)
+          }
+        val inputs = topologiesWithDots.map {
+          case (name, _, dot) =>
+            val f = new File(s"$cacheDir/${dotsToSlashes(name)}.dot")
+            IO.write(f, dot)
+            f
+        }.toSet
+        val cachedFun = FileFunction.cached(cacheDir, FileInfo.hash) { _ =>
+          val fs = Future.traverse(topologiesWithDots) {
+            case (topologyName, topology, _) =>
+              val svg = if (eisnerRoughSVG.value) topology.toSimplifiedRoughSVG(config) else topology.toSVG(config)
+              svg.map { svg =>
+                val filename = s"${eisnerTargetDirectory.value.getAbsolutePath}/${dotsToSlashes(topologyName)}.svg"
+                log.info(s"Eisner - saving $filename")
+                val f = new File(filename)
+                IO.write(f, svg)
+                f
+              }
+          }
+          Await.result(fs, 60.seconds).toSet
         }
-        Await.result(fs, 60.seconds)
+        cachedFun(inputs)
       } else {
         log.warn("Eisner - No topology found!")
-        Seq.empty
+        Set.empty
       }
     }
   }

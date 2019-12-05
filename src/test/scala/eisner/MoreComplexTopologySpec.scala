@@ -10,7 +10,8 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nSOURCE-\\n0000000049", "KSTREAM-\\nREDUCE-\\n0000000046"),
           Edge("KSTREAM-\\nREDUCE-\\n0000000046", "KTABLE-\\nTOSTREAM-\\n0000000050"),
           Edge("KTABLE-\\nTOSTREAM-\\n0000000050", "KSTREAM-\\nSINK-\\n0000000051")
-        )
+        ),
+        "lightgrey"
       ),
       SubGraph(
         "3",
@@ -37,7 +38,8 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nSOURCE-\\n0000000013", "KSTREAM-\\nREDUCE-\\n0000000010"),
           Edge("KSTREAM-\\nSOURCE-\\n0000000018", "KSTREAM-\\nREDUCE-\\n0000000015"),
           Edge("KSTREAM-\\nSOURCE-\\n0000000029", "KSTREAM-\\nREDUCE-\\n0000000026")
-        )
+        ),
+        "lightgrey"
       ),
       SubGraph(
         "2",
@@ -47,7 +49,8 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nFLATMAP-\\n0000000005", "KSTREAM-\\nFILTER-\\n0000000038"),
           Edge("KSTREAM-\\nFLATMAP-\\n0000000005", "KSTREAM-\\nSINK-\\n0000000006"),
           Edge("KSTREAM-\\nFILTER-\\n0000000038", "KSTREAM-\\nSINK-\\n0000000037")
-        )
+        ),
+        "lightgrey"
       ),
       SubGraph(
         "1",
@@ -58,7 +61,8 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nFLATMAP-\\n0000000003", "KSTREAM-\\nFILTER-\\n0000000032"),
           Edge("KSTREAM-\\nFILTER-\\n0000000017", "KSTREAM-\\nSINK-\\n0000000016"),
           Edge("KSTREAM-\\nFILTER-\\n0000000032", "KSTREAM-\\nSINK-\\n0000000031")
-        )
+        ),
+        "lightgrey"
       ),
       SubGraph(
         "0",
@@ -69,7 +73,8 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
           Edge("KSTREAM-\\nFLATMAP-\\n0000000001", "KSTREAM-\\nFILTER-\\n0000000020"),
           Edge("KSTREAM-\\nFILTER-\\n0000000012", "KSTREAM-\\nSINK-\\n0000000011"),
           Edge("KSTREAM-\\nFILTER-\\n0000000020", "KSTREAM-\\nSINK-\\n0000000019")
-        )
+        ),
+        "lightgrey"
       )
     ),
     Vector(
@@ -101,24 +106,24 @@ final class MoreComplexTopologySpec extends BaseEisnerSpec(4) {
       Edge("KSTREAM-\\nSINK-\\n0000000051", "snkItemsTopic")
     ),
     Set(
-      Topic("KSTREAM-\\nFLATMAP-\\n0000000003-\\nrepartition"),
-      Topic("KSTREAM-\\nFLATMAP-\\n0000000005-\\nrepartition"),
-      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000025-\\nrepartition"),
-      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000014-\\nrepartition"),
-      Topic("tblDeptTopic"),
-      Topic("srcFeeTopic"),
-      Topic("srcDeptTopic"),
-      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000045-\\nrepartition"),
-      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000009-\\nrepartition"),
-      Topic("snkItemsTopic"),
-      Topic("KSTREAM-\\nFLATMAP-\\n0000000001-\\nrepartition"),
-      Topic("srcItemsTopic")
+      Topic("KSTREAM-\\nFLATMAP-\\n0000000003-\\nrepartition", "black"),
+      Topic("KSTREAM-\\nFLATMAP-\\n0000000005-\\nrepartition", "black"),
+      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000025-\\nrepartition", "black"),
+      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000014-\\nrepartition", "black"),
+      Topic("tblDeptTopic", "black"),
+      Topic("srcFeeTopic", "black"),
+      Topic("srcDeptTopic", "black"),
+      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000045-\\nrepartition", "black"),
+      Topic("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000009-\\nrepartition", "black"),
+      Topic("snkItemsTopic", "black"),
+      Topic("KSTREAM-\\nFLATMAP-\\n0000000001-\\nrepartition", "black"),
+      Topic("srcItemsTopic", "black")
     ),
     Set(
-      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000014"),
-      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000009"),
-      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000025"),
-      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000045")
+      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000014", "black"),
+      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000009", "black"),
+      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000025", "black"),
+      Store("KSTREAM-\\nREDUCE-\\nSTATE-\\nSTORE-\\n0000000045", "black")
     )
   )
 }
