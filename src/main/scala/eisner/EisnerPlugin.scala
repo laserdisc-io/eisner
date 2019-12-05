@@ -13,6 +13,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSupport {
   object autoImport {
+    val eisnerRoughSVG        = settingKey[Boolean]("The flag that controls whether to create SVG using pseudo hand-drawing")
     val eisnerTargetDirectory = settingKey[File]("The directory where to store the generated topologies")
     val eisnerTopologies      = settingKey[Seq[String]]("The fully qualified names of classes implementing org.apache.kafka.streams.Topology")
     val eisnerTopologiesSnippet =
@@ -23,6 +24,7 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
   import autoImport._
 
   override final def projectSettings: Seq[Setting[_]] = Seq(
+    eisnerRoughSVG := true,
     eisnerTargetDirectory := (Compile / target).value / "eisner",
     eisnerTopologies := Seq.empty,
     eisnerTopologiesSnippet := None,
@@ -71,7 +73,8 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
         val cachedFun = FileFunction.cached(cacheDir, FileInfo.hash) { _ =>
           val fs = Future.traverse(topologiesWithDots) {
             case (topologyName, topology, _) =>
-              topology.toSVG.map { svg =>
+              val svg = if (eisnerRoughSVG.value) topology.toSimplifiedRoughSVG else topology.toSVG
+              svg.map { svg =>
                 val filename = s"${eisnerTargetDirectory.value.getAbsolutePath}/${dotsToSlashes(topologyName)}.svg"
                 log.info(s"Eisner - saving $filename")
                 val f = new File(filename)
