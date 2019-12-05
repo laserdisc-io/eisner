@@ -9,6 +9,13 @@ package object eisner {
   private[eisner] final val Topic    = dot.Topic
   private[eisner] final val Store    = dot.Store
 
+  private[this] final val decimalsPattern = """\.(\d{2})\d+(\D?)""".r
+  private[this] object trimDoubles extends shapeless.poly.->((s: String) => decimalsPattern.replaceAllIn(s, ".$1$2"))
+  private[this] final def simplify(svg: SVG): SVG = {
+    val simplified = shapeless.everywhere(trimDoubles)(svg)
+    simplified
+  }
+
   implicit final class IntOps(private val i: Int) extends AnyVal {
     final def tabs: String = "\t" * i
   }
@@ -44,6 +51,7 @@ package object eisner {
   private[eisner] implicit final class SVGOps(private val svg: SVG) extends AnyVal {
     import io.circe.Encoder
 
+    final def simplified: SVG                = simplify(svg)
     final def json: String                   = Encoder[SVG].apply(svg).noSpaces
     final def xml: String                    = Writer[SVG].write(svg, 0).mkString("\n")
     final def roughSVG: SVGParserError | SVG = js.svgToRoughSVG(json).decodeSVG
