@@ -84,11 +84,11 @@ digraph G {
 
 then, leveraging the JS wrapper of `graphviz` (see [here](https://github.com/mdaines/viz.js)), Eisner will convert it into the following [`SVG`](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics):
 
-<img src="https://raw.githubusercontent.com/laserdisc-io/eisner/master/src/test/resources/topology1.svg?sanitize=true" width="141" height="699"/>
+<img src="https://raw.githubusercontent.com/laserdisc-io/eisner/master/core/src/test/resources/topology1.svg?sanitize=true" width="141" height="699"/>
 
 and ultimately, it will add some "hand drawn" feeling to it using [roughjs](https://roughjs.com/), to turn it into a new `SVG` like the following:
 
-<img src="https://raw.githubusercontent.com/laserdisc-io/eisner/master/src/test/resources/topology1-rough.svg?sanitize=true" width="141" height="699"/>
+<img src="https://raw.githubusercontent.com/laserdisc-io/eisner/master/core/src/test/resources/topology1-rough.svg?sanitize=true" width="141" height="699"/>
 
 ## Usage
 
