@@ -27,10 +27,10 @@ jobs:
     - stage: test
       env: STEP="scripted"
       jdk: openjdk8
-      script: sbt ++$TRAVIS_SCALA_VERSION scripted
+      script: sbt ++$TRAVIS_SCALA_VERSION core/publishLocal scripted
     - env: STEP="scripted"
       jdk: openjdk11
-      script: sbt ++$TRAVIS_SCALA_VERSION scripted
+      script: sbt ++$TRAVIS_SCALA_VERSION core/publishLocal scripted
     - stage: release
       jdk: openjdk8
       script: sbt ci-release
