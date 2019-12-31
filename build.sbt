@@ -66,7 +66,7 @@ lazy val core = project
       "io.circe"               %% "circe-parser"         % "0.12.3",
       "io.dylemma"             %% "xml-spac"             % "0.7",
       "net.arnx"               % "nashorn-promise"       % "0.1.2",
-      "org.apache.kafka"       % "kafka-streams"         % "2.3.1",
+      "org.apache.kafka"       % "kafka-streams"         % "2.4.0",
       "org.scala-lang.modules" %% "scala-java8-compat"   % "0.9.0",
       "org.scalatest"          %% "scalatest"            % "3.1.0" % Test
     ),
