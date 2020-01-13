@@ -46,6 +46,9 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
       val dcp = (Compile / dependencyClasspath).value.map(_.data)
       val scp = (Compile / scalaInstance).value.allJars
 
+      // Let's capture the original classloader associated to the current thread
+      val originalClassloader = Thread.currentThread.getContextClassLoader
+
       val topologyDescriptions = eisnerTopologiesSnippet.value match {
         case None =>
           val cp = dcp.filter(f => f.getName.contains("kafka") || f.getName.contains("slf4j")) :+ cd
@@ -68,7 +71,7 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
       // see https://stackoverflow.com/a/30251930
       Thread.currentThread.setContextClassLoader(classOf[PromiseException].getClassLoader)
 
-      if (topologyDescriptions.nonEmpty) {
+      val result: Set[File] = if (topologyDescriptions.nonEmpty) {
         val config = Config(eisnerColorSubtopology.value, eisnerColorTopic.value, eisnerColorSink.value)
         val topologiesWithDots = topologyDescriptions
           .map {
@@ -102,6 +105,11 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
         log.warn("Eisner - No topology found!")
         Set.empty
       }
+
+      // re-set the current thread's classloader to what we captured at the start
+      Thread.currentThread.setContextClassLoader(originalClassloader)
+
+      result
     }
   }
 }
