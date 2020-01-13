@@ -40,6 +40,11 @@ private[eisner] final class Compiler(bootClasspath: Seq[File], classpath: Seq[Fi
 
   private[this] final def compile(code: String): Class[_] = {
     val name = className(code)
+
+    // external code we're compiling in the snippet may be relying on current thread's classloader
+    // e.g. https://github.com/sksamuel/avro4s/blob/v3.0.5/avro4s-core/src/main/scala/com/sksamuel/avro4s/SchemaFor.scala#L323
+    Thread.currentThread.setContextClassLoader(cl)
+
     run.compileSources(new BatchSourceFile("(inline)", mkClass(name, code)) :: Nil)
     cl.loadClass(name)
   }
