@@ -63,7 +63,7 @@ lazy val core = project
     libraryDependencies ++= Seq(
       "com.chuusai"            %% "shapeless"            % "2.3.3",
       "io.circe"               %% "circe-generic-extras" % "0.12.2",
-      "io.circe"               %% "circe-parser"         % "0.12.3",
+      "io.circe"               %% "circe-parser"         % "0.13.0",
       "io.dylemma"             %% "xml-spac"             % "0.7",
       "net.arnx"               % "nashorn-promise"       % "0.1.3",
       "org.apache.kafka"       % "kafka-streams"         % "2.4.0",
