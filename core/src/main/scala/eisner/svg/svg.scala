@@ -44,7 +44,7 @@ package object svg {
     .map {
       case ((w, h), vb) =>
         transformAttrParser.followedBy { t =>
-          titleParser.parseFirst.followedBy { title => elParser.parseToList.map { es => SVG(w, h, vb, t, List.empty, title :: es) } }
+          titleParser.parseFirst.followedBy(title => elParser.parseToList.map(es => SVG(w, h, vb, t, List.empty, title :: es)))
         }
     }
     .wrapSafe

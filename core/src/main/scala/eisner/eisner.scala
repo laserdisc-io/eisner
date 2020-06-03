@@ -27,26 +27,30 @@ package object eisner {
     private[eisner] final def decodeSVG: SVGParserError | SVG                     = decode[SVG](s).left.map(e => SVGParserError(e.getLocalizedMessage()))
 
     final def toDot(c: Config): TopologyParserError | String = toDiGraph(c).map(_.dot)
-    final def toSVG(c: Config)(implicit ec: ExecutionContext): Future[String] = toDiGraph(c) match {
-      case Left(tpe) => Future.failed(tpe)
-      case Right(dg) => dg.simpleSVG.map(_.xml)
-    }
-    final def toRoughSVG(c: Config)(implicit ec: ExecutionContext): Future[String] = toDiGraph(c) match {
-      case Left(tpe) => Future.failed(tpe)
-      case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.xml)))
-    }
-    final def toSimplifiedRoughSVG(c: Config)(implicit ec: ExecutionContext): Future[String] = toDiGraph(c) match {
-      case Left(tpe) => Future.failed(tpe)
-      case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.simplified.xml)))
-    }
+    final def toSVG(c: Config)(implicit ec: ExecutionContext): Future[String] =
+      toDiGraph(c) match {
+        case Left(tpe) => Future.failed(tpe)
+        case Right(dg) => dg.simpleSVG.map(_.xml)
+      }
+    final def toRoughSVG(c: Config)(implicit ec: ExecutionContext): Future[String] =
+      toDiGraph(c) match {
+        case Left(tpe) => Future.failed(tpe)
+        case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.xml)))
+      }
+    final def toSimplifiedRoughSVG(c: Config)(implicit ec: ExecutionContext): Future[String] =
+      toDiGraph(c) match {
+        case Left(tpe) => Future.failed(tpe)
+        case Right(dg) => dg.simpleSVG.flatMap(_.roughSVG.fold(Future.failed, svg => Future.successful(svg.simplified.xml)))
+      }
   }
   private[eisner] implicit final class DiGraphOps(private val dg: DiGraph) extends AnyVal {
     import scala.concurrent.{ExecutionContext, Future}
 
     final def dot: String = Writer[DiGraph].write(dg, 0).mkString("\n")
-    final def simpleSVG(implicit ec: ExecutionContext): Future[SVG] = js.dotToSVG(dot).flatMap {
-      svg.toSVG(_).fold(Future.failed, Future.successful)
-    }
+    final def simpleSVG(implicit ec: ExecutionContext): Future[SVG] =
+      js.dotToSVG(dot).flatMap {
+        svg.toSVG(_).fold(Future.failed, Future.successful)
+      }
   }
   private[eisner] implicit final class SVGOps(private val svg: SVG) extends AnyVal {
     import io.circe.Encoder
