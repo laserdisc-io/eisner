@@ -42,7 +42,9 @@ final object Edge {
 
 final case class Topic(name: String, color: String)
 final object Topic {
-  implicit final val topicWriter: Writer[Topic] = Writer.instance { case (Topic(t, c), i) => s"""${i.tabs}"$t" [shape = rect; color = $c];""" :: Nil }
+  implicit final val topicWriter: Writer[Topic] = Writer.instance {
+    case (Topic(t, c), i) => s"""${i.tabs}"$t" [shape = rect; color = $c];""" :: Nil
+  }
 }
 
 final case class Store(name: String, color: String)

@@ -11,10 +11,11 @@ final case class ViewBox(x: Double, y: Double, w: Double, h: Double) {
 }
 final object ViewBox {
   final val empty: ViewBox = ViewBox(0.0, 0.0, 0.0, 0.0)
-  final def unapply(s: String): Option[ViewBox] = s.split(' ').toList match {
-    case x :: y :: w :: h :: Nil => Try(ViewBox(x.dbl, y.dbl, w.dbl, h.dbl)).toOption
-    case _                       => None
-  }
+  final def unapply(s: String): Option[ViewBox] =
+    s.split(' ').toList match {
+      case x :: y :: w :: h :: Nil => Try(ViewBox(x.dbl, y.dbl, w.dbl, h.dbl)).toOption
+      case _                       => None
+    }
 
   implicit final val viewBoxCodec: Codec[ViewBox] = deriveConfiguredCodec
 }

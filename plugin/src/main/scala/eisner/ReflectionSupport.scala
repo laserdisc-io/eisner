@@ -28,7 +28,7 @@ private[eisner] trait ReflectionSupport {
     clazz -> clazz.getDeclaredConstructor().initialize
   }
 
-  private[this] final def findTopologiesInClass(ci: ClassInfo, cl: ClassLoader): List[(String, AnyRef)] = {
+  private[this] final def findTopologiesInClass(ci: ClassInfo, cl: ClassLoader): List[(String, AnyRef)] =
     if (ci.superClassName == kafkaTopologyClassName)
       (ci.name -> instantiate(ci.name, cl)._2) :: Nil
     else if (!ci.implements(supplierClassName)) {
@@ -39,7 +39,9 @@ private[eisner] trait ReflectionSupport {
       val supplierFields   = ci.fields.filter(_.signature == kafkaTopologySupplierFieldSignature)
       val supplierMethods  = ci.methods.filter(_.signature == kafkaTopologySupplierMethodSignature)
 
-      if (fields.nonEmpty || methods.nonEmpty || function0Fields.nonEmpty || function0Methods.nonEmpty || supplierFields.nonEmpty || supplierMethods.nonEmpty) {
+      if (
+        fields.nonEmpty || methods.nonEmpty || function0Fields.nonEmpty || function0Methods.nonEmpty || supplierFields.nonEmpty || supplierMethods.nonEmpty
+      ) {
         val name              = ci.name
         val (clazz, instance) = instantiate(name, cl)
 
@@ -68,7 +70,6 @@ private[eisner] trait ReflectionSupport {
         }.toList
       } else Nil
     } else Nil
-  }
 
   private[this] final def checkTopology(instance: AnyRef): (Boolean, String) = {
     val topologyDescription = instance.getClass.getMethod("describe").inside(instance)
@@ -81,7 +82,7 @@ private[eisner] trait ReflectionSupport {
   final def findTopologies(log: Logger, cl: ClassLoader) =
     (ci: ClassInfo) =>
       if (ci.name.startsWith(kafkaStreamsPackageName)) Nil
-      else {
+      else
         findTopologiesInClass(ci, cl).flatMap {
           case (name, instance) =>
             checkTopology(instance) match {
@@ -93,5 +94,4 @@ private[eisner] trait ReflectionSupport {
                 None
             }
         }
-      }
 }

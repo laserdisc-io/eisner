@@ -17,7 +17,7 @@ package object dot {
     final def unapplySeq(s: String): Option[Seq[String]] = Some(s.split(',').flatMap(Clean.unapply).filter(_ != "none"))
   }
 
-  final def toDot(c: Config, s: String): TopologyParserError | DiGraph = {
+  final def toDot(c: Config, s: String): TopologyParserError | DiGraph =
     if (!s.startsWith("Topolog"))
       Left(TopologyParserError(s"Supplied string does not appear to be a valid topology (${s.substring(0, 10)}...)"))
     else {
@@ -40,5 +40,4 @@ package object dot {
       else
         Left(TopologyParserError(s"Supplied topology does not contain valid subtopologies (${s.substring(0, 10)}...)"))
     }
-  }
 }
