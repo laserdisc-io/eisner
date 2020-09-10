@@ -31,12 +31,11 @@ package object js {
   }
 
   private[eisner] final def dotToSVG(dot: String): Future[String] =
-    engine.invokeFunction("dotToSVG", dot).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.flatMap {
-      case jm =>
-        Option(jm.get("result")) match {
-          case Some(s: String) => Future.successful(s)
-          case other           => Future.failed(new RuntimeException(s"Could not find svg in viz.js response: $other"))
-        }
+    engine.invokeFunction("dotToSVG", dot).asInstanceOf[CompletionStage[JMap[String, Object]]].toScala.flatMap { case jm =>
+      Option(jm.get("result")) match {
+        case Some(s: String) => Future.successful(s)
+        case other           => Future.failed(new RuntimeException(s"Could not find svg in viz.js response: $other"))
+      }
     }
   private[eisner] final def svgToRoughSVG(svg: String): String =
     engine.invokeFunction("svgToRoughSVG", svg).asInstanceOf[String]

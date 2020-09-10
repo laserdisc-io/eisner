@@ -79,29 +79,27 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
         val result: Set[File] = if (topologyDescriptions.nonEmpty) {
           val config = Config(eisnerColorSubtopology.value, eisnerColorTopic.value, eisnerColorSink.value)
           val topologiesWithDots = topologyDescriptions
-            .map {
-              case (n, td) => (n, td, td.toDot(config))
+            .map { case (n, td) =>
+              (n, td, td.toDot(config))
             }
-            .collect {
-              case (n, td, Right(d)) => (n, td, d)
+            .collect { case (n, td, Right(d)) =>
+              (n, td, d)
             }
-          val inputs = topologiesWithDots.map {
-            case (name, _, dot) =>
-              val f = new File(s"$cacheDir/${dotsToSlashes(name)}.dot")
-              IO.write(f, dot)
-              f
+          val inputs = topologiesWithDots.map { case (name, _, dot) =>
+            val f = new File(s"$cacheDir/${dotsToSlashes(name)}.dot")
+            IO.write(f, dot)
+            f
           }.toSet
           val cachedFun = FileFunction.cached(cacheDir, FileInfo.hash) { _ =>
-            val fs = Future.traverse(topologiesWithDots) {
-              case (topologyName, topology, _) =>
-                val svg = if (eisnerRoughSVG.value) topology.toSimplifiedRoughSVG(config) else topology.toSVG(config)
-                svg.map { svg =>
-                  val filename = s"${eisnerTargetDirectory.value.getAbsolutePath}/${dotsToSlashes(topologyName)}.svg"
-                  log.info(s"Eisner - saving $filename")
-                  val f = new File(filename)
-                  IO.write(f, svg)
-                  f
-                }
+            val fs = Future.traverse(topologiesWithDots) { case (topologyName, topology, _) =>
+              val svg = if (eisnerRoughSVG.value) topology.toSimplifiedRoughSVG(config) else topology.toSVG(config)
+              svg.map { svg =>
+                val filename = s"${eisnerTargetDirectory.value.getAbsolutePath}/${dotsToSlashes(topologyName)}.svg"
+                log.info(s"Eisner - saving $filename")
+                val f = new File(filename)
+                IO.write(f, svg)
+                f
+              }
             }
             Await.result(fs, 60.seconds).toSet
           }

@@ -41,11 +41,10 @@ package object svg {
       case _         => Parser.constant(Nil)
     }.flatten
   private[this] final val svgParser = basicSVGAttrParser
-    .map {
-      case ((w, h), vb) =>
-        transformAttrParser.followedBy { t =>
-          titleParser.parseFirst.followedBy(title => elParser.parseToList.map(es => SVG(w, h, vb, t, List.empty, title :: es)))
-        }
+    .map { case ((w, h), vb) =>
+      transformAttrParser.followedBy { t =>
+        titleParser.parseFirst.followedBy(title => elParser.parseToList.map(es => SVG(w, h, vb, t, List.empty, title :: es)))
+      }
     }
     .wrapSafe
     .map(_.toEither.left.map(e => SVGParserError(e.getLocalizedMessage())))
