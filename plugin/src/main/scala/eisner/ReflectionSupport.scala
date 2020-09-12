@@ -83,15 +83,14 @@ private[eisner] trait ReflectionSupport {
     (ci: ClassInfo) =>
       if (ci.name.startsWith(kafkaStreamsPackageName)) Nil
       else
-        findTopologiesInClass(ci, cl).flatMap {
-          case (name, instance) =>
-            checkTopology(instance) match {
-              case (true, topology) =>
-                log.info(s"Eisner - found topology: $name")
-                Some(name -> topology)
-              case _ =>
-                log.info(s"Eisner - skipping empty topology: $name")
-                None
-            }
+        findTopologiesInClass(ci, cl).flatMap { case (name, instance) =>
+          checkTopology(instance) match {
+            case (true, topology) =>
+              log.info(s"Eisner - found topology: $name")
+              Some(name -> topology)
+            case _ =>
+              log.info(s"Eisner - skipping empty topology: $name")
+              None
+          }
         }
 }

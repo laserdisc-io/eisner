@@ -13,9 +13,10 @@ object Writer {
       override final def write(a: A, tabs: Int): List[String] = f(a -> tabs)
     }
 
-  implicit final val stringWriter: Writer[String] = Writer.instance { case (s, i) => s"${i.tabs}$s" :: Nil }
+  implicit final val stringWriter: Writer[String] =
+    Writer.instance { case (s, i) => s"${i.tabs}$s" :: Nil }
   implicit final def genTraversableWriter[CC[x] <: GenTraversable[x], A](implicit A: Writer[A]): Writer[CC[A]] =
-    Writer.instance {
-      case (as, i) => as.toList.flatMap(A.write(_, i))
+    Writer.instance { case (as, i) =>
+      as.toList.flatMap(A.write(_, i))
     }
 }

@@ -23,12 +23,11 @@ final object ViewBox {
 final case class Pattern(id: String, x: Double, y: Double, width: Double, height: Double, patternUnits: String, path: El.Path)
 object Pattern {
   implicit final val patternCodec: Codec[Pattern] = deriveConfiguredCodec
-  implicit final val patternWriter: Writer[Pattern] = Writer.instance {
-    case (Pattern(id, x, y, w, h, pu, p), i) =>
-      s"""${i.tabs}<pattern id="$id" x="$x" y="$y" width="$w" height="$h" patternUnits="$pu">""" ::
-        Writer[El.Path].write(p, i + 1) :::
-        s"${i.tabs}</pattern>" ::
-        Nil
+  implicit final val patternWriter: Writer[Pattern] = Writer.instance { case (Pattern(id, x, y, w, h, pu, p), i) =>
+    s"""${i.tabs}<pattern id="$id" x="$x" y="$y" width="$w" height="$h" patternUnits="$pu">""" ::
+      Writer[El.Path].write(p, i + 1) :::
+      s"${i.tabs}</pattern>" ::
+      Nil
   }
 }
 
@@ -41,8 +40,8 @@ object El {
 
   object Path {
     implicit final val pathCodec: Codec[Path] = deriveConfiguredCodec
-    implicit final val pathWriter: Writer[Path] = Writer.instance {
-      case (Path(f, s, sw, d), i) => s"""${i.tabs}<path fill="$f" stroke="$s" stroke-width="$sw" d="$d"/>""" :: Nil
+    implicit final val pathWriter: Writer[Path] = Writer.instance { case (Path(f, s, sw, d), i) =>
+      s"""${i.tabs}<path fill="$f" stroke="$s" stroke-width="$sw" d="$d"/>""" :: Nil
     }
   }
 
