@@ -1,4 +1,4 @@
-scalaVersion := "2.12.10"
+scalaVersion := "2.12.12"
 
 libraryDependencies ++= Seq(
   "org.apache.kafka" % "kafka-streams" % "2.6.0",
