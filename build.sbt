@@ -7,7 +7,7 @@ def isJDK9Plus = jdkMajorVersion >= 9
 
 inThisBuild {
   Seq(
-    scalaVersion := "2.12.10",
+    scalaVersion := "2.12.12",
     organization := "io.laserdisc",
     homepage := Some(url("https://github.com/laserdisc-io/eisner")),
     licenses += "MIT" -> url("http://opensource.org/licenses/MIT"),
@@ -92,5 +92,10 @@ lazy val eisner = project
   .settings(
     addCommandAlias("fmt", ";scalafmt;test:scalafmt;scalafmtSbt"),
     addCommandAlias("fmtCheck", ";scalafmtCheck;test:scalafmtCheck;scalafmtSbtCheck"),
-    addCommandAlias("fullBuild", ";fmtCheck;clean;test;core/publishLocal;scripted")
+    addCommandAlias("fullBuild", ";fmtCheck;clean;test;core/publishLocal;scripted"),
+    addCommandAlias(
+      "setReleaseOptions",
+      "set scalacOptions ++= Seq(\"-opt:l:method\", \"-opt:l:inline\", \"-opt-inline-from:laserdisc.**\", \"-opt-inline-from:<sources>\")"
+    ),
+    addCommandAlias("releaseIt", ";clean;setReleaseOptions;session list;compile;ci-release")
   )
