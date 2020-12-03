@@ -108,7 +108,7 @@ jobs:
   publish_212:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     name: Publish Snapshot 2.12
-    needs: build
+    needs: [ build, scripted ]
     runs-on: ubuntu-20.04
     steps:
       - name: Branch Checkout
