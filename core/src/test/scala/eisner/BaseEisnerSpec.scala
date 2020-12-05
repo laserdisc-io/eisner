@@ -17,10 +17,10 @@ abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers with E
   s"Topology #$i" when {
     "loaded from disk" must {
       "convert to a valid graph" in {
-        txt.toDiGraph(config).right.value shouldBe expectedDiGraph
+        txt.toDiGraph(config).value shouldBe expectedDiGraph
       }
       "convert to a valid dot" in {
-        txt.toDot(config).right.value shouldBe dot
+        txt.toDot(config).value shouldBe dot
       }
       "convert to a valid svg" in {
         txt.toSVG(config).map(_.trim shouldBe svg)
