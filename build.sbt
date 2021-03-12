@@ -61,25 +61,35 @@ lazy val core = project
   .settings(
     name := "eisner-core",
     libraryDependencies ++= Seq(
-      "com.chuusai"            %% "shapeless"            % "2.3.3",
-      "io.circe"               %% "circe-generic-extras" % "0.13.0",
-      "io.circe"               %% "circe-parser"         % "0.13.0",
-      "io.dylemma"             %% "xml-spac"             % "0.8",
-      "net.arnx"                % "nashorn-promise"      % "0.1.3",
-      "org.apache.kafka"        % "kafka-streams"        % "2.7.0",
-      "org.scala-lang.modules" %% "scala-java8-compat"   % "0.9.1",
-      "org.scalatest"          %% "scalatest"            % "3.2.3" % Test
+      "com.chuusai"   %% "shapeless"      % "2.3.3",
+      "guru.nidi"      % "graphviz-java"  % "0.18.1",
+      "guru.nidi"      % "graphviz-rough" % "0.18.1",
+      "io.dylemma"    %% "xml-spac"       % "0.8",
+      "org.scalatest" %% "scalatest"      % "3.2.3"  % Test,
+      "org.slf4j"      % "slf4j-nop"      % "1.7.30" % Test
     ),
-    Test / parallelExecution := false
+    Test / fork := true,
+    Test / parallelExecution := false,
+    Compile / console / scalacOptions --= Seq(
+      "-Xlint:_,-type-parameter-shadow",
+      "-Ywarn-unused:imports",
+      "-Ywarn-unused:_,imports",
+      "-Xfatal-warnings"
+    ),
+    Test / console / scalacOptions := (Compile / console / scalacOptions).value
   )
 
 lazy val plugin = project
   .in(file("plugin"))
   .dependsOn(core)
   .enablePlugins(SbtPlugin)
+  .settings(scalacSettings)
   .settings(
     name := "sbt-eisner",
-    libraryDependencies += "org.clapper" %% "classutil" % "1.5.1",
+    libraryDependencies ++= Seq(
+      "org.apache.kafka" % "kafka-streams" % "2.7.0",
+      "org.clapper"     %% "classutil"     % "1.5.1"
+    ),
     Compile / unmanagedSourceDirectories += (Compile / sourceDirectory).value / (if (isJDK9Plus) "scala-jdk9+" else "scala-jdk8-"),
     scriptedLaunchOpts ++= Seq("-Xmx1024M", s"-Dplugin.version=${version.value}"),
     scriptedBufferLog := false
@@ -95,7 +105,7 @@ lazy val eisner = project
     addCommandAlias("fullBuild", ";fmtCheck;clean;test;core/publishLocal;scripted"),
     addCommandAlias(
       "setReleaseOptions",
-      "set scalacOptions ++= Seq(\"-opt:l:method\", \"-opt:l:inline\", \"-opt-inline-from:laserdisc.**\", \"-opt-inline-from:<sources>\")"
+      "set scalacOptions ++= Seq(\"-opt:l:method\", \"-opt:l:inline\", \"-opt-inline-from:eisner.**\", \"-opt-inline-from:<sources>\")"
     ),
     addCommandAlias("releaseIt", ";clean;setReleaseOptions;session list;compile;ci-release")
   )

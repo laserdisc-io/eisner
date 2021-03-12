@@ -1,60 +1,71 @@
 package eisner
 
-import io.circe.generic.extras.Configuration
-import io.dylemma.spac._
 import io.dylemma.spac.xml._
-import io.dylemma.spac.xml.XMLParser._
+import io.dylemma.spac.xml.XMLParser.{forMandatoryAttribute => at, forOptionalAttribute => optAt, forText => txt}
 
 package object svg {
-  private[this] final val fillParser        = forMandatoryAttribute("fill")
-  private[this] final val strokeParser      = forMandatoryAttribute("stroke")
-  private[this] final val strokeWidthParser = forOptionalAttribute("stroke-width").map(_.fold(1.0)(_.dbl))
-  private[this] final val ellipseParser = {
-    fillParser ~ strokeParser ~ strokeWidthParser ~
-      forMandatoryAttribute("cx").map(_.dbl) ~
-      forMandatoryAttribute("cy").map(_.dbl) ~
-      forMandatoryAttribute("rx").map(_.dbl) ~
-      forMandatoryAttribute("ry").map(_.dbl)
-  }.as(El.Ellipse)
-  private[this] final val pathParser    = (fillParser ~ strokeParser ~ strokeWidthParser ~ forMandatoryAttribute("d")).as(El.Path.apply)
-  private[this] final val polygonParser = (fillParser ~ strokeParser ~ strokeWidthParser ~ forMandatoryAttribute("points")).as(El.Polygon)
-  private[this] implicit final val textParser = {
-    forMandatoryAttribute("text-anchor") ~
-      forMandatoryAttribute("x").map(_.dbl) ~
-      forMandatoryAttribute("y").map(_.dbl) ~
-      forMandatoryAttribute("font-family") ~
-      forMandatoryAttribute("font-size").map(_.dbl) ~
-      fillParser ~
-      forText
-  }.as(El.Text)
-  private[this] final val basicSVGAttrParser = XMLSplitter(
+  private[svg] final val styleFun = (_: String).split(';').map(_.trim.split(':').map(_.trim).toList).foldLeft(("", "", 1.0d)) {
+    case ((_, s, sw), "fill" :: f :: Nil)         => (f, s, sw)
+    case ((f, _, sw), "stroke" :: s :: Nil)       => (f, s, sw)
+    case ((f, s, _), "stroke-width" :: sw :: Nil) => (f, s, sw.toDouble)
+    case (acc, _)                                 => acc
+  }
+  private[svg] final val dblAt = (s: String) => at(s).map(_.toDouble)
+
+  private[svg] final val cx            = dblAt("cx")
+  private[svg] final val cy            = dblAt("cy")
+  private[svg] final val d             = at("d")
+  private[svg] final val fill          = at("fill")
+  private[svg] final val fillOpt       = optAt("fill")
+  private[svg] final val `font-family` = at("font-family")
+  private[svg] final val `font-size`   = dblAt("font-size")
+  private[svg] final val height        = dblAt("height")
+  private[svg] final val id            = at("id")
+  private[svg] final val patternUnits  = at("patternUnits")
+  private[svg] final val points        = at("points")
+  private[svg] final val rx            = dblAt("rx")
+  private[svg] final val ry            = dblAt("ry")
+  private[svg] final val stroke        = at("stroke")
+  private[svg] final val strokeWidth   = optAt("stroke-width").map(_.fold(1.0)(_.toDouble))
+  private[svg] final val style         = at("style").map(styleFun)
+  private[svg] final val `text-anchor` = at("text-anchor")
+  private[svg] final val viewBoxOpt    = optAt("viewBox").map(_.flatMap(ViewBox.unapply))
+  private[svg] final val width         = dblAt("width")
+  private[svg] final val x             = dblAt("x")
+  private[svg] final val y             = dblAt("y")
+
+  private[svg] final val ellipse = (fill ~ stroke ~ strokeWidth ~ cx ~ cy ~ rx ~ ry).as(El.Ellipse)
+  private[svg] final val path    = (fill ~ stroke ~ strokeWidth ~ d).as(El.Path.apply) orElse (style ~ d).as(El.Path.apply)
+  private[svg] final val polygon = (fill ~ stroke ~ strokeWidth ~ points).as(El.Polygon)
+  private[svg] final val text    = (`text-anchor` ~ x ~ y ~ `font-size` ~ `font-family` ~ fillOpt ~ txt).as(El.Text)
+
+  private[svg] final val pattern = for {
+    pc   <- (id ~ x ~ y ~ width ~ height ~ viewBoxOpt ~ patternUnits).asTuple.followedBy
+    path <- XMLSplitter(* \ "path").map(path).parseFirst
+  } yield Pattern(pc._1, pc._2, pc._3, pc._4, pc._5, pc._6, pc._7, path)
+
+  private[svg] final val patterns  = XMLSplitter("svg" \ "defs").map(XMLSplitter(* \ "pattern").map(pattern).parseToList).parseFirst
+  private[svg] final val transform = XMLSplitter("svg" \ "g").first.attr("transform")
+  private[svg] final val title     = XMLSplitter("svg" \ "g" \ "text").map(text).parseFirst
+  private[svg] final val elements = {
+    XMLSplitter("svg" \ ** \ "ellipse").map(ellipse) parallel
+      XMLSplitter("svg" \ ** \ "path").map(path) parallel
+      XMLSplitter("svg" \ ** \ "polygon").map(polygon) parallel
+      XMLSplitter("svg" \ ** \ "text").map(text)
+  }.parseToList
+
+  private[svg] final val svg = XMLSplitter(
     attr("width") & attr("height") & attr("viewBox").map(ViewBox.unapply(_).getOrElse(ViewBox.empty))
-  )
-  private[this] final val transformAttrParser = XMLSplitter("svg" \ "g").first.attr("transform")
-  private[this] final val titleParser         = XMLSplitter("svg" \ "g" \ "text").as(textParser)
-  private[this] final def elParser =
-    XMLSplitter("svg" \ "g" \ "g" \ extractElemName).map {
-      case "ellipse" => ellipseParser.map(_ :: Nil)
-      case "path"    => pathParser.map(_ :: Nil)
-      case "polygon" => polygonParser.map(_ :: Nil)
-      case "text"    => textParser.map(_ :: Nil)
-      case _         => Parser.constant(Nil)
-    }.flatten
-  private[this] final val svgParser = basicSVGAttrParser
-    .map { case ((w, h), vb) =>
-      transformAttrParser.followedBy { t =>
-        titleParser.parseFirst.followedBy(title => elParser.parseToList.map(es => SVG(w, h, vb, t, List.empty, title :: es)))
-      }
-    }
-    .wrapSafe
+  ).map { case ((width, height), viewBox) =>
+    for {
+      patterns  <- patterns.followedBy
+      transform <- transform.followedBy
+      title     <- title.followedBy
+      elements  <- elements
+    } yield SVG(width, height, viewBox, transform, patterns, title :: elements)
+  }.wrapSafe
     .map(_.toEither.left.map(e => SVGParserError(e.getLocalizedMessage())))
     .parseFirst
 
-  final def toSVG(s: String): SVGParserError | SVG = svgParser.parse(s)
-
-  implicit final class StringToDouble(private val s: String) extends AnyVal {
-    final def dbl: Double = s.toDouble
-  }
-
-  implicit final val configuration: Configuration = Configuration.default.withDiscriminator("type")
+  final def toSVG(s: String): SVGParserError | SVG = svg.parse(s)
 }
