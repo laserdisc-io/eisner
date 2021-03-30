@@ -62,11 +62,11 @@ lazy val core = project
     name := "eisner-core",
     libraryDependencies ++= Seq(
       "com.chuusai"   %% "shapeless"      % "2.3.3",
-      "guru.nidi"      % "graphviz-java"  % "0.18.1" excludeAll("guru.nidi" % "code-assert"),
-      "guru.nidi"      % "graphviz-rough" % "0.18.1" excludeAll("guru.nidi" % "code-assert"),
+      "guru.nidi"      % "graphviz-java"  % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
+      "guru.nidi"      % "graphviz-rough" % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "io.dylemma"    %% "xml-spac"       % "0.8",
-      "org.scalatest" %% "scalatest"      % "3.2.6"  % Test,
-      "org.slf4j"      % "slf4j-nop"      % "1.7.30" % Test
+      "org.scalatest" %% "scalatest"      % "3.2.6"                          % Test,
+      "org.slf4j"      % "slf4j-nop"      % "1.7.30"                         % Test
     ),
     Test / fork := true,
     Test / parallelExecution := false,
