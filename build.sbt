@@ -68,7 +68,7 @@ lazy val core = project
       "net.arnx"                % "nashorn-promise"      % "0.1.3",
       "org.apache.kafka"        % "kafka-streams"        % "2.7.0",
       "org.scala-lang.modules" %% "scala-java8-compat"   % "0.9.1",
-      "org.scalatest"          %% "scalatest"            % "3.2.6" % Test
+      "org.scalatest"          %% "scalatest"            % "3.2.7" % Test
     ),
     Test / parallelExecution := false
   )
