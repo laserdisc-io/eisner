@@ -1,18 +1,19 @@
 package eisner
 
 import org.scalatest.EitherValues
-import scala.io.Source
 import org.scalatest.matchers.should.Matchers
-import org.scalatest.wordspec.AsyncWordSpec
+import org.scalatest.wordspec.AnyWordSpec
 
-abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers with EitherValues {
+import scala.io.Source
+
+abstract class BaseEisnerSpec(i: Int) extends AnyWordSpec with Matchers with EitherValues {
   def expectedDiGraph: DiGraph
 
   val config = Config("lightgrey", "black", "black")
 
-  lazy val txt = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.txt")).getLines.mkString("\n")
-  lazy val dot = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.dot")).getLines.mkString("\n")
-  lazy val svg = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.svg")).getLines.mkString("\n")
+  lazy val txt = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.txt")).getLines.mkString("\n").trim
+  lazy val dot = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.dot")).getLines.mkString("\n").trim
+  lazy val svg = Source.fromInputStream(getClass.getResourceAsStream(s"/topology$i.svg")).getLines.mkString("\n").trim
 
   s"Topology #$i" when {
     "loaded from disk" must {
@@ -23,7 +24,7 @@ abstract class BaseEisnerSpec(i: Int) extends AsyncWordSpec with Matchers with E
         txt.toDot(config).value shouldBe dot
       }
       "convert to a valid svg" in {
-        txt.toSVG(config).map(_.trim shouldBe svg)
+        txt.toSVG(config).value.trim shouldBe svg
       }
     }
   }
