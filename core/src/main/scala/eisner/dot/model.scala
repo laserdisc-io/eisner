@@ -9,10 +9,10 @@ final object DiGraph {
     Writer.instance { case (DiGraph(sgs, es, ts, ss), _) =>
       "digraph G {" ::
         s"""${1.tabs}label = "Kafka Streams Topology"""" ::
-        Writer[List[SubGraph]].write(sgs.reverse, 1) :::
-        Writer[Vector[Edge]].write(es, 1) :::
-        Writer[Set[Topic]].write(ts, 1) :::
-        Writer[Set[Store]].write(ss, 1) :::
+        sgs.reverse.write(1) :::
+        es.write(1) :::
+        ts.write(1) :::
+        ss.write(1) :::
         "}" ::
         Nil
     }
@@ -29,7 +29,7 @@ final object SubGraph {
         s"${(i + 1).tabs}style = filled;" ::
         s"${(i + 1).tabs}color = $c;" ::
         s"${(i + 1).tabs}node [style = filled, color = white];" ::
-        Writer[Vector[Edge]].write(es, i + 1) :::
+        es.write(i + 1) :::
         s"${i.tabs}}" ::
         Nil
     }

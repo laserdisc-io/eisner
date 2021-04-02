@@ -1,416 +1,943 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="1366pt" height="2596pt" viewBox="0.0 0.0 1366.0 2595.94" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<g transform="scale(1 1) rotate(0) translate(4 2591.9397)">
-		<text text-anchor="middle" x="679.0" y="-8.2" font-family="Times,serif" font-size="14.0" fill="#000000">Kafka Streams Topology</text>
-		<polygon fill="#d3d3d3" stroke="#d3d3d3" stroke-width="1.0" points="671,-2026.3794 671,-2543.9397 953,-2543.9397 953,-2026.3794 671,-2026.3794"/>
-		<text text-anchor="middle" x="812.0" y="-2527.3397" font-family="Times,serif" font-size="14.0" fill="#000000">Sub-</text>
-		<text text-anchor="middle" x="812.0" y="-2510.5397" font-family="Times,serif" font-size="14.0" fill="#000000">topology: 0</text>
-		<polygon fill="#d3d3d3" stroke="#d3d3d3" stroke-width="1.0" points="381,-2026.3794 381,-2543.9397 663,-2543.9397 663,-2026.3794 381,-2026.3794"/>
-		<text text-anchor="middle" x="522.0" y="-2527.3397" font-family="Times,serif" font-size="14.0" fill="#000000">Sub-</text>
-		<text text-anchor="middle" x="522.0" y="-2510.5397" font-family="Times,serif" font-size="14.0" fill="#000000">topology: 1</text>
-		<polygon fill="#d3d3d3" stroke="#d3d3d3" stroke-width="1.0" points="8,-1894.6843 8,-2403.7496 290,-2403.7496 290,-1894.6843 8,-1894.6843"/>
-		<text text-anchor="middle" x="149.0" y="-2387.1496" font-family="Times,serif" font-size="14.0" fill="#000000">Sub-</text>
-		<text text-anchor="middle" x="149.0" y="-2370.3496" font-family="Times,serif" font-size="14.0" fill="#000000">topology: 2</text>
-		<polygon fill="#d3d3d3" stroke="#d3d3d3" stroke-width="1.0" points="240,-773.4702 240,-1881.5794 1090,-1881.5794 1090,-773.4702 240,-773.4702"/>
-		<text text-anchor="middle" x="665.0" y="-1864.9794" font-family="Times,serif" font-size="14.0" fill="#000000">Sub-</text>
-		<text text-anchor="middle" x="665.0" y="-1848.1794" font-family="Times,serif" font-size="14.0" fill="#000000">topology: 3</text>
-		<polygon fill="#d3d3d3" stroke="#d3d3d3" stroke-width="1.0" points="378,-88.8 378,-628.6702 530,-628.6702 530,-88.8 378,-88.8"/>
-		<text text-anchor="middle" x="454.0" y="-612.0702" font-family="Times,serif" font-size="14.0" fill="#000000">Sub-</text>
-		<text text-anchor="middle" x="454.0" y="-595.2702" font-family="Times,serif" font-size="14.0" fill="#000000">topology: 4</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="812.0" cy="-2453.0446" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="812.0" y="-2465.6446" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="812.0" y="-2448.8446" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="812.0" y="-2432.0446" font-family="Times,serif" font-size="14.0" fill="#000000">0000000000</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="812.0" cy="-2312.8545" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="812.0" y="-2325.4545" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="812.0" y="-2308.6545" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAP-</text>
-		<text text-anchor="middle" x="812.0" y="-2291.8545" font-family="Times,serif" font-size="14.0" fill="#000000">0000000001</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M812,-2411.7412C812,-2396.9003 812,-2379.9752 812,-2364.3735"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="815.5001,-2364.3471 812,-2354.3472 808.5001,-2364.3472 815.5001,-2364.3471"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="883.0" cy="-2194.2645" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="883.0" y="-2206.8645" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="883.0" y="-2190.0645" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
-		<text text-anchor="middle" x="883.0" y="-2173.2645" font-family="Times,serif" font-size="14.0" fill="#000000">0000000012</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M835.0517,-2274.3517C841.2519,-2263.9956 848.0322,-2252.6706 854.491,-2241.8825"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="857.6872,-2243.3576 859.821,-2232.9799 851.6813,-2239.7619 857.6872,-2243.3576"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="741.0" cy="-2194.2645" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="741.0" y="-2206.8645" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="741.0" y="-2190.0645" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
-		<text text-anchor="middle" x="741.0" y="-2173.2645" font-family="Times,serif" font-size="14.0" fill="#000000">0000000020</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M788.9483,-2274.3517C782.7481,-2263.9956 775.9678,-2252.6706 769.509,-2241.8825"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="772.3187,-2239.7619 764.179,-2232.9799 766.3128,-2243.3576 772.3187,-2239.7619"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="883.0" cy="-2075.6744" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="883.0" y="-2088.2744" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="883.0" y="-2071.4744" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="883.0" y="-2054.6744" font-family="Times,serif" font-size="14.0" fill="#000000">0000000011</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M883,-2152.7874C883,-2144.6199 883,-2135.9552 883,-2127.4966"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="886.5001,-2127.3285 883,-2117.3285 879.5001,-2127.3285 886.5001,-2127.3285"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="741.0" cy="-2075.6744" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="741.0" y="-2088.2744" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="741.0" y="-2071.4744" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="741.0" y="-2054.6744" font-family="Times,serif" font-size="14.0" fill="#000000">0000000019</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M741,-2152.7874C741,-2144.6199 741,-2135.9552 741,-2127.4966"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="744.5001,-2127.3285 741,-2117.3285 737.5001,-2127.3285 744.5001,-2127.3285"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="926.1612,-1998.2795 835.8388,-1998.2795 835.8388,-1889.6792 926.1612,-1889.6792 926.1612,-1998.2795"/>
-		<text text-anchor="middle" x="881.0" y="-1981.7794" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="881.0" y="-1964.9794" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="881.0" y="-1948.1794" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="881.0" y="-1931.3794" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="881.0" y="-1914.5794" font-family="Times,serif" font-size="14.0" fill="#000000">0000000009-</text>
-		<text text-anchor="middle" x="881.0" y="-1897.7794" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M882.3727,-2034.3666C882.2492,-2026.2339 882.1168,-2017.5185 881.9848,-2008.8263"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="885.4821,-2008.6151 881.8306,-1998.6694 878.4829,-2008.7215 885.4821,-2008.6151"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="784.1612,-1981.6796 693.8388,-1981.6796 693.8388,-1906.2791 784.1612,-1906.2791 784.1612,-1981.6796"/>
-		<text text-anchor="middle" x="739.0" y="-1964.9794" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="739.0" y="-1948.1794" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAP-</text>
-		<text text-anchor="middle" x="739.0" y="-1931.3794" font-family="Times,serif" font-size="14.0" fill="#000000">0000000001-</text>
-		<text text-anchor="middle" x="739.0" y="-1914.5794" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M740.3727,-2034.3666C740.17,-2021.022 739.9435,-2006.1082 739.7339,-1992.3028"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="743.229,-1991.9518 739.5775,-1982.0061 736.2298,-1992.0582 743.229,-1991.9518"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="522.0" cy="-2453.0446" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="522.0" y="-2465.6446" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="522.0" y="-2448.8446" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="522.0" y="-2432.0446" font-family="Times,serif" font-size="14.0" fill="#000000">0000000002</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="522.0" cy="-2312.8545" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="522.0" y="-2325.4545" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="522.0" y="-2308.6545" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAP-</text>
-		<text text-anchor="middle" x="522.0" y="-2291.8545" font-family="Times,serif" font-size="14.0" fill="#000000">0000000003</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M522,-2411.7412C522,-2396.9003 522,-2379.9752 522,-2364.3735"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="525.5001,-2364.3471 522,-2354.3472 518.5001,-2364.3472 525.5001,-2364.3471"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="593.0" cy="-2194.2645" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="593.0" y="-2206.8645" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="593.0" y="-2190.0645" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
-		<text text-anchor="middle" x="593.0" y="-2173.2645" font-family="Times,serif" font-size="14.0" fill="#000000">0000000017</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M545.0517,-2274.3517C551.2519,-2263.9956 558.0322,-2252.6706 564.491,-2241.8825"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="567.6872,-2243.3576 569.821,-2232.9799 561.6813,-2239.7619 567.6872,-2243.3576"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="451.0" cy="-2194.2645" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="451.0" y="-2206.8645" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="451.0" y="-2190.0645" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
-		<text text-anchor="middle" x="451.0" y="-2173.2645" font-family="Times,serif" font-size="14.0" fill="#000000">0000000032</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M498.9483,-2274.3517C492.7481,-2263.9956 485.9678,-2252.6706 479.509,-2241.8825"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="482.3187,-2239.7619 474.179,-2232.9799 476.3128,-2243.3576 482.3187,-2239.7619"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="593.0" cy="-2075.6744" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="593.0" y="-2088.2744" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="593.0" y="-2071.4744" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="593.0" y="-2054.6744" font-family="Times,serif" font-size="14.0" fill="#000000">0000000016</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M593,-2152.7874C593,-2144.6199 593,-2135.9552 593,-2127.4966"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="596.5001,-2127.3285 593,-2117.3285 589.5001,-2127.3285 596.5001,-2127.3285"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="451.0" cy="-2075.6744" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="451.0" y="-2088.2744" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="451.0" y="-2071.4744" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="451.0" y="-2054.6744" font-family="Times,serif" font-size="14.0" fill="#000000">0000000031</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M451,-2152.7874C451,-2144.6199 451,-2135.9552 451,-2127.4966"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="454.5001,-2127.3285 451,-2117.3285 447.5001,-2127.3285 454.5001,-2127.3285"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="639.1612,-1998.2795 548.8388,-1998.2795 548.8388,-1889.6792 639.1612,-1889.6792 639.1612,-1998.2795"/>
-		<text text-anchor="middle" x="594.0" y="-1981.7794" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="594.0" y="-1964.9794" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="594.0" y="-1948.1794" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="594.0" y="-1931.3794" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="594.0" y="-1914.5794" font-family="Times,serif" font-size="14.0" fill="#000000">0000000014-</text>
-		<text text-anchor="middle" x="594.0" y="-1897.7794" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M593.3137,-2034.3666C593.3754,-2026.2339 593.4416,-2017.5185 593.5076,-2008.8263"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="597.0086,-2008.6958 593.5847,-1998.6694 590.0088,-2008.6425 597.0086,-2008.6958"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="497.1612,-1981.6796 406.8388,-1981.6796 406.8388,-1906.2791 497.1612,-1906.2791 497.1612,-1981.6796"/>
-		<text text-anchor="middle" x="452.0" y="-1964.9794" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="452.0" y="-1948.1794" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAP-</text>
-		<text text-anchor="middle" x="452.0" y="-1931.3794" font-family="Times,serif" font-size="14.0" fill="#000000">0000000003-</text>
-		<text text-anchor="middle" x="452.0" y="-1914.5794" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M451.3137,-2034.3666C451.415,-2021.022 451.5282,-2006.1082 451.6331,-1992.3028"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="455.1351,-1992.0324 451.7113,-1982.0061 448.1353,-1991.9792 455.1351,-1992.0324"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="149.0" cy="-2312.8545" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="149.0" y="-2325.4545" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="149.0" y="-2308.6545" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="149.0" y="-2291.8545" font-family="Times,serif" font-size="14.0" fill="#000000">0000000004</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="149.0" cy="-2194.2645" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="149.0" y="-2206.8645" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="149.0" y="-2190.0645" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAP-</text>
-		<text text-anchor="middle" x="149.0" y="-2173.2645" font-family="Times,serif" font-size="14.0" fill="#000000">0000000005</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M149,-2271.3775C149,-2263.21 149,-2254.5452 149,-2246.0867"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="152.5001,-2245.9185 149,-2235.9186 145.5001,-2245.9186 152.5001,-2245.9185"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="78.0" cy="-2075.6744" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="78.0" y="-2088.2744" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="78.0" y="-2071.4744" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
-		<text text-anchor="middle" x="78.0" y="-2054.6744" font-family="Times,serif" font-size="14.0" fill="#000000">0000000038</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M125.9483,-2155.7617C119.7481,-2145.4055 112.9678,-2134.0805 106.509,-2123.2925"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="109.3187,-2121.1718 101.179,-2114.3898 103.3128,-2124.7676 109.3187,-2121.1718"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="220.0" cy="-2075.6744" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="220.0" y="-2088.2744" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="220.0" y="-2071.4744" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="220.0" y="-2054.6744" font-family="Times,serif" font-size="14.0" fill="#000000">0000000006</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M172.0517,-2155.7617C178.2519,-2145.4055 185.0322,-2134.0805 191.491,-2123.2925"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="194.6872,-2124.7676 196.821,-2114.3898 188.6813,-2121.1718 194.6872,-2124.7676"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="105.0" cy="-1943.9794" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="105.0" y="-1956.5794" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="105.0" y="-1939.7794" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="105.0" y="-1922.9794" font-family="Times,serif" font-size="14.0" fill="#000000">0000000037</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M86.395,-2034.7272C88.9855,-2022.0916 91.8701,-2008.0215 94.5799,-1994.8043"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="98.0304,-1995.4005 96.6102,-1984.9013 91.173,-1993.9945 98.0304,-1995.4005"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="388.1515,-1961.9794 297.8485,-1961.9794 297.8485,-1925.9794 388.1515,-1925.9794 388.1515,-1961.9794"/>
-		<text text-anchor="middle" x="343.0" y="-1939.7794" font-family="Times,serif" font-size="14.0" fill="#000000">tblDeptTopic</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M253.749,-2040.8734C266.4567,-2027.6519 280.979,-2012.4008 294,-1998.3794 302.563,-1989.1585 311.8311,-1978.9338 319.9783,-1969.8606"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="322.7404,-1972.0227 326.8035,-1962.2379 317.5254,-1967.3532 322.7404,-1972.0227"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="204.1612,-1828.3846 113.8388,-1828.3846 113.8388,-1752.9841 204.1612,-1752.9841 204.1612,-1828.3846"/>
-		<text text-anchor="middle" x="159.0" y="-1811.6843" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="159.0" y="-1794.8843" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAP-</text>
-		<text text-anchor="middle" x="159.0" y="-1778.0843" font-family="Times,serif" font-size="14.0" fill="#000000">0000000005-</text>
-		<text text-anchor="middle" x="159.0" y="-1761.2843" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M119.1879,-1903.7029C126.2826,-1883.5623 134.9139,-1859.0599 142.3238,-1838.0247"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="145.7201,-1838.9173 145.7415,-1828.3225 139.1178,-1836.5915 145.7201,-1838.9173"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="736.0" cy="-1790.6843" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="736.0" y="-1803.2843" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="736.0" y="-1786.4843" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="736.0" y="-1769.6843" font-family="Times,serif" font-size="14.0" fill="#000000">0000000021</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="736.0" cy="-1672.0943" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="736.0" y="-1684.6943" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="736.0" y="-1667.8943" font-family="Times,serif" font-size="14.0" fill="#000000">LEFTJOIN-</text>
-		<text text-anchor="middle" x="736.0" y="-1651.0943" font-family="Times,serif" font-size="14.0" fill="#000000">0000000022</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M736,-1749.2073C736,-1741.0398 736,-1732.375 736,-1723.9164"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="739.5001,-1723.7483 736,-1713.7483 732.5001,-1723.7484 739.5001,-1723.7483"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="741.0" cy="-1531.5492" rx="99.6821" ry="41.0911"/>
-		<text text-anchor="middle" x="741.0" y="-1544.1492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="741.0" y="-1527.3492" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAPVALUES-</text>
-		<text text-anchor="middle" x="741.0" y="-1510.5492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000023</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M737.4731,-1630.6863C738.0024,-1615.8078 738.6061,-1598.8399 739.1625,-1583.1986"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="742.6623,-1583.2651 739.5201,-1573.1469 735.6667,-1583.0161 742.6623,-1583.2651"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1291.544,-1583.0955C1291.544,-1589.416 1272.0269,-1594.5502 1248,-1594.5502 1223.9731,-1594.5502 1204.456,-1589.416 1204.456,-1583.0955 1204.456,-1583.0955 1204.456,-1480.003 1204.456,-1480.003 1204.456,-1473.6824 1223.9731,-1468.5482 1248,-1468.5482 1272.0269,-1468.5482 1291.544,-1473.6824 1291.544,-1480.003 1291.544,-1480.003 1291.544,-1583.0955 1291.544,-1583.0955"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1291.544,-1583.0955C1291.544,-1576.7749 1272.0269,-1571.6408 1248,-1571.6408 1223.9731,-1571.6408 1204.456,-1576.7749 1204.456,-1583.0955"/>
-		<text text-anchor="middle" x="1248.0" y="-1560.9492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="1248.0" y="-1544.1492" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="1248.0" y="-1527.3492" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="1248.0" y="-1510.5492" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="1248.0" y="-1493.7492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000014</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M779.6906,-1642.773C788.426,-1638.0528 797.7646,-1633.7541 807,-1630.7992 971.9481,-1578.0242 1041.6207,-1675.2224 1195,-1594.7992 1195.1983,-1594.6953 1195.3961,-1594.5902 1195.5934,-1594.4841"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1197.5973,-1597.3578 1204.1658,-1589.0448 1193.8469,-1591.4472 1197.5973,-1597.3578"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="933.0" cy="-1369.0492" rx="61.8044" ry="53.3494"/>
-		<text text-anchor="middle" x="933.0" y="-1390.0492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="933.0" y="-1373.2492" font-family="Times,serif" font-size="14.0" fill="#000000">KEY-</text>
-		<text text-anchor="middle" x="933.0" y="-1356.4492" font-family="Times,serif" font-size="14.0" fill="#000000">SELECT-</text>
-		<text text-anchor="middle" x="933.0" y="-1339.6492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000024</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M785.0487,-1494.2684C813.607,-1470.098 850.9428,-1438.4987 880.963,-1413.091"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="883.4522,-1415.5695 888.8242,-1406.4376 878.93,-1410.2263 883.4522,-1415.5695"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="708.0" cy="-1369.0492" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="708.0" y="-1381.6492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="708.0" y="-1364.8492" font-family="Times,serif" font-size="14.0" fill="#000000">LEFTJOIN-</text>
-		<text text-anchor="middle" x="708.0" y="-1348.0492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000030</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M732.5873,-1490.1232C728.2652,-1468.8402 722.9596,-1442.7139 718.3846,-1420.1854"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="721.7603,-1419.2214 716.3401,-1410.118 714.9004,-1420.6145 721.7603,-1419.2214"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="955.0" cy="-1216.6248" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="955.0" y="-1229.2248" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="955.0" y="-1212.4248" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
-		<text text-anchor="middle" x="955.0" y="-1195.6248" font-family="Times,serif" font-size="14.0" fill="#000000">0000000028</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M940.6328,-1316.1663C942.8928,-1300.5078 945.3628,-1283.3952 947.6073,-1267.8439"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="951.0808,-1268.2783 949.0454,-1257.8809 944.1526,-1267.2783 951.0808,-1268.2783"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="528.0" cy="-1216.6248" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="528.0" y="-1229.2248" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="528.0" y="-1212.4248" font-family="Times,serif" font-size="14.0" fill="#000000">MERGE-</text>
-		<text text-anchor="middle" x="528.0" y="-1195.6248" font-family="Times,serif" font-size="14.0" fill="#000000">0000000043</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M669.3855,-1336.3504C641.5064,-1312.7423 603.7343,-1280.7568 574.2449,-1255.7851"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="576.4439,-1253.0609 566.5507,-1249.2696 571.9203,-1258.4029 576.4439,-1253.0609"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="452.0" cy="-1790.6843" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="452.0" y="-1803.2843" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="452.0" y="-1786.4843" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="452.0" y="-1769.6843" font-family="Times,serif" font-size="14.0" fill="#000000">0000000033</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="452.0" cy="-1672.0943" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="452.0" y="-1684.6943" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="452.0" y="-1667.8943" font-family="Times,serif" font-size="14.0" fill="#000000">LEFTJOIN-</text>
-		<text text-anchor="middle" x="452.0" y="-1651.0943" font-family="Times,serif" font-size="14.0" fill="#000000">0000000034</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M452,-1749.2073C452,-1741.0398 452,-1732.375 452,-1723.9164"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="455.5001,-1723.7483 452,-1713.7483 448.5001,-1723.7484 455.5001,-1723.7483"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="523.0" cy="-1531.5492" rx="99.6821" ry="41.0911"/>
-		<text text-anchor="middle" x="523.0" y="-1544.1492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="523.0" y="-1527.3492" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAPVALUES-</text>
-		<text text-anchor="middle" x="523.0" y="-1510.5492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000035</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M471.7775,-1632.9446C479.8094,-1617.0452 489.1871,-1598.4821 497.7074,-1581.6162"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="500.9536,-1582.9524 502.3387,-1572.4485 494.7055,-1579.796 500.9536,-1582.9524"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1185.544,-1583.0955C1185.544,-1589.416 1166.0269,-1594.5502 1142,-1594.5502 1117.9731,-1594.5502 1098.456,-1589.416 1098.456,-1583.0955 1098.456,-1583.0955 1098.456,-1480.003 1098.456,-1480.003 1098.456,-1473.6824 1117.9731,-1468.5482 1142,-1468.5482 1166.0269,-1468.5482 1185.544,-1473.6824 1185.544,-1480.003 1185.544,-1480.003 1185.544,-1583.0955 1185.544,-1583.0955"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1185.544,-1583.0955C1185.544,-1576.7749 1166.0269,-1571.6408 1142,-1571.6408 1117.9731,-1571.6408 1098.456,-1576.7749 1098.456,-1583.0955"/>
-		<text text-anchor="middle" x="1142.0" y="-1560.9492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="1142.0" y="-1544.1492" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="1142.0" y="-1527.3492" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="1142.0" y="-1510.5492" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="1142.0" y="-1493.7492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000009</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M495.6216,-1642.5517C504.3633,-1637.8519 513.722,-1633.6173 523,-1630.7992 641.683,-1594.7511 965.6158,-1651.9702 1091.9226,-1594.8829"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1093.616,-1597.9501 1101.0275,-1590.3791 1090.5123,-1591.6758 1093.616,-1597.9501"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="528.0" cy="-1369.0492" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="528.0" y="-1381.6492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="528.0" y="-1364.8492" font-family="Times,serif" font-size="14.0" fill="#000000">LEFTJOIN-</text>
-		<text text-anchor="middle" x="528.0" y="-1348.0492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000036</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M524.2746,-1490.1232C524.927,-1468.9217 525.7272,-1442.914 526.4186,-1420.4445"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="529.9184,-1420.5026 526.7277,-1410.3996 522.9217,-1420.2872 529.9184,-1420.5026"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="310.0" cy="-1672.0943" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="310.0" y="-1684.6943" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="310.0" y="-1667.8943" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="310.0" y="-1651.0943" font-family="Times,serif" font-size="14.0" fill="#000000">0000000039</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="343.0" cy="-1531.5492" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="343.0" y="-1544.1492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="343.0" y="-1527.3492" font-family="Times,serif" font-size="14.0" fill="#000000">LEFTJOIN-</text>
-		<text text-anchor="middle" x="343.0" y="-1510.5492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000040</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M319.6337,-1631.065C323.2257,-1615.7668 327.3461,-1598.2182 331.1167,-1582.1594"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="334.5328,-1582.9218 333.4114,-1572.3865 327.7181,-1581.3217 334.5328,-1582.9218"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="348.0" cy="-1369.0492" rx="99.6821" ry="41.0911"/>
-		<text text-anchor="middle" x="348.0" y="-1381.6492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="348.0" y="-1364.8492" font-family="Times,serif" font-size="14.0" fill="#000000">FLATMAPVALUES-</text>
-		<text text-anchor="middle" x="348.0" y="-1348.0492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000041</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M344.2746,-1490.1232C344.927,-1468.9217 345.7272,-1442.914 346.4186,-1420.4445"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="349.9184,-1420.5026 346.7277,-1410.3996 342.9217,-1420.2872 349.9184,-1420.5026"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1257.544,-1420.5955C1257.544,-1426.916 1238.0269,-1432.0502 1214,-1432.0502 1189.9731,-1432.0502 1170.456,-1426.916 1170.456,-1420.5955 1170.456,-1420.5955 1170.456,-1317.503 1170.456,-1317.503 1170.456,-1311.1824 1189.9731,-1306.0482 1214,-1306.0482 1238.0269,-1306.0482 1257.544,-1311.1824 1257.544,-1317.503 1257.544,-1317.503 1257.544,-1420.5955 1257.544,-1420.5955"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1257.544,-1420.5955C1257.544,-1414.2749 1238.0269,-1409.1408 1214,-1409.1408 1189.9731,-1409.1408 1170.456,-1414.2749 1170.456,-1420.5955"/>
-		<text text-anchor="middle" x="1214.0" y="-1398.4492" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="1214.0" y="-1381.6492" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="1214.0" y="-1364.8492" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="1214.0" y="-1348.0492" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="1214.0" y="-1331.2492" font-family="Times,serif" font-size="14.0" fill="#000000">0000000025</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M374.0067,-1495.7108C385.4115,-1484.9481 399.1914,-1474.3918 414,-1468.2992 553.9418,-1410.7243 948.1187,-1472.5137 1094,-1432.2992 1117.3365,-1425.8661 1141.279,-1414.402 1161.5787,-1402.9841"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1163.4221,-1405.9614 1170.3375,-1397.9347 1159.926,-1399.897 1163.4221,-1405.9614"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M528,-1327.3986C528,-1309.0931 528,-1287.4125 528,-1268.1067"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="531.5001,-1267.9609 528,-1257.961 524.5001,-1267.961 531.5001,-1267.9609"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="367.0" cy="-1216.6248" rx="61.8044" ry="53.3494"/>
-		<text text-anchor="middle" x="367.0" y="-1237.6248" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="367.0" y="-1220.8248" font-family="Times,serif" font-size="14.0" fill="#000000">KEY-</text>
-		<text text-anchor="middle" x="367.0" y="-1204.0248" font-family="Times,serif" font-size="14.0" fill="#000000">SELECT-</text>
-		<text text-anchor="middle" x="367.0" y="-1187.2248" font-family="Times,serif" font-size="14.0" fill="#000000">0000000042</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M353.1417,-1327.801C354.9892,-1312.9794 357.1175,-1295.9053 359.1431,-1279.6558"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="362.6236,-1280.0284 360.3875,-1269.6722 355.6774,-1279.1624 362.6236,-1280.0284"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="457.0" cy="-1086.1553" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="457.0" y="-1098.7553" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="457.0" y="-1081.9553" font-family="Times,serif" font-size="14.0" fill="#000000">MERGE-</text>
-		<text text-anchor="middle" x="457.0" y="-1065.1553" font-family="Times,serif" font-size="14.0" fill="#000000">0000000044</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M398.7306,-1170.6261C407.2835,-1158.2274 416.5386,-1144.8106 425.1006,-1132.3986"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="428.103,-1134.21 430.9003,-1123.9911 422.341,-1130.2352 428.103,-1134.21"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M506.6977,-1177.4796C499.3261,-1163.9337 490.9767,-1148.5909 483.2546,-1134.4008"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="486.1416,-1132.3835 478.2873,-1125.2728 479.993,-1135.7295 486.1416,-1132.3835"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="457.0" cy="-954.4603" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="457.0" y="-967.0603" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="457.0" y="-950.2603" font-family="Times,serif" font-size="14.0" fill="#000000">FILTER-</text>
-		<text text-anchor="middle" x="457.0" y="-933.4603" font-family="Times,serif" font-size="14.0" fill="#000000">0000000048</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M457,-1044.8475C457,-1032.5861 457,-1018.9999 457,-1006.1659"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="460.5001,-1006.0743 457,-996.0743 453.5001,-1006.0744 460.5001,-1006.0743"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="998.0" cy="-1086.1553" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="998.0" y="-1098.7553" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="998.0" y="-1081.9553" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="998.0" y="-1065.1553" font-family="Times,serif" font-size="14.0" fill="#000000">0000000027</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M968.3698,-1176.0586C972.4954,-1163.5406 977.0895,-1149.6015 981.405,-1136.5073"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="984.8324,-1137.2895 984.6385,-1126.6964 978.1842,-1135.0983 984.8324,-1137.2895"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="457.0" cy="-822.7653" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="457.0" y="-835.3653" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="457.0" y="-818.5653" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="457.0" y="-801.7653" font-family="Times,serif" font-size="14.0" fill="#000000">0000000047</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M457,-913.1525C457,-900.891 457,-887.3049 457,-874.4709"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="460.5001,-874.3793 457,-864.3793 453.5001,-874.3793 460.5001,-874.3793"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="1296.1612,-1008.7605 1205.8388,-1008.7605 1205.8388,-900.1601 1296.1612,-900.1601 1296.1612,-1008.7605"/>
-		<text text-anchor="middle" x="1251.0" y="-992.2603" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="1251.0" y="-975.4603" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="1251.0" y="-958.6603" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="1251.0" y="-941.8603" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="1251.0" y="-925.0603" font-family="Times,serif" font-size="14.0" fill="#000000">0000000025-</text>
-		<text text-anchor="middle" x="1251.0" y="-908.2603" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1047.0809,-1060.607C1089.9663,-1038.2837 1152.1404,-1005.92 1196.5461,-982.8054"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1198.2046,-985.8879 1205.4588,-978.166 1194.9725,-979.6788 1198.2046,-985.8879"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="502.1612,-745.3704 411.8388,-745.3704 411.8388,-636.77 502.1612,-636.77 502.1612,-745.3704"/>
-		<text text-anchor="middle" x="457.0" y="-728.8702" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="457.0" y="-712.0702" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="457.0" y="-695.2702" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="457.0" y="-678.4702" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="457.0" y="-661.6702" font-family="Times,serif" font-size="14.0" fill="#000000">0000000045-</text>
-		<text text-anchor="middle" x="457.0" y="-644.8702" font-family="Times,serif" font-size="14.0" fill="#000000">repartition</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M457,-781.4575C457,-773.3248 457,-764.6094 457,-755.9172"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="460.5001,-755.7603 457,-745.7603 453.5001,-755.7603 460.5001,-755.7603"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="878.0" cy="-1790.6843" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="878.0" y="-1803.2843" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="878.0" y="-1786.4843" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="878.0" y="-1769.6843" font-family="Times,serif" font-size="14.0" fill="#000000">0000000013</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="878.0" cy="-1672.0943" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="878.0" y="-1684.6943" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="878.0" y="-1667.8943" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="878.0" y="-1651.0943" font-family="Times,serif" font-size="14.0" fill="#000000">0000000010</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M878,-1749.2073C878,-1741.0398 878,-1732.375 878,-1723.9164"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="881.5001,-1723.7483 878,-1713.7483 874.5001,-1723.7484 881.5001,-1723.7483"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M922.8621,-1643.4603C931.3338,-1638.7915 940.2778,-1634.3344 949,-1630.7992 1007.6538,-1607.0263 1035.8493,-1629.0498 1091.8991,-1595.4709"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1093.8022,-1598.4085 1100.3778,-1590.1011 1090.0569,-1592.4947 1093.8022,-1598.4085"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="594.0" cy="-1790.6843" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="594.0" y="-1803.2843" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="594.0" y="-1786.4843" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="594.0" y="-1769.6843" font-family="Times,serif" font-size="14.0" fill="#000000">0000000018</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="594.0" cy="-1672.0943" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="594.0" y="-1684.6943" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="594.0" y="-1667.8943" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="594.0" y="-1651.0943" font-family="Times,serif" font-size="14.0" fill="#000000">0000000015</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M594,-1749.2073C594,-1741.0398 594,-1732.375 594,-1723.9164"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="597.5001,-1723.7483 594,-1713.7483 590.5001,-1723.7484 597.5001,-1723.7483"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M637.6327,-1642.5881C646.3734,-1637.885 655.7288,-1633.6398 665,-1630.7992 777.8702,-1596.217 1089.7822,-1648.3233 1195,-1594.7992 1195.1995,-1594.6977 1195.3986,-1594.5951 1195.5972,-1594.4914"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1197.5657,-1597.389 1204.2154,-1589.1407 1193.8734,-1591.4419 1197.5657,-1597.389"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="1020.0" cy="-1790.6843" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="1020.0" y="-1803.2843" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="1020.0" y="-1786.4843" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="1020.0" y="-1769.6843" font-family="Times,serif" font-size="14.0" fill="#000000">0000000029</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="1020.0" cy="-1672.0943" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="1020.0" y="-1684.6943" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="1020.0" y="-1667.8943" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="1020.0" y="-1651.0943" font-family="Times,serif" font-size="14.0" fill="#000000">0000000026</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1020,-1749.2073C1020,-1741.0398 1020,-1732.375 1020,-1723.9164"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1023.5001,-1723.7483 1020,-1713.7483 1016.5001,-1723.7484 1023.5001,-1723.7483"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1080.7729,-1664.014C1155.1271,-1652.7372 1274.4338,-1629.6597 1301,-1594.7992 1335.0778,-1550.0819 1320.7983,-1520.9202 1301,-1468.2992 1293.3723,-1448.026 1279.515,-1429.1919 1265.0689,-1413.4983"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1267.3939,-1410.8653 1257.9545,-1406.054 1262.3332,-1415.7017 1267.3939,-1410.8653"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="457.0" cy="-537.7752" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="457.0" y="-550.3752" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="457.0" y="-533.5752" font-family="Times,serif" font-size="14.0" fill="#000000">SOURCE-</text>
-		<text text-anchor="middle" x="457.0" y="-516.7752" font-family="Times,serif" font-size="14.0" fill="#000000">0000000049</text>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="457.0" cy="-419.1851" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="457.0" y="-431.7851" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="457.0" y="-414.9851" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="457.0" y="-398.1851" font-family="Times,serif" font-size="14.0" fill="#000000">0000000046</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M457,-496.2981C457,-488.1306 457,-479.4659 457,-471.0073"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="460.5001,-470.8392 457,-460.8392 453.5001,-470.8392 460.5001,-470.8392"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="454.0" cy="-278.6401" rx="67.8995" ry="41.0911"/>
-		<text text-anchor="middle" x="454.0" y="-291.2401" font-family="Times,serif" font-size="14.0" fill="#000000">KTABLE-</text>
-		<text text-anchor="middle" x="454.0" y="-274.4401" font-family="Times,serif" font-size="14.0" fill="#000000">TOSTREAM-</text>
-		<text text-anchor="middle" x="454.0" y="-257.6401" font-family="Times,serif" font-size="14.0" fill="#000000">0000000050</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M456.1161,-377.7771C455.7985,-362.8986 455.4364,-345.9307 455.1025,-330.2894"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="458.6006,-330.1608 454.8879,-320.2378 451.6022,-330.3102 458.6006,-330.1608"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M627.544,-330.1863C627.544,-336.5069 608.0269,-341.6411 584,-341.6411 559.9731,-341.6411 540.456,-336.5069 540.456,-330.1863 540.456,-330.1863 540.456,-227.0938 540.456,-227.0938 540.456,-220.7733 559.9731,-215.6391 584,-215.6391 608.0269,-215.6391 627.544,-220.7733 627.544,-227.0938 627.544,-227.0938 627.544,-330.1863 627.544,-330.1863"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M627.544,-330.1863C627.544,-323.8658 608.0269,-318.7316 584,-318.7316 559.9731,-318.7316 540.456,-323.8658 540.456,-330.1863"/>
-		<text text-anchor="middle" x="584.0" y="-308.0401" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="584.0" y="-291.2401" font-family="Times,serif" font-size="14.0" fill="#000000">REDUCE-</text>
-		<text text-anchor="middle" x="584.0" y="-274.4401" font-family="Times,serif" font-size="14.0" fill="#000000">STATE-</text>
-		<text text-anchor="middle" x="584.0" y="-257.6401" font-family="Times,serif" font-size="14.0" fill="#000000">STORE-</text>
-		<text text-anchor="middle" x="584.0" y="-240.8401" font-family="Times,serif" font-size="14.0" fill="#000000">0000000045</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M492.7533,-384.9906C504.3876,-373.4831 517.3225,-360.2834 533.3752,-342.4186"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="536.4174,-344.2649 540.4511,-334.468 531.1884,-339.6112 536.4174,-344.2649"/>
-		<ellipse fill="#ffffff" stroke="#ffffff" stroke-width="1.0" cx="454.0" cy="-138.095" rx="61.8044" ry="41.0911"/>
-		<text text-anchor="middle" x="454.0" y="-150.695" font-family="Times,serif" font-size="14.0" fill="#000000">KSTREAM-</text>
-		<text text-anchor="middle" x="454.0" y="-133.895" font-family="Times,serif" font-size="14.0" fill="#000000">SINK-</text>
-		<text text-anchor="middle" x="454.0" y="-117.095" font-family="Times,serif" font-size="14.0" fill="#000000">0000000051</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M454,-237.2321C454,-222.3536 454,-205.3857 454,-189.7444"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="457.5001,-189.6927 454,-179.6927 450.5001,-189.6928 457.5001,-189.6927"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="503.7036,-60.8 404.2964,-60.8 404.2964,-24.8 503.7036,-24.8 503.7036,-60.8"/>
-		<text text-anchor="middle" x="454.0" y="-38.6" font-family="Times,serif" font-size="14.0" fill="#000000">snkItemsTopic</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M454,-96.5745C454,-88.0228 454,-79.2034 454,-71.2429"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="457.5001,-71.0259 454,-61.0259 450.5001,-71.0259 457.5001,-71.0259"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="860.0786,-2587.9397 763.9214,-2587.9397 763.9214,-2551.9397 860.0786,-2551.9397 860.0786,-2587.9397"/>
-		<text text-anchor="middle" x="812.0" y="-2565.7397" font-family="Times,serif" font-size="14.0" fill="#000000">srcItemsTopic</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M812,-2551.931C812,-2539.3085 812,-2521.7505 812,-2504.9273"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="815.5001,-2504.5981 812,-2494.5982 808.5001,-2504.5982 815.5001,-2504.5981"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M879.9339,-1889.5016C879.6356,-1874.2587 879.3122,-1857.7359 879.0168,-1842.643"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="882.5126,-1842.3853 878.8175,-1832.4558 875.5139,-1842.5224 882.5126,-1842.3853"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M738.2584,-1906.0862C737.8812,-1886.8091 737.4171,-1863.0938 737.0079,-1842.1858"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="740.5072,-1842.1088 736.8121,-1832.1792 733.5085,-1842.2458 740.5072,-1842.1088"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="564.6896,-2587.9397 479.3104,-2587.9397 479.3104,-2551.9397 564.6896,-2551.9397 564.6896,-2587.9397"/>
-		<text text-anchor="middle" x="522.0" y="-2565.7397" font-family="Times,serif" font-size="14.0" fill="#000000">srcFeeTopic</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M522,-2551.931C522,-2539.3085 522,-2521.7505 522,-2504.9273"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="525.5001,-2504.5981 522,-2494.5982 518.5001,-2504.5982 525.5001,-2504.5981"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M594,-1889.5016C594,-1874.2587 594,-1857.7359 594,-1842.643"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="597.5001,-1842.4557 594,-1832.4558 590.5001,-1842.4558 597.5001,-1842.4557"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M452,-1906.0862C452,-1886.8091 452,-1863.0938 452,-1842.1858"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="455.5001,-1842.1792 452,-1832.1792 448.5001,-1842.1793 455.5001,-1842.1792"/>
-		<polygon fill="none" stroke="#000000" stroke-width="1.0" points="195.1896,-2471.0446 102.8104,-2471.0446 102.8104,-2435.0446 195.1896,-2435.0446 195.1896,-2471.0446"/>
-		<text text-anchor="middle" x="149.0" y="-2448.8446" font-family="Times,serif" font-size="14.0" fill="#000000">srcDeptTopic</text>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M149,-2435.0042C149,-2417.1952 149,-2389.1159 149,-2364.3675"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="152.5001,-2364.3634 149,-2354.3634 145.5001,-2364.3635 152.5001,-2364.3634"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M204.305,-1755.1034C222.385,-1740.904 243.231,-1724.5323 261.6067,-1710.1006"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="264.1542,-1712.5503 269.857,-1703.6212 259.8306,-1707.0451 264.1542,-1712.5503"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M1287.8233,-1009.1009C1318.7746,-1060.3928 1358,-1140.4274 1358,-1216.6248 1358,-1531.5492 1358,-1531.5492 1358,-1531.5492 1358,-1666.6167 1185.909,-1740.8684 1087.316,-1772.3248"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="1086.2198,-1769.0004 1077.7202,-1775.3255 1088.3091,-1775.6813 1086.2198,-1769.0004"/>
-		<path fill="none" stroke="#000000" stroke-width="1.0" d="M457,-636.5925C457,-621.3496 457,-604.8267 457,-589.7338"/>
-		<polygon fill="#000000" stroke="#000000" stroke-width="1.0" points="460.5001,-589.5466 457,-579.5466 453.5001,-589.5467 460.5001,-589.5466"/>
-	</g>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.44.0 (20200408.0750)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="1196px" height="2596px"
+ viewBox="0.00 0.00 1196.33 2595.94" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 2591.94)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-2591.94 1192.33,-2591.94 1192.33,4 -4,4"/>
+<text text-anchor="middle" x="594.17" y="-8.2" font-family="Times,serif" font-size="14.00">Kafka Streams Topology</text>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="671,-2026.38 671,-2543.94 953,-2543.94 953,-2026.38 671,-2026.38"/>
+<text text-anchor="middle" x="812" y="-2527.34" font-family="Times,serif" font-size="14.00">Sub&#45;</text>
+<text text-anchor="middle" x="812" y="-2510.54" font-family="Times,serif" font-size="14.00">topology: 0</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_2</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="8,-1894.68 8,-2403.75 290,-2403.75 290,-1894.68 8,-1894.68"/>
+<text text-anchor="middle" x="149" y="-2387.15" font-family="Times,serif" font-size="14.00">Sub&#45;</text>
+<text text-anchor="middle" x="149" y="-2370.35" font-family="Times,serif" font-size="14.00">topology: 2</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_1</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="381,-2026.38 381,-2543.94 663,-2543.94 663,-2026.38 381,-2026.38"/>
+<text text-anchor="middle" x="522" y="-2527.34" font-family="Times,serif" font-size="14.00">Sub&#45;</text>
+<text text-anchor="middle" x="522" y="-2510.54" font-family="Times,serif" font-size="14.00">topology: 1</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_3</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="240,-773.47 240,-1881.58 1090,-1881.58 1090,-773.47 240,-773.47"/>
+<text text-anchor="middle" x="665" y="-1864.98" font-family="Times,serif" font-size="14.00">Sub&#45;</text>
+<text text-anchor="middle" x="665" y="-1848.18" font-family="Times,serif" font-size="14.00">topology: 3</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_4</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="524,-88.8 524,-628.67 676,-628.67 676,-88.8 524,-88.8"/>
+<text text-anchor="middle" x="600" y="-612.07" font-family="Times,serif" font-size="14.00">Sub&#45;</text>
+<text text-anchor="middle" x="600" y="-595.27" font-family="Times,serif" font-size="14.00">topology: 4</text>
+</g>
+<!-- srcItemsTopic -->
+<g id="node1" class="node">
+<title>srcItemsTopic</title>
+<polygon fill="none" stroke="black" points="860.08,-2587.94 763.92,-2587.94 763.92,-2551.94 860.08,-2551.94 860.08,-2587.94"/>
+<text text-anchor="middle" x="812" y="-2565.74" font-family="Times,serif" font-size="14.00">srcItemsTopic</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000000 -->
+<g id="node17" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000000</title>
+<ellipse fill="white" stroke="white" cx="812" cy="-2453.04" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="812" y="-2465.64" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="812" y="-2448.84" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="812" y="-2432.04" font-family="Times,serif" font-size="14.00">0000000000</text>
+</g>
+<!-- srcItemsTopic&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000000 -->
+<g id="edge39" class="edge">
+<title>srcItemsTopic&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000000</title>
+<path fill="none" stroke="black" d="M812,-2551.49C812,-2539.01 812,-2521.54 812,-2504.83"/>
+<polygon fill="black" stroke="black" points="815.5,-2504.57 812,-2494.57 808.5,-2504.57 815.5,-2504.57"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009&#45;\nrepartition -->
+<g id="node2" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009&#45;\nrepartition</title>
+<polygon fill="none" stroke="black" points="776.16,-1998.28 685.84,-1998.28 685.84,-1889.68 776.16,-1889.68 776.16,-1998.28"/>
+<text text-anchor="middle" x="731" y="-1981.78" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="731" y="-1964.98" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="731" y="-1948.18" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="731" y="-1931.38" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="731" y="-1914.58" font-family="Times,serif" font-size="14.00">0000000009&#45;</text>
+<text text-anchor="middle" x="731" y="-1897.78" font-family="Times,serif" font-size="14.00">repartition</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000013 -->
+<g id="node53" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000013</title>
+<ellipse fill="white" stroke="white" cx="594" cy="-1790.68" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="594" y="-1803.28" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="594" y="-1786.48" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="594" y="-1769.68" font-family="Times,serif" font-size="14.00">0000000013</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000013 -->
+<g id="edge41" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000013</title>
+<path fill="none" stroke="black" d="M685.72,-1902.59C678.61,-1895.76 671.47,-1888.6 665,-1881.58 651.92,-1867.39 638.55,-1851.05 627,-1836.22"/>
+<polygon fill="black" stroke="black" points="629.66,-1833.93 620.78,-1828.16 624.12,-1838.21 629.66,-1833.93"/>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;\nrepartition -->
+<g id="node3" class="node">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;\nrepartition</title>
+<polygon fill="none" stroke="black" points="926.16,-1981.68 835.84,-1981.68 835.84,-1906.28 926.16,-1906.28 926.16,-1981.68"/>
+<text text-anchor="middle" x="881" y="-1964.98" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="881" y="-1948.18" font-family="Times,serif" font-size="14.00">FLATMAP&#45;</text>
+<text text-anchor="middle" x="881" y="-1931.38" font-family="Times,serif" font-size="14.00">0000000001&#45;</text>
+<text text-anchor="middle" x="881" y="-1914.58" font-family="Times,serif" font-size="14.00">repartition</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000021 -->
+<g id="node34" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000021</title>
+<ellipse fill="white" stroke="white" cx="878" cy="-1790.68" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="878" y="-1803.28" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="878" y="-1786.48" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="878" y="-1769.68" font-family="Times,serif" font-size="14.00">0000000021</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000021 -->
+<g id="edge43" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000021</title>
+<path fill="none" stroke="black" d="M880.27,-1906.36C879.89,-1887.12 879.42,-1863.24 879,-1842.26"/>
+<polygon fill="black" stroke="black" points="882.5,-1842.16 878.8,-1832.23 875.5,-1842.3 882.5,-1842.16"/>
+</g>
+<!-- srcFeeTopic -->
+<g id="node4" class="node">
+<title>srcFeeTopic</title>
+<polygon fill="none" stroke="black" points="564.69,-2587.94 479.31,-2587.94 479.31,-2551.94 564.69,-2551.94 564.69,-2587.94"/>
+<text text-anchor="middle" x="522" y="-2565.74" font-family="Times,serif" font-size="14.00">srcFeeTopic</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000002 -->
+<g id="node23" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000002</title>
+<ellipse fill="white" stroke="white" cx="522" cy="-2453.04" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="522" y="-2465.64" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="522" y="-2448.84" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="522" y="-2432.04" font-family="Times,serif" font-size="14.00">0000000002</text>
+</g>
+<!-- srcFeeTopic&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000002 -->
+<g id="edge44" class="edge">
+<title>srcFeeTopic&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000002</title>
+<path fill="none" stroke="black" d="M522,-2551.49C522,-2539.01 522,-2521.54 522,-2504.83"/>
+<polygon fill="black" stroke="black" points="525.5,-2504.57 522,-2494.57 518.5,-2504.57 525.5,-2504.57"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014&#45;\nrepartition -->
+<g id="node5" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014&#45;\nrepartition</title>
+<polygon fill="none" stroke="black" points="497.16,-1998.28 406.84,-1998.28 406.84,-1889.68 497.16,-1889.68 497.16,-1998.28"/>
+<text text-anchor="middle" x="452" y="-1981.78" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="452" y="-1964.98" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="452" y="-1948.18" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="452" y="-1931.38" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="452" y="-1914.58" font-family="Times,serif" font-size="14.00">0000000014&#45;</text>
+<text text-anchor="middle" x="452" y="-1897.78" font-family="Times,serif" font-size="14.00">repartition</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000018 -->
+<g id="node55" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000018</title>
+<ellipse fill="white" stroke="white" cx="452" cy="-1790.68" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="452" y="-1803.28" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="452" y="-1786.48" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="452" y="-1769.68" font-family="Times,serif" font-size="14.00">0000000018</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000018 -->
+<g id="edge46" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000018</title>
+<path fill="none" stroke="black" d="M452,-1889.64C452,-1874.29 452,-1857.6 452,-1842.42"/>
+<polygon fill="black" stroke="black" points="455.5,-1842.18 452,-1832.18 448.5,-1842.18 455.5,-1842.18"/>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;\nrepartition -->
+<g id="node6" class="node">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;\nrepartition</title>
+<polygon fill="none" stroke="black" points="648.16,-1981.68 557.84,-1981.68 557.84,-1906.28 648.16,-1906.28 648.16,-1981.68"/>
+<text text-anchor="middle" x="603" y="-1964.98" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="603" y="-1948.18" font-family="Times,serif" font-size="14.00">FLATMAP&#45;</text>
+<text text-anchor="middle" x="603" y="-1931.38" font-family="Times,serif" font-size="14.00">0000000003&#45;</text>
+<text text-anchor="middle" x="603" y="-1914.58" font-family="Times,serif" font-size="14.00">repartition</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000033 -->
+<g id="node45" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000033</title>
+<ellipse fill="white" stroke="white" cx="736" cy="-1790.68" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="736" y="-1803.28" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="736" y="-1786.48" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="736" y="-1769.68" font-family="Times,serif" font-size="14.00">0000000033</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000033 -->
+<g id="edge48" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000033</title>
+<path fill="none" stroke="black" d="M641.45,-1906.35C649.42,-1898.36 657.63,-1889.82 665,-1881.58 677.86,-1867.19 691.17,-1850.8 702.74,-1835.98"/>
+<polygon fill="black" stroke="black" points="705.62,-1837.98 708.98,-1827.94 700.09,-1833.7 705.62,-1837.98"/>
+</g>
+<!-- srcDeptTopic -->
+<g id="node7" class="node">
+<title>srcDeptTopic</title>
+<polygon fill="none" stroke="black" points="195.19,-2471.04 102.81,-2471.04 102.81,-2435.04 195.19,-2435.04 195.19,-2471.04"/>
+<text text-anchor="middle" x="149" y="-2448.84" font-family="Times,serif" font-size="14.00">srcDeptTopic</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000004 -->
+<g id="node29" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000004</title>
+<ellipse fill="white" stroke="white" cx="149" cy="-2312.85" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="149" y="-2325.45" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="149" y="-2308.65" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="149" y="-2291.85" font-family="Times,serif" font-size="14.00">0000000004</text>
+</g>
+<!-- srcDeptTopic&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000004 -->
+<g id="edge49" class="edge">
+<title>srcDeptTopic&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000004</title>
+<path fill="none" stroke="black" d="M149,-2434.82C149,-2417.29 149,-2389.24 149,-2364.57"/>
+<polygon fill="black" stroke="black" points="152.5,-2364.25 149,-2354.25 145.5,-2364.25 152.5,-2364.25"/>
+</g>
+<!-- tblDeptTopic -->
+<g id="node8" class="node">
+<title>tblDeptTopic</title>
+<polygon fill="none" stroke="black" points="388.15,-1961.98 297.85,-1961.98 297.85,-1925.98 388.15,-1925.98 388.15,-1961.98"/>
+<text text-anchor="middle" x="343" y="-1939.78" font-family="Times,serif" font-size="14.00">tblDeptTopic</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;\nrepartition -->
+<g id="node9" class="node">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;\nrepartition</title>
+<polygon fill="none" stroke="black" points="204.16,-1828.38 113.84,-1828.38 113.84,-1752.98 204.16,-1752.98 204.16,-1828.38"/>
+<text text-anchor="middle" x="159" y="-1811.68" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="159" y="-1794.88" font-family="Times,serif" font-size="14.00">FLATMAP&#45;</text>
+<text text-anchor="middle" x="159" y="-1778.08" font-family="Times,serif" font-size="14.00">0000000005&#45;</text>
+<text text-anchor="middle" x="159" y="-1761.28" font-family="Times,serif" font-size="14.00">repartition</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000039 -->
+<g id="node49" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000039</title>
+<ellipse fill="white" stroke="white" cx="452" cy="-1672.09" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="452" y="-1684.69" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="452" y="-1667.89" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="452" y="-1651.09" font-family="Times,serif" font-size="14.00">0000000039</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000039 -->
+<g id="edge52" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000039</title>
+<path fill="none" stroke="black" d="M204.18,-1763.76C214.43,-1758.53 225.42,-1753.4 236,-1749.39 298.08,-1725.83 319.33,-1738.01 381,-1713.39 386.79,-1711.08 392.68,-1708.37 398.47,-1705.48"/>
+<polygon fill="black" stroke="black" points="400.21,-1708.52 407.47,-1700.8 396.98,-1702.31 400.21,-1708.52"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014 -->
+<g id="node10" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014</title>
+<path fill="none" stroke="black" d="M231.54,-1583.1C231.54,-1589.42 212.03,-1594.55 188,-1594.55 163.97,-1594.55 144.46,-1589.42 144.46,-1583.1 144.46,-1583.1 144.46,-1480 144.46,-1480 144.46,-1473.68 163.97,-1468.55 188,-1468.55 212.03,-1468.55 231.54,-1473.68 231.54,-1480 231.54,-1480 231.54,-1583.1 231.54,-1583.1"/>
+<path fill="none" stroke="black" d="M231.54,-1583.1C231.54,-1576.77 212.03,-1571.64 188,-1571.64 163.97,-1571.64 144.46,-1576.77 144.46,-1583.1"/>
+<text text-anchor="middle" x="188" y="-1560.95" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="188" y="-1544.15" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="188" y="-1527.35" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="188" y="-1510.55" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="188" y="-1493.75" font-family="Times,serif" font-size="14.00">0000000014</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009 -->
+<g id="node11" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009</title>
+<path fill="none" stroke="black" d="M125.54,-1583.1C125.54,-1589.42 106.03,-1594.55 82,-1594.55 57.97,-1594.55 38.46,-1589.42 38.46,-1583.1 38.46,-1583.1 38.46,-1480 38.46,-1480 38.46,-1473.68 57.97,-1468.55 82,-1468.55 106.03,-1468.55 125.54,-1473.68 125.54,-1480 125.54,-1480 125.54,-1583.1 125.54,-1583.1"/>
+<path fill="none" stroke="black" d="M125.54,-1583.1C125.54,-1576.77 106.03,-1571.64 82,-1571.64 57.97,-1571.64 38.46,-1576.77 38.46,-1583.1"/>
+<text text-anchor="middle" x="82" y="-1560.95" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="82" y="-1544.15" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="82" y="-1527.35" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="82" y="-1510.55" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="82" y="-1493.75" font-family="Times,serif" font-size="14.00">0000000009</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025 -->
+<g id="node12" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025</title>
+<path fill="none" stroke="black" d="M231.54,-1420.6C231.54,-1426.92 212.03,-1432.05 188,-1432.05 163.97,-1432.05 144.46,-1426.92 144.46,-1420.6 144.46,-1420.6 144.46,-1317.5 144.46,-1317.5 144.46,-1311.18 163.97,-1306.05 188,-1306.05 212.03,-1306.05 231.54,-1311.18 231.54,-1317.5 231.54,-1317.5 231.54,-1420.6 231.54,-1420.6"/>
+<path fill="none" stroke="black" d="M231.54,-1420.6C231.54,-1414.27 212.03,-1409.14 188,-1409.14 163.97,-1409.14 144.46,-1414.27 144.46,-1420.6"/>
+<text text-anchor="middle" x="188" y="-1398.45" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="188" y="-1381.65" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="188" y="-1364.85" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="188" y="-1348.05" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="188" y="-1331.25" font-family="Times,serif" font-size="14.00">0000000025</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025&#45;\nrepartition -->
+<g id="node13" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025&#45;\nrepartition</title>
+<polygon fill="none" stroke="black" points="1188.16,-1008.76 1097.84,-1008.76 1097.84,-900.16 1188.16,-900.16 1188.16,-1008.76"/>
+<text text-anchor="middle" x="1143" y="-992.26" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="1143" y="-975.46" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="1143" y="-958.66" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="1143" y="-941.86" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="1143" y="-925.06" font-family="Times,serif" font-size="14.00">0000000025&#45;</text>
+<text text-anchor="middle" x="1143" y="-908.26" font-family="Times,serif" font-size="14.00">repartition</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000029 -->
+<g id="node57" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000029</title>
+<ellipse fill="white" stroke="white" cx="1020" cy="-1790.68" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="1020" y="-1803.28" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="1020" y="-1786.48" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="1020" y="-1769.68" font-family="Times,serif" font-size="14.00">0000000029</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000029 -->
+<g id="edge56" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000029</title>
+<path fill="none" stroke="black" d="M1137.43,-1009.21C1132.48,-1061.77 1126,-1144.11 1126,-1215.62 1126,-1532.55 1126,-1532.55 1126,-1532.55 1126,-1614.41 1128.1,-1640.41 1091,-1713.39 1084.27,-1726.63 1074.56,-1739.22 1064.47,-1750.21"/>
+<polygon fill="black" stroke="black" points="1061.83,-1747.91 1057.46,-1757.56 1066.89,-1752.74 1061.83,-1747.91"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045&#45;\nrepartition -->
+<g id="node14" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045&#45;\nrepartition</title>
+<polygon fill="none" stroke="black" points="648.16,-745.37 557.84,-745.37 557.84,-636.77 648.16,-636.77 648.16,-745.37"/>
+<text text-anchor="middle" x="603" y="-728.87" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="603" y="-712.07" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="603" y="-695.27" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="603" y="-678.47" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="603" y="-661.67" font-family="Times,serif" font-size="14.00">0000000045&#45;</text>
+<text text-anchor="middle" x="603" y="-644.87" font-family="Times,serif" font-size="14.00">repartition</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000049 -->
+<g id="node59" class="node">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000049</title>
+<ellipse fill="white" stroke="white" cx="603" cy="-537.78" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="603" y="-550.38" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="603" y="-533.58" font-family="Times,serif" font-size="14.00">SOURCE&#45;</text>
+<text text-anchor="middle" x="603" y="-516.78" font-family="Times,serif" font-size="14.00">0000000049</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000049 -->
+<g id="edge62" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045&#45;\nrepartition&#45;&gt;KSTREAM&#45;\nSOURCE&#45;\n0000000049</title>
+<path fill="none" stroke="black" d="M603,-636.73C603,-621.38 603,-604.69 603,-589.51"/>
+<polygon fill="black" stroke="black" points="606.5,-589.27 603,-579.27 599.5,-589.27 606.5,-589.27"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045 -->
+<g id="node15" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045</title>
+<path fill="none" stroke="black" d="M773.54,-330.19C773.54,-336.51 754.03,-341.64 730,-341.64 705.97,-341.64 686.46,-336.51 686.46,-330.19 686.46,-330.19 686.46,-227.09 686.46,-227.09 686.46,-220.77 705.97,-215.64 730,-215.64 754.03,-215.64 773.54,-220.77 773.54,-227.09 773.54,-227.09 773.54,-330.19 773.54,-330.19"/>
+<path fill="none" stroke="black" d="M773.54,-330.19C773.54,-323.87 754.03,-318.73 730,-318.73 705.97,-318.73 686.46,-323.87 686.46,-330.19"/>
+<text text-anchor="middle" x="730" y="-308.04" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="730" y="-291.24" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="730" y="-274.44" font-family="Times,serif" font-size="14.00">STATE&#45;</text>
+<text text-anchor="middle" x="730" y="-257.64" font-family="Times,serif" font-size="14.00">STORE&#45;</text>
+<text text-anchor="middle" x="730" y="-240.84" font-family="Times,serif" font-size="14.00">0000000045</text>
+</g>
+<!-- snkItemsTopic -->
+<g id="node16" class="node">
+<title>snkItemsTopic</title>
+<polygon fill="none" stroke="black" points="649.7,-60.8 550.3,-60.8 550.3,-24.8 649.7,-24.8 649.7,-60.8"/>
+<text text-anchor="middle" x="600" y="-38.6" font-family="Times,serif" font-size="14.00">snkItemsTopic</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000001 -->
+<g id="node18" class="node">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000001</title>
+<ellipse fill="white" stroke="white" cx="812" cy="-2312.85" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="812" y="-2325.45" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="812" y="-2308.65" font-family="Times,serif" font-size="14.00">FLATMAP&#45;</text>
+<text text-anchor="middle" x="812" y="-2291.85" font-family="Times,serif" font-size="14.00">0000000001</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000000&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000001 -->
+<g id="edge1" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000000&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000001</title>
+<path fill="none" stroke="black" d="M812,-2411.7C812,-2397.07 812,-2380.35 812,-2364.92"/>
+<polygon fill="black" stroke="black" points="815.5,-2364.49 812,-2354.49 808.5,-2364.49 815.5,-2364.49"/>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000012 -->
+<g id="node19" class="node">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000012</title>
+<ellipse fill="white" stroke="white" cx="741" cy="-2194.26" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="741" y="-2206.86" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="741" y="-2190.06" font-family="Times,serif" font-size="14.00">FILTER&#45;</text>
+<text text-anchor="middle" x="741" y="-2173.26" font-family="Times,serif" font-size="14.00">0000000012</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000012 -->
+<g id="edge2" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000012</title>
+<path fill="none" stroke="black" d="M789.14,-2274.32C782.75,-2263.82 775.72,-2252.28 769.06,-2241.34"/>
+<polygon fill="black" stroke="black" points="772,-2239.45 763.81,-2232.73 766.02,-2243.09 772,-2239.45"/>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000020 -->
+<g id="node21" class="node">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000020</title>
+<ellipse fill="white" stroke="white" cx="883" cy="-2194.26" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="883" y="-2206.86" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="883" y="-2190.06" font-family="Times,serif" font-size="14.00">FILTER&#45;</text>
+<text text-anchor="middle" x="883" y="-2173.26" font-family="Times,serif" font-size="14.00">0000000020</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000020 -->
+<g id="edge3" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000020</title>
+<path fill="none" stroke="black" d="M834.86,-2274.32C841.25,-2263.82 848.28,-2252.28 854.94,-2241.34"/>
+<polygon fill="black" stroke="black" points="857.98,-2243.09 860.19,-2232.73 852,-2239.45 857.98,-2243.09"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000011 -->
+<g id="node20" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000011</title>
+<ellipse fill="white" stroke="white" cx="741" cy="-2075.67" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="741" y="-2088.27" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="741" y="-2071.47" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="741" y="-2054.67" font-family="Times,serif" font-size="14.00">0000000011</text>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000012&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000011 -->
+<g id="edge4" class="edge">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000012&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000011</title>
+<path fill="none" stroke="black" d="M741,-2152.81C741,-2144.58 741,-2135.83 741,-2127.3"/>
+<polygon fill="black" stroke="black" points="744.5,-2127.05 741,-2117.05 737.5,-2127.05 744.5,-2127.05"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000011&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009&#45;\nrepartition -->
+<g id="edge40" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000011&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009&#45;\nrepartition</title>
+<path fill="none" stroke="black" d="M737.89,-2034.35C737.26,-2026.23 736.59,-2017.5 735.92,-2008.8"/>
+<polygon fill="black" stroke="black" points="739.4,-2008.33 735.14,-1998.63 732.42,-2008.87 739.4,-2008.33"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000019 -->
+<g id="node22" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000019</title>
+<ellipse fill="white" stroke="white" cx="883" cy="-2075.67" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="883" y="-2088.27" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="883" y="-2071.47" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="883" y="-2054.67" font-family="Times,serif" font-size="14.00">0000000019</text>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000020&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000019 -->
+<g id="edge5" class="edge">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000020&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000019</title>
+<path fill="none" stroke="black" d="M883,-2152.81C883,-2144.58 883,-2135.83 883,-2127.3"/>
+<polygon fill="black" stroke="black" points="886.5,-2127.05 883,-2117.05 879.5,-2127.05 886.5,-2127.05"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000019&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;\nrepartition -->
+<g id="edge42" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000019&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000001&#45;\nrepartition</title>
+<path fill="none" stroke="black" d="M882.38,-2034.35C882.17,-2020.96 881.94,-2005.93 881.73,-1992.07"/>
+<polygon fill="black" stroke="black" points="885.22,-1991.7 881.57,-1981.75 878.22,-1991.8 885.22,-1991.7"/>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000003 -->
+<g id="node24" class="node">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000003</title>
+<ellipse fill="white" stroke="white" cx="522" cy="-2312.85" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="522" y="-2325.45" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="522" y="-2308.65" font-family="Times,serif" font-size="14.00">FLATMAP&#45;</text>
+<text text-anchor="middle" x="522" y="-2291.85" font-family="Times,serif" font-size="14.00">0000000003</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000002&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000003 -->
+<g id="edge6" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000002&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000003</title>
+<path fill="none" stroke="black" d="M522,-2411.7C522,-2397.07 522,-2380.35 522,-2364.92"/>
+<polygon fill="black" stroke="black" points="525.5,-2364.49 522,-2354.49 518.5,-2364.49 525.5,-2364.49"/>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000017 -->
+<g id="node25" class="node">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000017</title>
+<ellipse fill="white" stroke="white" cx="451" cy="-2194.26" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="451" y="-2206.86" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="451" y="-2190.06" font-family="Times,serif" font-size="14.00">FILTER&#45;</text>
+<text text-anchor="middle" x="451" y="-2173.26" font-family="Times,serif" font-size="14.00">0000000017</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000017 -->
+<g id="edge7" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000017</title>
+<path fill="none" stroke="black" d="M499.14,-2274.32C492.75,-2263.82 485.72,-2252.28 479.06,-2241.34"/>
+<polygon fill="black" stroke="black" points="482,-2239.45 473.81,-2232.73 476.02,-2243.09 482,-2239.45"/>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000032 -->
+<g id="node27" class="node">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000032</title>
+<ellipse fill="white" stroke="white" cx="593" cy="-2194.26" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="593" y="-2206.86" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="593" y="-2190.06" font-family="Times,serif" font-size="14.00">FILTER&#45;</text>
+<text text-anchor="middle" x="593" y="-2173.26" font-family="Times,serif" font-size="14.00">0000000032</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000032 -->
+<g id="edge8" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000032</title>
+<path fill="none" stroke="black" d="M544.86,-2274.32C551.25,-2263.82 558.28,-2252.28 564.94,-2241.34"/>
+<polygon fill="black" stroke="black" points="567.98,-2243.09 570.19,-2232.73 562,-2239.45 567.98,-2243.09"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000016 -->
+<g id="node26" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000016</title>
+<ellipse fill="white" stroke="white" cx="451" cy="-2075.67" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="451" y="-2088.27" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="451" y="-2071.47" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="451" y="-2054.67" font-family="Times,serif" font-size="14.00">0000000016</text>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000017&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000016 -->
+<g id="edge9" class="edge">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000017&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000016</title>
+<path fill="none" stroke="black" d="M451,-2152.81C451,-2144.58 451,-2135.83 451,-2127.3"/>
+<polygon fill="black" stroke="black" points="454.5,-2127.05 451,-2117.05 447.5,-2127.05 454.5,-2127.05"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000016&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014&#45;\nrepartition -->
+<g id="edge45" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000016&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014&#45;\nrepartition</title>
+<path fill="none" stroke="black" d="M451.31,-2034.35C451.37,-2026.23 451.44,-2017.5 451.51,-2008.8"/>
+<polygon fill="black" stroke="black" points="455.01,-2008.66 451.59,-1998.63 448.01,-2008.61 455.01,-2008.66"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000031 -->
+<g id="node28" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000031</title>
+<ellipse fill="white" stroke="white" cx="593" cy="-2075.67" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="593" y="-2088.27" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="593" y="-2071.47" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="593" y="-2054.67" font-family="Times,serif" font-size="14.00">0000000031</text>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000032&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000031 -->
+<g id="edge10" class="edge">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000032&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000031</title>
+<path fill="none" stroke="black" d="M593,-2152.81C593,-2144.58 593,-2135.83 593,-2127.3"/>
+<polygon fill="black" stroke="black" points="596.5,-2127.05 593,-2117.05 589.5,-2127.05 596.5,-2127.05"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000031&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;\nrepartition -->
+<g id="edge47" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000031&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000003&#45;\nrepartition</title>
+<path fill="none" stroke="black" d="M596.11,-2034.35C597.14,-2020.96 598.3,-2005.93 599.37,-1992.07"/>
+<polygon fill="black" stroke="black" points="602.89,-1991.99 600.16,-1981.75 595.91,-1991.45 602.89,-1991.99"/>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000005 -->
+<g id="node30" class="node">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000005</title>
+<ellipse fill="white" stroke="white" cx="149" cy="-2194.26" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="149" y="-2206.86" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="149" y="-2190.06" font-family="Times,serif" font-size="14.00">FLATMAP&#45;</text>
+<text text-anchor="middle" x="149" y="-2173.26" font-family="Times,serif" font-size="14.00">0000000005</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000004&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000005 -->
+<g id="edge11" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000004&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000005</title>
+<path fill="none" stroke="black" d="M149,-2271.4C149,-2263.17 149,-2254.42 149,-2245.89"/>
+<polygon fill="black" stroke="black" points="152.5,-2245.64 149,-2235.64 145.5,-2245.64 152.5,-2245.64"/>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000038 -->
+<g id="node31" class="node">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000038</title>
+<ellipse fill="white" stroke="white" cx="78" cy="-2075.67" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="78" y="-2088.27" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="78" y="-2071.47" font-family="Times,serif" font-size="14.00">FILTER&#45;</text>
+<text text-anchor="middle" x="78" y="-2054.67" font-family="Times,serif" font-size="14.00">0000000038</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000038 -->
+<g id="edge12" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000038</title>
+<path fill="none" stroke="black" d="M126.14,-2155.73C119.75,-2145.23 112.72,-2133.69 106.06,-2122.75"/>
+<polygon fill="black" stroke="black" points="109,-2120.86 100.81,-2114.14 103.02,-2124.5 109,-2120.86"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000006 -->
+<g id="node33" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000006</title>
+<ellipse fill="white" stroke="white" cx="220" cy="-2075.67" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="220" y="-2088.27" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="220" y="-2071.47" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="220" y="-2054.67" font-family="Times,serif" font-size="14.00">0000000006</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000006 -->
+<g id="edge13" class="edge">
+<title>KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000006</title>
+<path fill="none" stroke="black" d="M171.86,-2155.73C178.25,-2145.23 185.28,-2133.69 191.94,-2122.75"/>
+<polygon fill="black" stroke="black" points="194.98,-2124.5 197.19,-2114.14 189,-2120.86 194.98,-2124.5"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000037 -->
+<g id="node32" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000037</title>
+<ellipse fill="white" stroke="white" cx="132" cy="-1943.98" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="132" y="-1956.58" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="132" y="-1939.78" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="132" y="-1922.98" font-family="Times,serif" font-size="14.00">0000000037</text>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000038&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000037 -->
+<g id="edge14" class="edge">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000038&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000037</title>
+<path fill="none" stroke="black" d="M94.2,-2035.76C99.75,-2022.42 106.04,-2007.33 111.86,-1993.34"/>
+<polygon fill="black" stroke="black" points="115.2,-1994.44 115.81,-1983.86 108.73,-1991.75 115.2,-1994.44"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000037&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;\nrepartition -->
+<g id="edge51" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000037&#45;&gt;KSTREAM&#45;\nFLATMAP&#45;\n0000000005&#45;\nrepartition</title>
+<path fill="none" stroke="black" d="M139.16,-1902.83C142.69,-1883.06 146.97,-1859.11 150.64,-1838.51"/>
+<polygon fill="black" stroke="black" points="154.14,-1838.85 152.45,-1828.39 147.25,-1837.62 154.14,-1838.85"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000006&#45;&gt;tblDeptTopic -->
+<g id="edge50" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000006&#45;&gt;tblDeptTopic</title>
+<path fill="none" stroke="black" d="M253.36,-2040.69C266.15,-2027.55 280.83,-2012.34 294,-1998.38 302.68,-1989.18 312.1,-1978.97 320.34,-1969.96"/>
+<polygon fill="black" stroke="black" points="323.08,-1972.15 327.23,-1962.41 317.91,-1967.44 323.08,-1972.15"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022 -->
+<g id="node35" class="node">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022</title>
+<ellipse fill="white" stroke="white" cx="878" cy="-1672.09" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="878" y="-1684.69" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="878" y="-1667.89" font-family="Times,serif" font-size="14.00">LEFTJOIN&#45;</text>
+<text text-anchor="middle" x="878" y="-1651.09" font-family="Times,serif" font-size="14.00">0000000022</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000021&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022 -->
+<g id="edge15" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000021&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022</title>
+<path fill="none" stroke="black" d="M878,-1749.23C878,-1741 878,-1732.25 878,-1723.72"/>
+<polygon fill="black" stroke="black" points="881.5,-1723.47 878,-1713.47 874.5,-1723.47 881.5,-1723.47"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014 -->
+<g id="edge53" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014</title>
+<path fill="none" stroke="black" d="M834.7,-1642.47C825.85,-1637.81 816.37,-1633.59 807,-1630.8 688.13,-1595.38 364.59,-1651.59 237.83,-1594.7"/>
+<polygon fill="black" stroke="black" points="239.21,-1591.48 228.69,-1590.21 236.12,-1597.76 239.21,-1591.48"/>
+</g>
+<!-- KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023 -->
+<g id="node36" class="node">
+<title>KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023</title>
+<ellipse fill="white" stroke="white" cx="883" cy="-1531.55" rx="99.68" ry="41.09"/>
+<text text-anchor="middle" x="883" y="-1544.15" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="883" y="-1527.35" font-family="Times,serif" font-size="14.00">FLATMAPVALUES&#45;</text>
+<text text-anchor="middle" x="883" y="-1510.55" font-family="Times,serif" font-size="14.00">0000000023</text>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022&#45;&gt;KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023 -->
+<g id="edge16" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000022&#45;&gt;KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023</title>
+<path fill="none" stroke="black" d="M879.46,-1630.65C879.99,-1615.84 880.61,-1598.9 881.17,-1583.3"/>
+<polygon fill="black" stroke="black" points="884.67,-1583.4 881.53,-1573.28 877.67,-1583.15 884.67,-1583.4"/>
+</g>
+<!-- KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000024 -->
+<g id="node37" class="node">
+<title>KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000024</title>
+<ellipse fill="white" stroke="white" cx="1006" cy="-1369.05" rx="61.8" ry="53.35"/>
+<text text-anchor="middle" x="1006" y="-1390.05" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="1006" y="-1373.25" font-family="Times,serif" font-size="14.00">KEY&#45;</text>
+<text text-anchor="middle" x="1006" y="-1356.45" font-family="Times,serif" font-size="14.00">SELECT&#45;</text>
+<text text-anchor="middle" x="1006" y="-1339.65" font-family="Times,serif" font-size="14.00">0000000024</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023&#45;&gt;KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000024 -->
+<g id="edge17" class="edge">
+<title>KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023&#45;&gt;KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000024</title>
+<path fill="none" stroke="black" d="M912.77,-1491.7C928.8,-1470.79 948.77,-1444.73 966.12,-1422.09"/>
+<polygon fill="black" stroke="black" points="969.07,-1423.99 972.38,-1413.92 963.52,-1419.73 969.07,-1423.99"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000030 -->
+<g id="node40" class="node">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000030</title>
+<ellipse fill="white" stroke="white" cx="845" cy="-1369.05" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="845" y="-1381.65" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="845" y="-1364.85" font-family="Times,serif" font-size="14.00">LEFTJOIN&#45;</text>
+<text text-anchor="middle" x="845" y="-1348.05" font-family="Times,serif" font-size="14.00">0000000030</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000030 -->
+<g id="edge18" class="edge">
+<title>KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000023&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000030</title>
+<path fill="none" stroke="black" d="M873.41,-1490.05C868.35,-1468.69 862.11,-1442.31 856.76,-1419.73"/>
+<polygon fill="black" stroke="black" points="860.16,-1418.91 854.45,-1409.98 853.35,-1420.52 860.16,-1418.91"/>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000028 -->
+<g id="node38" class="node">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000028</title>
+<ellipse fill="white" stroke="white" cx="1011" cy="-1216.62" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="1011" y="-1229.22" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="1011" y="-1212.42" font-family="Times,serif" font-size="14.00">FILTER&#45;</text>
+<text text-anchor="middle" x="1011" y="-1195.62" font-family="Times,serif" font-size="14.00">0000000028</text>
+</g>
+<!-- KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000024&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000028 -->
+<g id="edge19" class="edge">
+<title>KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000024&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000028</title>
+<path fill="none" stroke="black" d="M1007.73,-1315.86C1008.24,-1300.55 1008.8,-1283.84 1009.31,-1268.61"/>
+<polygon fill="black" stroke="black" points="1012.81,-1268.45 1009.65,-1258.34 1005.82,-1268.22 1012.81,-1268.45"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000027 -->
+<g id="node39" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000027</title>
+<ellipse fill="white" stroke="white" cx="1011" cy="-1086.16" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="1011" y="-1098.76" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="1011" y="-1081.96" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="1011" y="-1065.16" font-family="Times,serif" font-size="14.00">0000000027</text>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000028&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000027 -->
+<g id="edge20" class="edge">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000028&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000027</title>
+<path fill="none" stroke="black" d="M1011,-1175.33C1011,-1163.49 1011,-1150.38 1011,-1137.97"/>
+<polygon fill="black" stroke="black" points="1014.5,-1137.75 1011,-1127.75 1007.5,-1137.75 1014.5,-1137.75"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000027&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025&#45;\nrepartition -->
+<g id="edge60" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000027&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025&#45;\nrepartition</title>
+<path fill="none" stroke="black" d="M1047.58,-1052.76C1060.32,-1041.2 1074.74,-1027.82 1090.45,-1012.33"/>
+<polygon fill="black" stroke="black" points="1093.14,-1014.59 1097.76,-1005.06 1088.2,-1009.63 1093.14,-1014.59"/>
+</g>
+<!-- KSTREAM&#45;\nMERGE&#45;\n0000000043 -->
+<g id="node41" class="node">
+<title>KSTREAM&#45;\nMERGE&#45;\n0000000043</title>
+<ellipse fill="white" stroke="white" cx="665" cy="-1216.62" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="665" y="-1229.22" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="665" y="-1212.42" font-family="Times,serif" font-size="14.00">MERGE&#45;</text>
+<text text-anchor="middle" x="665" y="-1195.62" font-family="Times,serif" font-size="14.00">0000000043</text>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000030&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000043 -->
+<g id="edge21" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000030&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000043</title>
+<path fill="none" stroke="black" d="M806.83,-1336.15C778.79,-1312.71 740.56,-1280.77 710.86,-1255.95"/>
+<polygon fill="black" stroke="black" points="713.04,-1253.21 703.12,-1249.48 708.55,-1258.58 713.04,-1253.21"/>
+</g>
+<!-- KSTREAM&#45;\nMERGE&#45;\n0000000044 -->
+<g id="node42" class="node">
+<title>KSTREAM&#45;\nMERGE&#45;\n0000000044</title>
+<ellipse fill="white" stroke="white" cx="603" cy="-1086.16" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="603" y="-1098.76" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="603" y="-1081.96" font-family="Times,serif" font-size="14.00">MERGE&#45;</text>
+<text text-anchor="middle" x="603" y="-1065.16" font-family="Times,serif" font-size="14.00">0000000044</text>
+</g>
+<!-- KSTREAM&#45;\nMERGE&#45;\n0000000043&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000044 -->
+<g id="edge22" class="edge">
+<title>KSTREAM&#45;\nMERGE&#45;\n0000000043&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000044</title>
+<path fill="none" stroke="black" d="M646.4,-1177.08C640.02,-1163.87 632.81,-1148.92 626.12,-1135.06"/>
+<polygon fill="black" stroke="black" points="629.09,-1133.16 621.59,-1125.67 622.78,-1136.2 629.09,-1133.16"/>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000048 -->
+<g id="node43" class="node">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000048</title>
+<ellipse fill="white" stroke="white" cx="603" cy="-954.46" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="603" y="-967.06" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="603" y="-950.26" font-family="Times,serif" font-size="14.00">FILTER&#45;</text>
+<text text-anchor="middle" x="603" y="-933.46" font-family="Times,serif" font-size="14.00">0000000048</text>
+</g>
+<!-- KSTREAM&#45;\nMERGE&#45;\n0000000044&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000048 -->
+<g id="edge23" class="edge">
+<title>KSTREAM&#45;\nMERGE&#45;\n0000000044&#45;&gt;KSTREAM&#45;\nFILTER&#45;\n0000000048</title>
+<path fill="none" stroke="black" d="M603,-1044.83C603,-1032.51 603,-1018.8 603,-1005.9"/>
+<polygon fill="black" stroke="black" points="606.5,-1005.76 603,-995.76 599.5,-1005.76 606.5,-1005.76"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000047 -->
+<g id="node44" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000047</title>
+<ellipse fill="white" stroke="white" cx="603" cy="-822.77" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="603" y="-835.37" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="603" y="-818.57" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="603" y="-801.77" font-family="Times,serif" font-size="14.00">0000000047</text>
+</g>
+<!-- KSTREAM&#45;\nFILTER&#45;\n0000000048&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000047 -->
+<g id="edge24" class="edge">
+<title>KSTREAM&#45;\nFILTER&#45;\n0000000048&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000047</title>
+<path fill="none" stroke="black" d="M603,-913.13C603,-900.81 603,-887.11 603,-874.2"/>
+<polygon fill="black" stroke="black" points="606.5,-874.07 603,-864.07 599.5,-874.07 606.5,-874.07"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000047&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045&#45;\nrepartition -->
+<g id="edge61" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000047&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045&#45;\nrepartition</title>
+<path fill="none" stroke="black" d="M603,-781.44C603,-773.32 603,-764.59 603,-755.89"/>
+<polygon fill="black" stroke="black" points="606.5,-755.72 603,-745.72 599.5,-755.72 606.5,-755.72"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034 -->
+<g id="node46" class="node">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034</title>
+<ellipse fill="white" stroke="white" cx="736" cy="-1672.09" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="736" y="-1684.69" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="736" y="-1667.89" font-family="Times,serif" font-size="14.00">LEFTJOIN&#45;</text>
+<text text-anchor="middle" x="736" y="-1651.09" font-family="Times,serif" font-size="14.00">0000000034</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000033&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034 -->
+<g id="edge25" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000033&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034</title>
+<path fill="none" stroke="black" d="M736,-1749.23C736,-1741 736,-1732.25 736,-1723.72"/>
+<polygon fill="black" stroke="black" points="739.5,-1723.47 736,-1713.47 732.5,-1723.47 739.5,-1723.47"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009 -->
+<g id="edge54" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009</title>
+<path fill="none" stroke="black" d="M692.69,-1642.51C683.84,-1637.84 674.37,-1633.61 665,-1630.8 551.95,-1596.82 240.43,-1647.91 135,-1594.8 134.8,-1594.7 134.6,-1594.6 134.41,-1594.5"/>
+<polygon fill="black" stroke="black" points="136.19,-1591.49 125.84,-1589.23 132.53,-1597.45 136.19,-1591.49"/>
+</g>
+<!-- KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000035 -->
+<g id="node47" class="node">
+<title>KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000035</title>
+<ellipse fill="white" stroke="white" cx="665" cy="-1531.55" rx="99.68" ry="41.09"/>
+<text text-anchor="middle" x="665" y="-1544.15" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="665" y="-1527.35" font-family="Times,serif" font-size="14.00">FLATMAPVALUES&#45;</text>
+<text text-anchor="middle" x="665" y="-1510.55" font-family="Times,serif" font-size="14.00">0000000035</text>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034&#45;&gt;KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000035 -->
+<g id="edge26" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000034&#45;&gt;KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000035</title>
+<path fill="none" stroke="black" d="M716.41,-1632.87C708.24,-1616.92 698.65,-1598.2 689.97,-1581.28"/>
+<polygon fill="black" stroke="black" points="692.94,-1579.4 685.27,-1572.1 686.71,-1582.59 692.94,-1579.4"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000036 -->
+<g id="node48" class="node">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000036</title>
+<ellipse fill="white" stroke="white" cx="665" cy="-1369.05" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="665" y="-1381.65" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="665" y="-1364.85" font-family="Times,serif" font-size="14.00">LEFTJOIN&#45;</text>
+<text text-anchor="middle" x="665" y="-1348.05" font-family="Times,serif" font-size="14.00">0000000036</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000035&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000036 -->
+<g id="edge27" class="edge">
+<title>KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000035&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000036</title>
+<path fill="none" stroke="black" d="M665,-1490.05C665,-1468.95 665,-1442.95 665,-1420.55"/>
+<polygon fill="black" stroke="black" points="668.5,-1420.54 665,-1410.54 661.5,-1420.54 668.5,-1420.54"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000036&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000043 -->
+<g id="edge28" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000036&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000043</title>
+<path fill="none" stroke="black" d="M665,-1327.74C665,-1309.44 665,-1287.61 665,-1268.23"/>
+<polygon fill="black" stroke="black" points="668.5,-1268.05 665,-1258.05 661.5,-1268.05 668.5,-1268.05"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040 -->
+<g id="node50" class="node">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040</title>
+<ellipse fill="white" stroke="white" cx="452" cy="-1531.55" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="452" y="-1544.15" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="452" y="-1527.35" font-family="Times,serif" font-size="14.00">LEFTJOIN&#45;</text>
+<text text-anchor="middle" x="452" y="-1510.55" font-family="Times,serif" font-size="14.00">0000000040</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000039&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040 -->
+<g id="edge29" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000039&#45;&gt;KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040</title>
+<path fill="none" stroke="black" d="M452,-1630.65C452,-1615.84 452,-1598.9 452,-1583.3"/>
+<polygon fill="black" stroke="black" points="455.5,-1583.28 452,-1573.28 448.5,-1583.28 455.5,-1583.28"/>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025 -->
+<g id="edge55" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025</title>
+<path fill="none" stroke="black" d="M403.53,-1505.78C380.01,-1494.02 351.23,-1480.02 325,-1468.3 288.93,-1452.19 272.5,-1457.16 238.72,-1433.77"/>
+<polygon fill="black" stroke="black" points="240.39,-1430.65 230.25,-1427.57 236.25,-1436.3 240.39,-1430.65"/>
+</g>
+<!-- KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000041 -->
+<g id="node51" class="node">
+<title>KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000041</title>
+<ellipse fill="white" stroke="white" cx="466" cy="-1369.05" rx="99.68" ry="41.09"/>
+<text text-anchor="middle" x="466" y="-1381.65" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="466" y="-1364.85" font-family="Times,serif" font-size="14.00">FLATMAPVALUES&#45;</text>
+<text text-anchor="middle" x="466" y="-1348.05" font-family="Times,serif" font-size="14.00">0000000041</text>
+</g>
+<!-- KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040&#45;&gt;KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000041 -->
+<g id="edge30" class="edge">
+<title>KSTREAM&#45;\nLEFTJOIN&#45;\n0000000040&#45;&gt;KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000041</title>
+<path fill="none" stroke="black" d="M455.53,-1490.05C457.37,-1468.95 459.64,-1442.95 461.6,-1420.55"/>
+<polygon fill="black" stroke="black" points="465.09,-1420.8 462.47,-1410.54 458.11,-1420.2 465.09,-1420.8"/>
+</g>
+<!-- KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000042 -->
+<g id="node52" class="node">
+<title>KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000042</title>
+<ellipse fill="white" stroke="white" cx="499" cy="-1216.62" rx="61.8" ry="53.35"/>
+<text text-anchor="middle" x="499" y="-1237.62" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="499" y="-1220.82" font-family="Times,serif" font-size="14.00">KEY&#45;</text>
+<text text-anchor="middle" x="499" y="-1204.02" font-family="Times,serif" font-size="14.00">SELECT&#45;</text>
+<text text-anchor="middle" x="499" y="-1187.22" font-family="Times,serif" font-size="14.00">0000000042</text>
+</g>
+<!-- KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000041&#45;&gt;KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000042 -->
+<g id="edge31" class="edge">
+<title>KSTREAM&#45;\nFLATMAPVALUES&#45;\n0000000041&#45;&gt;KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000042</title>
+<path fill="none" stroke="black" d="M474.84,-1327.74C478.12,-1312.82 481.91,-1295.55 485.5,-1279.17"/>
+<polygon fill="black" stroke="black" points="488.98,-1279.64 487.7,-1269.12 482.14,-1278.14 488.98,-1279.64"/>
+</g>
+<!-- KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000042&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000044 -->
+<g id="edge32" class="edge">
+<title>KSTREAM&#45;\nKEY&#45;\nSELECT&#45;\n0000000042&#45;&gt;KSTREAM&#45;\nMERGE&#45;\n0000000044</title>
+<path fill="none" stroke="black" d="M533.92,-1172.49C544.67,-1159.21 556.52,-1144.57 567.32,-1131.23"/>
+<polygon fill="black" stroke="black" points="570.32,-1133.09 573.89,-1123.11 564.88,-1128.68 570.32,-1133.09"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000010 -->
+<g id="node54" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000010</title>
+<ellipse fill="white" stroke="white" cx="310" cy="-1672.09" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="310" y="-1684.69" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="310" y="-1667.89" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="310" y="-1651.09" font-family="Times,serif" font-size="14.00">0000000010</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000013&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000010 -->
+<g id="edge33" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000013&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000010</title>
+<path fill="none" stroke="black" d="M549.07,-1761.81C540.6,-1757.25 531.68,-1752.88 523,-1749.39 462.59,-1725.1 441.41,-1737.67 381,-1713.39 375.44,-1711.15 369.78,-1708.56 364.2,-1705.78"/>
+<polygon fill="black" stroke="black" points="365.42,-1702.47 354.93,-1700.97 362.2,-1708.68 365.42,-1702.47"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000010&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009 -->
+<g id="edge57" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000010&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000009</title>
+<path fill="none" stroke="black" d="M254.16,-1654.08C217.98,-1641.36 171.07,-1621.56 135,-1594.8 134.5,-1594.43 134,-1594.05 133.51,-1593.67"/>
+<polygon fill="black" stroke="black" points="135.56,-1590.82 125.64,-1587.09 131.07,-1596.19 135.56,-1590.82"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000015 -->
+<g id="node56" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000015</title>
+<ellipse fill="white" stroke="white" cx="594" cy="-1672.09" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="594" y="-1684.69" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="594" y="-1667.89" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="594" y="-1651.09" font-family="Times,serif" font-size="14.00">0000000015</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000018&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000015 -->
+<g id="edge34" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000018&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000015</title>
+<path fill="none" stroke="black" d="M490.43,-1758.13C508.11,-1743.62 529.23,-1726.28 547.77,-1711.05"/>
+<polygon fill="black" stroke="black" points="550.03,-1713.72 555.54,-1704.67 545.59,-1708.31 550.03,-1713.72"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000015&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014 -->
+<g id="edge58" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000015&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000014</title>
+<path fill="none" stroke="black" d="M550.17,-1642.73C541.44,-1638.1 532.15,-1633.84 523,-1630.8 404.09,-1591.33 350.36,-1655.21 238.03,-1595.21"/>
+<polygon fill="black" stroke="black" points="239.57,-1592.06 229.13,-1590.26 236.17,-1598.18 239.57,-1592.06"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000026 -->
+<g id="node58" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000026</title>
+<ellipse fill="white" stroke="white" cx="1020" cy="-1672.09" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="1020" y="-1684.69" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="1020" y="-1667.89" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="1020" y="-1651.09" font-family="Times,serif" font-size="14.00">0000000026</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000029&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000026 -->
+<g id="edge35" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000029&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000026</title>
+<path fill="none" stroke="black" d="M1020,-1749.23C1020,-1741 1020,-1732.25 1020,-1723.72"/>
+<polygon fill="black" stroke="black" points="1023.5,-1723.47 1020,-1713.47 1016.5,-1723.47 1023.5,-1723.47"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000026&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025 -->
+<g id="edge59" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000026&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000025</title>
+<path fill="none" stroke="black" d="M976.7,-1642.48C967.85,-1637.81 958.37,-1633.59 949,-1630.8 827.8,-1594.66 494.73,-1650.13 381,-1594.8 312.66,-1561.55 258.9,-1491.8 225.67,-1438.77"/>
+<polygon fill="black" stroke="black" points="228.54,-1436.75 220.31,-1430.07 222.58,-1440.42 228.54,-1436.75"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000046 -->
+<g id="node60" class="node">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000046</title>
+<ellipse fill="white" stroke="white" cx="603" cy="-419.19" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="603" y="-431.79" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="603" y="-414.99" font-family="Times,serif" font-size="14.00">REDUCE&#45;</text>
+<text text-anchor="middle" x="603" y="-398.19" font-family="Times,serif" font-size="14.00">0000000046</text>
+</g>
+<!-- KSTREAM&#45;\nSOURCE&#45;\n0000000049&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000046 -->
+<g id="edge36" class="edge">
+<title>KSTREAM&#45;\nSOURCE&#45;\n0000000049&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\n0000000046</title>
+<path fill="none" stroke="black" d="M603,-496.32C603,-488.1 603,-479.34 603,-470.81"/>
+<polygon fill="black" stroke="black" points="606.5,-470.56 603,-460.56 599.5,-470.56 606.5,-470.56"/>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000046&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045 -->
+<g id="edge63" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000046&#45;&gt;KSTREAM&#45;\nREDUCE&#45;\nSTATE&#45;\nSTORE&#45;\n0000000045</title>
+<path fill="none" stroke="black" d="M638.35,-384.81C650.06,-373.38 663.14,-360.22 679.31,-342.48"/>
+<polygon fill="black" stroke="black" points="682.34,-344.35 686.44,-334.59 677.14,-339.66 682.34,-344.35"/>
+</g>
+<!-- KTABLE&#45;\nTOSTREAM&#45;\n0000000050 -->
+<g id="node61" class="node">
+<title>KTABLE&#45;\nTOSTREAM&#45;\n0000000050</title>
+<ellipse fill="white" stroke="white" cx="600" cy="-278.64" rx="67.9" ry="41.09"/>
+<text text-anchor="middle" x="600" y="-291.24" font-family="Times,serif" font-size="14.00">KTABLE&#45;</text>
+<text text-anchor="middle" x="600" y="-274.44" font-family="Times,serif" font-size="14.00">TOSTREAM&#45;</text>
+<text text-anchor="middle" x="600" y="-257.64" font-family="Times,serif" font-size="14.00">0000000050</text>
+</g>
+<!-- KSTREAM&#45;\nREDUCE&#45;\n0000000046&#45;&gt;KTABLE&#45;\nTOSTREAM&#45;\n0000000050 -->
+<g id="edge37" class="edge">
+<title>KSTREAM&#45;\nREDUCE&#45;\n0000000046&#45;&gt;KTABLE&#45;\nTOSTREAM&#45;\n0000000050</title>
+<path fill="none" stroke="black" d="M602.12,-377.74C601.8,-362.93 601.44,-345.99 601.1,-330.39"/>
+<polygon fill="black" stroke="black" points="604.6,-330.3 600.88,-320.38 597.6,-330.45 604.6,-330.3"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000051 -->
+<g id="node62" class="node">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000051</title>
+<ellipse fill="white" stroke="white" cx="600" cy="-138.1" rx="61.8" ry="41.09"/>
+<text text-anchor="middle" x="600" y="-150.7" font-family="Times,serif" font-size="14.00">KSTREAM&#45;</text>
+<text text-anchor="middle" x="600" y="-133.9" font-family="Times,serif" font-size="14.00">SINK&#45;</text>
+<text text-anchor="middle" x="600" y="-117.1" font-family="Times,serif" font-size="14.00">0000000051</text>
+</g>
+<!-- KTABLE&#45;\nTOSTREAM&#45;\n0000000050&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000051 -->
+<g id="edge38" class="edge">
+<title>KTABLE&#45;\nTOSTREAM&#45;\n0000000050&#45;&gt;KSTREAM&#45;\nSINK&#45;\n0000000051</title>
+<path fill="none" stroke="black" d="M600,-237.19C600,-222.39 600,-205.44 600,-189.85"/>
+<polygon fill="black" stroke="black" points="603.5,-189.83 600,-179.83 596.5,-189.83 603.5,-189.83"/>
+</g>
+<!-- KSTREAM&#45;\nSINK&#45;\n0000000051&#45;&gt;snkItemsTopic -->
+<g id="edge64" class="edge">
+<title>KSTREAM&#45;\nSINK&#45;\n0000000051&#45;&gt;snkItemsTopic</title>
+<path fill="none" stroke="black" d="M600,-96.72C600,-88.05 600,-79.09 600,-71.06"/>
+<polygon fill="black" stroke="black" points="603.5,-70.8 600,-60.8 596.5,-70.8 603.5,-70.8"/>
+</g>
+</g>
 </svg>

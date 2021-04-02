@@ -2,14 +2,9 @@ package eisner
 
 import java.net.URLClassLoader
 
-import net.arnx.nashorn.lib.PromiseException
 import org.clapper.classutil.ClassFinder
 import sbt._
 import sbt.Keys._
-
-import scala.concurrent.{Await, Future}
-import scala.concurrent.duration._
-import scala.concurrent.ExecutionContext.Implicits.global
 
 object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSupport {
   object autoImport {
@@ -51,12 +46,27 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
         val dcp = (Compile / dependencyClasspath).value.map(_.data)
         val scp = (Compile / scalaInstance).value.allJars
 
-        // Let's capture the original classloader associated to the current thread
-        val originalClassloader = Thread.currentThread.getContextClassLoader
-
         val topologyDescriptions = eisnerTopologiesSnippet.value match {
           case None =>
-            val cp = dcp.filter(f => f.getName.contains("kafka") || f.getName.contains("slf4j")) :+ cd
+            val Version = """^slf4j-api-([0-9]+\.[0-9]+\.[0-9]+).jar$""".r
+            val slf4j = dcp.map(_.getName()).find(_.contains("slf4j-api")) match {
+              case Some(Version(version)) =>
+                val slf4jModule = "org.slf4j" % "slf4j-nop" % version
+                (Compile / dependencyResolution).value.retrieve(slf4jModule, None, dependencyCacheDirectory.value, log) match {
+                  case Left(uw) =>
+                    import sbt.util.ShowLines._
+                    log.warn(s"Eisner - failed to resolve $slf4jModule")
+                    uw.lines.foreach(l => log.warn(s"  $l"))
+                    Seq.empty
+                  case Right(files) =>
+                    log.debug(s"Eisner - resolved $slf4jModule")
+                    files
+                }
+              case _ =>
+                log.warn("Eisner - could not find slf4j-api in classpath")
+                Seq.empty
+            }
+            val cp = dcp.filter(f => f.getName.contains("kafka")) ++ slf4j :+ cd
 
             log.debug(s"Eisner - looking for topologies in classpath: ${cp.map(_.getAbsolutePath).mkString(":")}")
 
@@ -71,10 +81,6 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
 
           case Some(snippet) => getTopologies(snippet, scp, dcp :+ cd)
         }
-
-        // Nashorn requires classloader that contains referenced classes to be injected
-        // see https://stackoverflow.com/a/30251930
-        Thread.currentThread.setContextClassLoader(classOf[PromiseException].getClassLoader)
 
         val result: Set[File] = if (topologyDescriptions.nonEmpty) {
           val config = Config(eisnerColorSubtopology.value, eisnerColorTopic.value, eisnerColorSink.value)
@@ -91,26 +97,26 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
             f
           }.toSet
           val cachedFun = FileFunction.cached(cacheDir, FileInfo.hash) { _ =>
-            val fs = Future.traverse(topologiesWithDots) { case (topologyName, topology, _) =>
-              val svg = if (eisnerRoughSVG.value) topology.toSimplifiedRoughSVG(config) else topology.toSVG(config)
-              svg.map { svg =>
-                val filename = s"${eisnerTargetDirectory.value.getAbsolutePath}/${dotsToSlashes(topologyName)}.svg"
-                log.info(s"Eisner - saving $filename")
-                val f = new File(filename)
-                IO.write(f, svg)
-                f
+            topologiesWithDots.foldLeft(Set.empty[File]) { case (files, (topologyName, topology, _)) =>
+              val svg = if (eisnerRoughSVG.value) topology.toRoughSVG(config) else topology.toSVG(config)
+              svg match {
+                case Left(tpe) =>
+                  log.error(tpe.msg)
+                  files
+                case Right(svg) =>
+                  val filename = s"${eisnerTargetDirectory.value.getAbsolutePath}/${dotsToSlashes(topologyName)}.svg"
+                  log.info(s"Eisner - saving $filename")
+                  val f = new File(filename)
+                  IO.write(f, svg)
+                  files + f
               }
             }
-            Await.result(fs, 60.seconds).toSet
           }
           cachedFun(inputs)
         } else {
-          log.warn("Eisner - No topology found!")
+          log.warn("Eisner - no topology found!")
           Set.empty
         }
-
-        // re-set the current thread's classloader to what we captured at the start
-        Thread.currentThread.setContextClassLoader(originalClassloader)
 
         result
       }
