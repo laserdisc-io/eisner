@@ -14,7 +14,7 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
     val eisnerColorTopic      = settingKey[String]("The color used to represent topics, see https://www.graphviz.org/doc/info/colors.html")
     val eisnerRoughSVG        = settingKey[Boolean]("The flag that controls whether to create SVG using pseudo hand-drawing")
     val eisnerTargetDirectory = settingKey[File]("The directory where to store the generated topologies")
-    val eisnerTopologies      = settingKey[Seq[String]]("The fully qualified names of classes implementing org.apache.kafka.streams.Topology")
+    val eisnerTopologies = settingKey[Seq[String]]("The fully qualified names of classes implementing org.apache.kafka.streams.Topology")
     val eisnerTopologiesSnippet =
       settingKey[Option[String]](
         "A scala snippet (including all imports) that evaluates to a Seq[(String, org.apache.kafka.streams.Topology)]"
@@ -26,14 +26,14 @@ object EisnerPlugin extends AutoPlugin with ReflectionSupport with SnippetSuppor
 
   override final def projectSettings: Seq[Setting[_]] =
     Seq(
-      eisnerColorSink := "black",
-      eisnerColorSubtopology := "lightgrey",
-      eisnerColorTopic := "black",
-      eisnerRoughSVG := true,
-      eisnerTargetDirectory := (Compile / target).value / "eisner",
-      eisnerTopologies := Seq.empty,
+      eisnerColorSink         := "black",
+      eisnerColorSubtopology  := "lightgrey",
+      eisnerColorTopic        := "black",
+      eisnerRoughSVG          := true,
+      eisnerTargetDirectory   := (Compile / target).value / "eisner",
+      eisnerTopologies        := Seq.empty,
       eisnerTopologiesSnippet := None,
-      eisner := generate.dependsOn(Compile / compile).value
+      eisner                  := generate.dependsOn(Compile / compile).value
     )
 
   private[this] final def generate: Def.Initialize[Task[Set[File]]] =

@@ -11,5 +11,4 @@ eisnerTopologiesSnippet := Some("""
   |val settings = Settings(source = "topic a", destination = "topic b")
   |
   |List("snippet.EisnerTopology#myTopology" -> EisnerTopology.myTopology(settings))
-  |""".stripMargin
-)
+  |""".stripMargin)
