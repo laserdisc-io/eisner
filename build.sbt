@@ -65,7 +65,7 @@ lazy val core = project
       "guru.nidi"      % "graphviz-java"  % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "guru.nidi"      % "graphviz-rough" % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "io.dylemma"    %% "xml-spac"       % "0.8",
-      "org.scalatest" %% "scalatest"      % "3.2.9"                          % Test,
+      "org.scalatest" %% "scalatest"      % "3.2.10"                          % Test,
       "org.slf4j"      % "slf4j-nop"      % "1.7.32"                         % Test
     ),
     Test / fork              := true,
