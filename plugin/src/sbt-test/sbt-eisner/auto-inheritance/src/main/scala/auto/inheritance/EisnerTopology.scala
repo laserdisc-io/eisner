@@ -26,6 +26,7 @@ final class EisnerTopology extends Topology {
     "output-topic",
     Serdes.String().serializer(),
     Serdes.String().serializer(),
-    "sensor-a", "sensor-b"
+    "sensor-a",
+    "sensor-b"
   )
 }

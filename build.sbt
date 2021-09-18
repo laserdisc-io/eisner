@@ -7,9 +7,9 @@ def isJDK9Plus = jdkMajorVersion >= 9
 
 inThisBuild {
   Seq(
-    scalaVersion := "2.12.14",
-    organization := "io.laserdisc",
-    homepage := Some(url("https://github.com/laserdisc-io/eisner")),
+    scalaVersion      := "2.12.15",
+    organization      := "io.laserdisc",
+    homepage          := Some(url("https://github.com/laserdisc-io/eisner")),
     licenses += "MIT" -> url("http://opensource.org/licenses/MIT"),
     developers += Developer("sirocchj", "Julien Sirocchi", "julien.sirocchi@gmail.com", url("https://github.com/sirocchj"))
   )
@@ -51,8 +51,8 @@ val scalacSettings = Seq(
 
 val noPublishSettings = Seq(
   publishArtifact := false,
-  publish := {},
-  publishLocal := {}
+  publish         := {},
+  publishLocal    := {}
 )
 
 lazy val core = project
@@ -64,11 +64,11 @@ lazy val core = project
       "com.chuusai"   %% "shapeless"      % "2.3.7",
       "guru.nidi"      % "graphviz-java"  % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "guru.nidi"      % "graphviz-rough" % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
-      "io.dylemma"    %% "xml-spac"       % "0.9.2",
-      "org.scalatest" %% "scalatest"      % "3.2.9"                          % Test,
-      "org.slf4j"      % "slf4j-nop"      % "1.7.30"                         % Test
+      "io.dylemma"    %% "xml-spac"       % "0.8",
+      "org.scalatest" %% "scalatest"      % "3.2.10"                         % Test,
+      "org.slf4j"      % "slf4j-nop"      % "1.7.32"                         % Test
     ),
-    Test / fork := true,
+    Test / fork              := true,
     Test / parallelExecution := false,
     Compile / console / scalacOptions --= Seq(
       "-Xlint:_,-type-parameter-shadow",
@@ -87,7 +87,7 @@ lazy val plugin = project
   .settings(
     name := "sbt-eisner",
     libraryDependencies ++= Seq(
-      "org.apache.kafka" % "kafka-streams" % "2.8.0",
+      "org.apache.kafka" % "kafka-streams" % "2.8.1",
       "org.clapper"     %% "classutil"     % "1.5.1"
     ),
     Compile / unmanagedSourceDirectories += (Compile / sourceDirectory).value / (if (isJDK9Plus) "scala-jdk9+" else "scala-jdk8-"),
