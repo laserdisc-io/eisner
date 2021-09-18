@@ -87,7 +87,7 @@ lazy val plugin = project
   .settings(
     name := "sbt-eisner",
     libraryDependencies ++= Seq(
-      "org.apache.kafka" % "kafka-streams" % "2.8.0",
+      "org.apache.kafka" % "kafka-streams" % "2.8.1",
       "org.clapper"     %% "classutil"     % "1.5.1"
     ),
     Compile / unmanagedSourceDirectories += (Compile / sourceDirectory).value / (if (isJDK9Plus) "scala-jdk9+" else "scala-jdk8-"),
