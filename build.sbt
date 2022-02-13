@@ -61,7 +61,7 @@ lazy val core = project
   .settings(
     name := "eisner-core",
     libraryDependencies ++= Seq(
-      "com.chuusai"   %% "shapeless"      % "2.3.7",
+      "com.chuusai"   %% "shapeless"      % "2.3.8",
       "guru.nidi"      % "graphviz-java"  % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "guru.nidi"      % "graphviz-rough" % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "io.dylemma"    %% "xml-spac"       % "0.8",
