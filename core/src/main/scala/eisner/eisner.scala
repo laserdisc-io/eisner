@@ -30,7 +30,7 @@ package object eisner {
     def apply(s: String): GraphvizError | MutableGraph = Try(parser.read(s)).toEither.left.map(t => GraphvizError(t.getMessage()))
   }
 
-  private[this] final lazy val roughifyer = new Roughifyer().bowing(1.2).curveStepCount(1.4).roughness(1).font("*", "sans-serif")
+  private[this] final lazy val roughifyer = new Roughifyer.bowing(1.2).curveStepCount(1.4).roughness(1).font("*", "sans-serif")
 
   // FIXME replace this ugly hack
   private[this] final val e2r = (_: String).replaceAll("""\[style = filled, color = white\]""", "[shape = rectangle, color = black]")

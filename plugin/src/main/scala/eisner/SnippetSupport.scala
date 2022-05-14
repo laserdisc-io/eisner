@@ -15,7 +15,7 @@ private[eisner] trait SnippetSupport {
 private[eisner] final class Compiler(bootClasspath: Seq[File], classpath: Seq[File]) {
   private[this] final val target = new VirtualDirectory("(memory)", None)
 
-  private[this] final val settings = new Settings()
+  private[this] final val settings = new Settings
   settings.bootclasspath.value = bootClasspath.map(_.getAbsolutePath).mkString(":")
   settings.classpath.value = classpath.map(_.getAbsolutePath).mkString(":")
   settings.outputDirs.setSingleOutput(target)

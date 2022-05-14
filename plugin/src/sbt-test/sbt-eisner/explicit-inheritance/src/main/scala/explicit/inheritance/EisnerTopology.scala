@@ -8,7 +8,7 @@ final class EisnerTopology extends Topology {
   addSource(
     Topology.AutoOffsetReset.EARLIEST,
     "sensor-a",
-    new WallclockTimestampExtractor(),
+    new WallclockTimestampExtractor,
     Serdes.String().deserializer(),
     Serdes.String().deserializer(),
     "topic-a"
@@ -16,7 +16,7 @@ final class EisnerTopology extends Topology {
   addSource(
     Topology.AutoOffsetReset.EARLIEST,
     "sensor-b",
-    new WallclockTimestampExtractor(),
+    new WallclockTimestampExtractor,
     Serdes.String().deserializer(),
     Serdes.String().deserializer(),
     "topic-b"
