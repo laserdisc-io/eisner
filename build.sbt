@@ -64,7 +64,7 @@ lazy val core = project
       "com.chuusai"   %% "shapeless"      % "2.3.9",
       "guru.nidi"      % "graphviz-java"  % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "guru.nidi"      % "graphviz-rough" % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
-      "io.dylemma"    %% "xml-spac"       % "0.8",
+      "io.dylemma"    %% "xml-spac"       % "0.12.0",
       "org.scalatest" %% "scalatest"      % "3.2.13"                         % Test,
       "org.slf4j"      % "slf4j-nop"      % "1.7.36"                         % Test
     ),
