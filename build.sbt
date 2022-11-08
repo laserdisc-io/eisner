@@ -7,7 +7,7 @@ def isJDK9Plus = jdkMajorVersion >= 9
 
 inThisBuild {
   Seq(
-    scalaVersion      := "2.12.15",
+    scalaVersion      := "2.12.17",
     organization      := "io.laserdisc",
     homepage          := Some(url("https://github.com/laserdisc-io/eisner")),
     licenses += "MIT" -> url("http://opensource.org/licenses/MIT"),
@@ -65,7 +65,7 @@ lazy val core = project
       "guru.nidi"      % "graphviz-java"  % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "guru.nidi"      % "graphviz-rough" % "0.18.1" excludeAll ("guru.nidi" % "code-assert"),
       "io.dylemma"    %% "xml-spac"       % "0.8",
-      "org.scalatest" %% "scalatest"      % "3.2.13"                         % Test,
+      "org.scalatest" %% "scalatest"      % "3.2.14"                         % Test,
       "org.slf4j"      % "slf4j-nop"      % "1.7.36"                         % Test
     ),
     Test / fork              := true,
