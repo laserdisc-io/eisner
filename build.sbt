@@ -7,7 +7,7 @@ def isJDK9Plus = jdkMajorVersion >= 9
 
 inThisBuild {
   Seq(
-    scalaVersion      := "2.12.17",
+    scalaVersion      := "2.12.19",
     organization      := "io.laserdisc",
     homepage          := Some(url("https://github.com/laserdisc-io/eisner")),
     licenses += "MIT" -> url("http://opensource.org/licenses/MIT"),
